@@ -1,44 +1,33 @@
 import React, { useState } from "react";
-import { Tilt } from "react-tilt";
-import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utils/motion";
 
 const TeamCard = ({ index, para }) => {
   return (
-    <Tilt className=" w-full ">
-      <motion.div
-        variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-        className="w-full p-[1px] rounded-[20px] shadow-lg shadow-[#00CCFF] cursor-pointer"
+    <div
+      className="w-3/4 mx-auto p-[1px] rounded-[20px] "
+    >
+      <div
+        className=" rounded-[20px] p-4 min-h-[280px] flex justify-evenly items-center flex-col card-grad "
       >
-        <motion.div
-          options={{
-            max: 45,
-            scale: 1.1,
-            speed: 450,
-          }}
-          className=" rounded-[20px] p-4 min-h-[280px] flex justify-evenly items-center flex-col opacity-90"
-        >
-          <p className="text-[#09fbd3] text-xl xl:text-2xl font-serif text-center">{para}</p>
-      
-        </motion.div>
-      </motion.div>
-    </Tilt>
+        <p className="text-[#9fffef] xl:text-2xl font-robm">{para}</p>
+
+      </div>
+    </div>
   );
 };
 
 const About = () => {
   return (
-    <main className="relative w-full h-full mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl z-0 flex flex-col items-center justify-center">
-      <div className="text-emerald-500 mt-12 text-5xl font-Londrina_sketch uppercase">about us </div>
-      <div className="mt-5 flex flex-wrap gap-10">
-          <TeamCard 
+    <main className="relative w-full h-full mx-auto mb-12  max-w-7xl z-0 flex flex-col items-center justify-center font-nova_square ">
+      <div className="text-[3em] uppercase text-white">about us </div>
+      <div className="mt-5 flex flex-wrap gap-10 uppercase">
+        <TeamCard
           index={1}
-          para = {"Varchas is the annual sports fest of IIT Jodhpur. Being the largest sports fest of North-West India, Varchas celebrates spirit of sportmanship and serves as platform to showcase the countless hours of perspiration put in by teams to achieve excellence in their sport. Since it's inception in 2011, the grandeur of Varchas has spread far and wide across the best colleges of India."}
-          />
-          <TeamCard 
+          para={"Varchas stands as the annual sports festival of IIT Jodhpur and holds the distinction of being the largest sporting event in North-West India. Varchas is a celebration of the spirit of sportsmanship, offering a prominent platform to showcase the dedication and hard work invested by various teams to attain excellence in their respective sporting disciplines. Since its inception in 2011, the prestige and grandeur of Varchas has extended far and wide, gaining recognition among the most esteemed colleges and universities in India"}
+        />
+        <TeamCard
           index={1}
-          para = {"Indian Institute of Technology Jodhpur was established in 2008, to foster technology education and research in India. The Institute is committed to technological thought and action to benefit the economic development of India. IIT Jodhpur. functions from its sprawling résidential permamnent north- northwest of Jodhpur towards Nagaur. This campus is meticulously planned and envisioned to stand as a symbol of academics- simple, but deep"}
-          />
+          para={"Indian Institute of Technology Jodhpur was established in 2008, to foster technology education and research in India. The Institute is committed to technological thought and action to benefit the economic development of India. IIT Jodhpur. functions from its sprawling résidential permamnent north- northwest of Jodhpur towards Nagaur. This campus is meticulously planned and envisioned to stand as a symbol of academics- simple, but deep"}
+        />
       </div>
     </main>
   )

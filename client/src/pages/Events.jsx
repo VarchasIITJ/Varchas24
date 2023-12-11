@@ -8,71 +8,61 @@ import PDFModal from "../components/PDFModal";
 import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
-const TeamCard = ({ index, title, icon, price, category, team, registerPath }) => {
-  // const [isModalOpen, setIsModalOpen] = useState(false)
-  // const openModal = () => {
-  //   setIsModalOpen(true);
-  // };
+const TeamCard = ({ index, title, icon, price, category, team, registerPath, detailsPath, rulebook }) => {
+
 
   const navigate = useNavigate();
 
   const register = () => {
     navigate(registerPath);
-    // console.log(registerPath);
-    // location.reload();
   }
   return (
-    <Tilt className="xs:w-[250px] w-full">
-      <motion.div
-        variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-        className="w-full p-[1px] rounded-[20px] shadow-lg shadow-[#00CCFF] cursor-pointer"
+    <div className="xs:w-[250px] w-full">
+      <div
+        className="w-full p-[1px] rounded-[20px] shadow-lg shadow-[#00CCFF] backdrop-blur-sm hover:scale-[1.03]"
       >
-        <motion.div
-          options={{
-            max: 45,
-            scale: 1.1,
-            speed: 450,
-          }}
-          className=" rounded-[20px] p-4 min-h-[280px] flex justify-evenly items-center flex-col opacity-90"
+        <div
+          
+          className=" rounded-[20px] p-4 min-h-[280px] flex justify-evenly items-center flex-col opacity-90 gap-2 upp"
         >
           <img
             src={icon}
             alt="web-development"
-            className=" object-contain w-16 h-16"
+            className=" object-contain max-w-32 max-h-32 shadow rounded-md"
           />
 
-          <h3 className="text-white text-[20px] font-bold text-center hover:text-[#fb0909]">
+          <h3 className="text-white text-[20px] text-center uppercase  font-Eczar ">
             {title}
           </h3>
-          <h3 className="text-white text-[20px] font-bold text-center">
-            {price}
-          </h3>
-          <div className="flex justify-center text-white w-full text-center gap-4 items-center h-full">
-            <div className="shadow uppercase shadow-[#09fbd3] hover:text-[#09fbd3] w-full h-full px-2">{category}</div>
-            <div className="shadow uppercase shadow-[#09fbd3] hover:text-[#09fbd3] w-full h-full px-2 ">{team}</div>
+          <div className="flex justify-evenly w-full gap-2">
+
+          <button className="text-white text-[15px] font-semibold text-center hover:shadow-sm hover:scale-110 p-2 rounded-lg bg-[#8e51c8] hover:bg-[#9e75c4]" onClick={register}>
+            Register
+          </button>
+          <a className="text-white text-[15px] font-semibold text-center hover:shadow-sm hover:scale-110 p-2 rounded-lg bg-blue-600 hover:bg-blue-400" target="_blank" href={rulebook}>
+            Rule Book
+          </a>
           </div>
-          {/* <div className="flex flex-row justify-between gap-4"> */}
-            <button className="text-white text-[15px] font-semibold text-center hover:shadow-sm hover:text-[#fb0909] hover:scale-110" onClick={register}>
-              Register
-            </button>
-            {/* <button className="text-white text-[15px] font-semibold text-center hover:shadow-sm hover:text-[#fb0909] hover:scale-110" onClick={openModal}>
-              Rules Book
-            </button>
-            <PDFModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} /> */}
-          {/* </div> */}
-        </motion.div>
-      </motion.div>
-    </Tilt>
+          {/* <button className="text-white text-[15px] font-semibold text-center hover:shadow-sm hover:scale-110 p-2 px-4 rounded-lg bg-blue-600 hover:bg-blue-400" onClick={()=>{navigate(detailsPath)}}>
+            Details
+          </button> */}
+
+        </div>
+      </div>
+    </div>
   );
 };
 
 const Events = () => {
   return (
     <main className="relative w-full h-full mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl z-0">
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex flex-wrap gap-10 justify-center">
         {events.map((service, index) => (
           <TeamCard key={service.title} index={index} {...service} />
         ))}
+      </div>
+      <div className="text-red-800 mt-8 flex justify-center text-2xl ">
+        *All Registrations are Non-Refundable
       </div>
     </main>
   )

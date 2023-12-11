@@ -20,12 +20,17 @@ export const theme = {
     backgroundImage: {
       // "hero-pattern": "url('/src/assets/herobg.png')",
       "hero-pattern": "url('/src/assets/1.jpeg')",
+      "gallery": "url('/bg-gallery1.jpeg')",
     },
     fontFamily: {
       Teko: ['Teko', "sans-serif"],
       Eczar: ['Eczar', 'serif'],
       Londrina_shadow: ['Londrina Shadow', "cursive"],
       Londrina_sketch: ['Londrina Sketch', "cursive"],
+      Bungee_outline: ['Bungee Outline', 'cursive'],
+      nova_square: ['Nova Square', 'sans'],
+      roboto: ["Roboto Condensed", 'sans-serif'],
+      robm: ['Roboto Mono', 'monospace'],
     },
   },
 };

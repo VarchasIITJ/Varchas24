@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Power3, gsap } from 'gsap';
 import { StarsCanvas } from './canvas';
-import img from '/VLW.png';
+import img from '/logo.png';
 
 // eslint-disable-next-line react/prop-types
 const Opening = ({ onOpeningComplete }) => {
@@ -61,7 +61,7 @@ const Opening = ({ onOpeningComplete }) => {
     }, [hasOpenedBefore, onOpeningComplete]);
 
     return (
-        <div id="Open" className={`bg-black h-screen text-white ${isVisible ? 'visible' : 'hidden'}`}>
+        <div id="Open" className={`h-screen bg-black text-[#09fbd3] ${isVisible ? 'visible' : 'hidden'}`}>
             <div className='flex flex-col justify-center items-center mx-auto'>
                 <img src={img} alt="Image" />
                 <h1 className='text-5xl font-semibold text-center'>Varchas&apos;23</h1>

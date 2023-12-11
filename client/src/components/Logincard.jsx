@@ -28,27 +28,35 @@ export default function Logincard() {
   const authenticateUser = () => {
     const configuration = {
       method: "post",
-      url: "https://server-sigma-neon.vercel.app/api/user/login",
-      // url : "http://localhost:3000/api/user/login",
+      url : "https://api.varchas23.in/account/userlogin/",
       data: loginState,
     };
 
     axios(configuration)
-    .then((result) => {
-      alert(result.data.success);
-      localStorage.setItem("Token", result.data.token);
-      navigate("/");
-      location.reload();
-    })
-    .catch((error) => {
-      alert(error.response.data.error);
-    });
+      .then((result) => {
+        alert(result.data.message);
+        sessionStorage.setItem("Token", result.data.access_token);
+        sessionStorage.setItem("refresh_Token", result.data.refresh_token);
+        navigate("/");
+        location.reload();
+      })
+      .catch((error) => {
+        console.log(error);
+        if (error.response && error.response.data && error.response.data.message){
+            alert(error.response.data.message);
+        }
+        if (error.response && error.response.data && error.response.data.detail){
+          alert('Sorry For the inconvinience. Kindly try again');
+          sessionStorage.clear();
+          window.location.reload();
+        }
+      });
     // console.log(loginState);
   };
 
   return (
-    <form className="mt-4 space-y-6 w-96" onSubmit={handleSubmit}>
-      <div className="-space-y-px">
+    <form className="mt-4 space-y-6 w-72 xl:w-96" onSubmit={handleSubmit}>
+      <div className="-space-y-px ">
         {fields.map((field) => (
           <Input
             key={field.id}
