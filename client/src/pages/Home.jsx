@@ -1,15 +1,16 @@
-import Hero from "./Hero";
+// import Hero from "./Hero";
 import About from "./About";
 import Gallery from "./Gallery";
 import Soch from "./Soch";
 import Footer from "../components/Footer";
-import Disclaimer from "../components/disclaimer";
+// import Disclaimer from "../components/disclaimer";
+import CollegeModel from "../components/CollegeModel";
 
 const Home = () => {
     return (
         <main className="h-full w-screen">
             {/* <Disclaimer /> */}
-            <Hero />
+            <CollegeModel/>
             <div className="bg1">
 
             <Soch />

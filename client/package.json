@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/drei": "^9.111.5",
+    "@react-three/fiber": "^8.17.6",
     "axios": "^1.5.1",
     "esbuild": "^0.19.5",
     "framer-motion": "^10.16.4",
@@ -21,7 +23,8 @@
     "react-modal": "^3.16.1",
     "react-router-dom": "^6.16.0",
     "react-select": "^5.7.7",
-    "react-tilt": "^1.0.2"
+    "react-tilt": "^1.0.2",
+    "three": "^0.168.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
