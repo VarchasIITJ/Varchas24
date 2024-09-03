@@ -1,11 +1,12 @@
 // import Hero from "./Hero";
-import About from "./About";
-import Gallery from "./Gallery";
-// import Soch from "./Soch";
-import Footer from "../components/Footer";
+// // import Soch from "./Soch";
 // import Disclaimer from "../components/disclaimer";
 import CollegeModel from "../components/CollegeModel";
 import ParticleSlider from "../components/particleSlider";
+import About from "./About";
+import Informatics from "../components/informatics";
+import Gallery from "./Gallery";
+import Footer from "../components/Footer";
 import {motion} from "framer-motion"
 
 const Home = () => {
@@ -31,6 +32,7 @@ const Home = () => {
             className="bg2">
                 <About />
             </motion.div>
+            <Informatics/>
             <motion.div
             initial = {{opacity: 0}}
             whileInView={{opacity: 1}}
