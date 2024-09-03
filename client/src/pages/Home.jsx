@@ -32,7 +32,14 @@ const Home = () => {
             className="bg2">
                 <About />
             </motion.div>
-            <Informatics/>
+
+            <motion.div
+            initial = {{opacity: 0}}
+            whileInView={{opacity: 1}}
+            transition={{duration: 2}}>
+                <Informatics/>
+            </motion.div>
+            
             <motion.div
             initial = {{opacity: 0}}
             whileInView={{opacity: 1}}

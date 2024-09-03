@@ -6,10 +6,10 @@ const Gallery = () => {
   return (
     <main
     className="m-0 p-0 h-fit pb-48 bg-black">
-      <div className="ml-32 text-[3em] text-white mb-4 font-sans font-bold">
+      <div className="ml-32 text-[3em] text-yellow-300 mb-4 font-sans font-bold">
         Gallery
       </div>
-      <p className="text-white ml-32 mb-4">Relive the action and capture the spirit of Varchas through<br/> unforgettable moments frozen in time!</p>
+      <p className="text-white ml-32 mb-4 text-xl">Relive the action and capture the spirit of Varchas through<br/> unforgettable moments frozen in time!</p>
       <div className="slider mt-10" style={{
         "--width": "500px",
         "--height": "400px",
