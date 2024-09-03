@@ -9,7 +9,7 @@ function Model({ url }) {
   const [rotation, setRotation] = useState([0, 0, 0]);
 
   useFrame(() => {
-    setRotation([rotation[0], rotation[1] + 0.002, rotation[2]]);
+    setRotation([rotation[0], rotation[1] - 0.002, rotation[2]]);
   });
 
   return (
@@ -40,17 +40,19 @@ function Model({ url }) {
 export default function CollegeModel() {
   return (
     <Canvas 
-      style={{ height: '100vh', backgroundColor: '#87CEEB' }}
-      color="#87CEEB"
+      style={{ height: '100vh'}}
+      color="black"
+      className='bg-black'
       camera={{
         far: 50000,
-        position: [2800, 800,800],
+        position: [100, 100,100],
         rotation: [0, Math.PI / 4, 0], 
       }}
       onWheel={(event) => event.stopPropagation()}
     >
-      <Model url="assets\clg model12.glb" />
-      <OrbitControls enableZoom={false} />
+      <Model url="assets\clg model7.glb" />
+      <OrbitControls enableZoom={true} />
     </Canvas>
   );
 }
+

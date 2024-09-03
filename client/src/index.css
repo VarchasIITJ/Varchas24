@@ -101,8 +101,7 @@ border: 1px solid rgba(37, 0, 91, 0.1);
   );
 }
 .glass {
-  background: rgba(0, 17, 91, 0.25);
-border-radius: 16px;
+  background: rgba(0, 0, 0, 0.25);
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(8.2px);
 -webkit-backdrop-filter: blur(8.2px);
@@ -301,3 +300,26 @@ backdrop-filter: blur(4.5px);
 -webkit-backdrop-filter: blur(4.5px);
 border: 1px solid rgba(0, 255, 189, 0.25);
 }
+
+
+.center-underline-hover {
+  position: relative;
+  text-decoration: none;
+}
+
+.center-underline-hover::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 50%;
+  background-color: currentColor;
+  transition: width 0.35s ease;
+  transform: translateX(-50%);
+}
+
+.center-underline-hover:hover::after {
+  width: 100%;
+}
+
