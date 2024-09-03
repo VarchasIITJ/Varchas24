@@ -1,5 +1,13 @@
 // import Hero from "./Hero";
+<<<<<<< HEAD
+import About from "./About";
+import Gallery from "./Gallery";
+import Soch from "./Soch";
+import Footer_1 from "../components/Footer_1";
+import Footer from '../components/Footer'
+=======
 // // import Soch from "./Soch";
+>>>>>>> 34996ad2feec605e3da5a77193391e2cc33d8d29
 // import Disclaimer from "../components/disclaimer";
 import CollegeModel from "../components/CollegeModel";
 import ParticleSlider from "../components/particleSlider";
@@ -25,6 +33,16 @@ const Home = () => {
                 </div>
             </motion.div>
 
+<<<<<<< HEAD
+            <Soch />
+            </div>
+            <div className="bg2">
+
+            <About />
+            </div>
+            <Gallery />
+            <Footer_1/>
+=======
             <motion.div 
             initial = {{opacity: 0}}
             whileInView={{opacity: 1}}
@@ -55,6 +73,7 @@ const Home = () => {
             >
                 <Footer/>
             </motion.div>
+>>>>>>> 34996ad2feec605e3da5a77193391e2cc33d8d29
         </main>
     )
 }
