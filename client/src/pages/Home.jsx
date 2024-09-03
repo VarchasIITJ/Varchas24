@@ -2,7 +2,8 @@
 import About from "./About";
 import Gallery from "./Gallery";
 import Soch from "./Soch";
-import Footer from "../components/Footer";
+import Footer_1 from "../components/Footer_1";
+import Footer from '../components/Footer'
 // import Disclaimer from "../components/disclaimer";
 import CollegeModel from "../components/CollegeModel";
 
@@ -20,7 +21,7 @@ const Home = () => {
             <About />
             </div>
             <Gallery />
-            <Footer />
+            <Footer_1/>
         </main>
     )
 }
