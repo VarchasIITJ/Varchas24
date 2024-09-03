@@ -50,7 +50,7 @@ export default function CollegeModel() {
       }}
       onWheel={(event) => event.stopPropagation()}
     >
-      <Model url="assets\clg model6.glb" />
+      <Model url="assets\clg model7.glb" />
       <OrbitControls enableZoom={true} />
     </Canvas>
   );
