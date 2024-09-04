@@ -8,6 +8,7 @@ import ParticleSlider from "../components/particleSlider";
 import Informatics from "../components/informatics";
 import {motion} from "framer-motion"
 
+
 const Home = () => {
     return (
         <main className="h-full w-screen ">
@@ -28,7 +29,7 @@ const Home = () => {
             initial = {{opacity: 0}}
             whileInView={{opacity: 1}}
             transition={{duration: 2}}
-            className="bg2">
+            >
                 <About />
             </motion.div>
 

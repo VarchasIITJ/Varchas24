@@ -1,4 +1,3 @@
-import React from 'react'
 import logo from '../assets/logo.png'
 import Llogo from '../assets/LinkedI.png'
 import InstaLogo from '../assets/Insta.png'
@@ -17,7 +16,7 @@ function Footer_1 () {
         {/* Address Div */}
           <div className='mx-auto w-[20vw] flex flex-col pt-4'>
             <div className='text-white text-2xl mb-4 '>Address</div>
-            <div className='text-[#d1cbcb] hover:text-yellow-400 ease-in text-lg leading-10'>
+            <div className='text-[#d1cbcb] hover:text-yellow-400 transition-colors duration-1000 ease-in-out text-lg leading-10'>
               Indian Institute of Technology Jodhpur NH 62 Nagaur Road Karwar
               342030, Jodhpur District
             </div>
@@ -29,27 +28,28 @@ function Footer_1 () {
             </div>
             <div className='text-gray-100 text-lg'>
               <ul className='text-wrap  text-lg leading-10'>
-                <li className=' text-[#d1cbcb] hover:text-yellow-400 ease-in'>
-                  Preetam Public Relations{' '}
-                  <a href='tel:9950178420'>9950178420</a>
-                </li>
-                <li className=' text-[#d1cbcb] hover:text-yellow-400 ease-in'>
-                  Kowshika Public Relations {' '}
-                  <a href='tel:7386140537'>7386140537</a>
-                </li>
-                <li className=' text-[#d1cbcb] hover:text-yellow-400 ease-in'>
-                  Email Us@{' '}
-                  <a href='mailto:pr_varchas@iitj.ac.in'>
-                    pr_varchas@iitj.ac.in
-                  </a>
-                </li>
+              <li className="text-[#d1cbcb] hover:text-yellow-400 transition-colors duration-1000 ease-in-out">
+                Preetam PR{' '}
+                <a href="tel:9950178420">9950178420</a>
+            </li>
+            <li className="text-[#d1cbcb] hover:text-yellow-400 transition-colors duration-1000 ease-in-out">
+              Kowshika PR{' '}
+              <a href="tel:7386140537">7386140537</a>
+            </li>
+            <li className="text-[#d1cbcb] hover:text-yellow-400 transition-colors duration-1000 ease-in-out">
+              Email Us@{' '}
+              <a href="mailto:pr_varchas@iitj.ac.in">
+                pr_varchas@iitj.ac.in
+              </a>
+            </li>
+
               </ul>
             </div>
           </div>
         </div>
       </div>
       <div className='text-white flex justify-between pr-12 pb-7'>
-        <div className='w-1/3 pl-12'>
+        <div className='w-1/3 pl-12 hover:text-yellow-400 transition-colors duration-1000 ease-in-out'>
         &copy; IIT Jodhpur, India All Rights Reserved
         </div>
         <div className='flex w-1/5 justify-around'>
