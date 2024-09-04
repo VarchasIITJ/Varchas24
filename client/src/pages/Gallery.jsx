@@ -6,7 +6,7 @@ const Gallery = () => {
   return (
     <main
     className="m-0 p-0 h-fit pb-48 bg-black">
-      <div className="ml-32 text-[3em] text-yellow-300 mb-4 font-bold font-robm">
+      <div className="ml-32 text-6xl text-yellow-300 mb-4 font-bold font-robm">
         Gallery
       </div>
       <p className="text-white ml-32 mb-4 text-xl font-robm">Relive the action and capture the spirit of Varchas through<br/> unforgettable moments frozen in time!</p>
