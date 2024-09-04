@@ -5,14 +5,8 @@ const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({});
 
   useEffect(() => {
-    let countToDate = localStorage.getItem("countdownDate");
-
-    if (!countToDate) {
-      countToDate = new Date().setHours(new Date().getHours() + 24);
-      localStorage.setItem("countdownDate", countToDate);
-    } else {
-      countToDate = new Date(parseInt(countToDate));
-    }
+    // Set the countdown date directly in the code
+    const countToDate = new Date(2024, 9, 10).getTime(); // November 10, 2024
 
     const updateTimer = () => {
       const currentDate = new Date();
@@ -73,10 +67,13 @@ const FlipCard = ({ digit }) => {
   useEffect(() => {
     if (digit !== currentDigit) {
       setIsFlipping(true);
-      setTimeout(() => {
+
+      const flipTimeout = setTimeout(() => {
         setCurrentDigit(digit);
         setIsFlipping(false);
-      }, 500); // Match this duration with the flip animation duration in CSS
+      }, 950); // Slightly less than 1000ms to sync with animation
+
+      return () => clearTimeout(flipTimeout);
     }
   }, [digit, currentDigit]);
 

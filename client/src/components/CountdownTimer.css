@@ -1,59 +1,47 @@
 .container {
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-    align-items: center;
-    height: 45vh;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  height: 45vh;
 }
 
 .container-segment {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
 }
 
 .segment {
-    display: flex;
-    gap: 0.25em;
+  display: flex;
+  gap: 0.25em;
 }
 
 .segment-title {
-    font-size: 1.25rem;
-    color: #000000; 
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+  font-size: 1.25rem;
+  color: #000000; 
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .flip-card {
-    display: inline-flex;
-    width: 80px; /* Adjust card size */
-    height: 120px;
-    color: #ffeb3b;
-    background-color: black;
-    font-size: 3rem; /* Adjust font size */
-    text-align: center;
-    line-height: 120px; /* Align text vertically */
-    border-radius: 0.5em;
-    perspective: 1000px;
+  display: inline-flex;
+  width: 80px; /* Adjust card size */
+  height: 120px;
+  color: #ffeb3b;
+  background-color: black;
+  font-size: 3rem; /* Adjust font size */
+  text-align: center;
+  line-height: 120px; /* Align text vertically */
+  border-radius: 0.5em;
 }
 
+/* Removed all animation-related CSS */
 .flip-card-inner {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s;
-    transform-style: preserve-3d;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.flip-card.flipping .flip-card-inner {
-    transform: rotateX(360deg);
-}
-
-.flip-card-inner {
-    backface-visibility: hidden;
-    transform-origin: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
