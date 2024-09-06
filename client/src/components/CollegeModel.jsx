@@ -48,7 +48,7 @@ export default function CollegeModel() {
       className='bg-black'
       camera={{
         far: 50000,
-        position: [170, 100, 100],
+        position: [80, 50, 50],
         rotation: [0, Math.PI / 4, 0],
       }}
       onWheel={(event) => event.stopPropagation()}

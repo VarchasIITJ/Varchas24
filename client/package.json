@@ -16,8 +16,9 @@
     "3.js": "^0.0.1",
     "axios": "^1.5.1",
     "bidi-js": "^1.0.3",
+    "clsx": "^2.1.1",
     "esbuild": "^0.19.5",
-    "framer-motion": "^10.16.4",
+    "framer-motion": "^10.18.0",
     "gsap": "^3.12.2",
     "maath": "^0.10.4",
     "npx": "^10.2.2",
@@ -31,6 +32,7 @@
     "react-select": "^5.7.7",
     "react-simple-typewriter": "^5.0.1",
     "react-tilt": "^1.0.2",
+    "tailwind-merge": "^2.5.2",
     "three": "^0.168.0"
   },
   "devDependencies": {
