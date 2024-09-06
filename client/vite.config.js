@@ -1,10 +1,17 @@
+import glsl from "vite-plugin-glsl";
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { fileURLToPath, URL } from 'url';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  server: {
-    port: 3000, // Change this to the desired port
+  plugins: [react(), glsl()],  
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
   },
-})
+  server: {
+    host: true, 
+    port: 3000,     
+  },
+});

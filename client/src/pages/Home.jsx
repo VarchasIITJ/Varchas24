@@ -11,47 +11,48 @@ import {motion} from "framer-motion"
 
 const Home = () => {
     return (
-        <main className="h-full w-screen ">
+        <main className="h-full w-screen bg-black"> {/* Set the background color */}
             <motion.div 
-            initial = {{opacity: 0}}
-            whileInView={{opacity: 1}}
-            transition={{duration: 2}}
-            className="h-screen flex">
+                initial = {{opacity: 0}}
+                whileInView={{opacity: 1}}
+                transition={{duration: 2}}
+                className="h-screen flex">
                 <div className="w-1/2">
                     <CollegeModel />
                 </div>
-                <div className="w-1/2 flex items-center justify-center h-full ">
+                <div className="w-1/2 flex items-center justify-center h-full">
                     <ParticleSlider />
                 </div>
             </motion.div>
 
             <motion.div 
-            initial = {{opacity: 0}}
-            whileInView={{opacity: 1}}
-            transition={{duration: 2}}
+                initial = {{opacity: 0}}
+                whileInView={{opacity: 1}}
+                transition={{duration: 2}}
             >
                 <About />
             </motion.div>
 
             <motion.div
-            initial = {{opacity: 0}}
-            whileInView={{opacity: 1}}
-            transition={{duration: 2}}>
+                initial = {{opacity: 0}}
+                whileInView={{opacity: 1}}
+                transition={{duration: 2}}
+            >
                 <Informatics/>
             </motion.div>
             
             <motion.div
-            initial = {{opacity: 0}}
-            whileInView={{opacity: 1}}
-            transition={{duration: 2}}
+                initial = {{opacity: 0}}
+                whileInView={{opacity: 1}}
+                transition={{duration: 2}}
             >
                 <Gallery />
             </motion.div>
             
             <motion.div
-            initial = {{opacity: 0}}
-            whileInView={{opacity: 1}}
-            transition={{duration: 2}}
+                initial = {{opacity: 0}}
+                whileInView={{opacity: 1}}
+                transition={{duration: 2}}
             >
                 <Footer_1/>
             </motion.div>
