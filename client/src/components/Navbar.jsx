@@ -46,7 +46,7 @@ const Navbar = () => {
       >
         <li className="p-1  mt-2 hover:text-[#ffeb3b] ">
           <NavLink to="/">
-            <img src="/VLW.png" className="xl:h-16 xl:w-16 h-12 w-12" />
+            <img src="/NewLogo.png" className="xl:h-16 xl:w-16 h-12 w-12" />
           </NavLink>
         </li>
         <motion.li
