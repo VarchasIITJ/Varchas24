@@ -109,9 +109,10 @@ const TeamCreate = () => {
     console.log(data_t);
     const token = sessionStorage.getItem("Token");
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+    console.log(token)
     const configuration = {
       method: "post",
-      url: "https://api.varchas23.in/registration/createteam/",
+      url: "http://127.0.0.1:8000/registration/createteam/",
       data: data_t,
     };
     axios(configuration)

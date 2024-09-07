@@ -1,9 +1,10 @@
-import { useState } from "react";
+
 import { loginFields } from "../constants";
 import FormAction from "./formaction";
 import FormExtra from "./formextra";
 import Input from "./input";
 import axios from "axios";
+import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 const fields = loginFields;
@@ -28,13 +29,14 @@ export default function Logincard() {
   const authenticateUser = () => {
     const configuration = {
       method: "post",
-      url : "https://api.varchas23.in/account/userlogin/",
+      // url : "https://api.varchas23.in/account/userlogin/",
+      url : "http://127.0.0.1:8000/account/userlogin/",
       data: loginState,
     };
 
     axios(configuration)
       .then((result) => {
-        alert(result.data.message);
+        // alert(result.data.message);
         sessionStorage.setItem("Token", result.data.access_token);
         sessionStorage.setItem("refresh_Token", result.data.refresh_token);
         navigate("/");

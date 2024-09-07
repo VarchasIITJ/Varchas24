@@ -4,7 +4,6 @@ import Sponsors from "./pages/Sponsors";
 import Team from "./pages/Team";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import TeamCreate from "./pages/CreateTeam";
@@ -14,6 +13,9 @@ import VTeam from "./pages/viewTeam";
 import Discount from "./pages/Discount";
 import Forgot from "./pages/Forgot";
 import Dcricket from "./sports/c";
+import SignUp from "./pages/Signup";
+import Form from "./pages/Form"
+
 
 const App = () => {
 
@@ -35,7 +37,10 @@ const App = () => {
 
             <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
+            {/* <Route path="/signup" element={<Signup />} /> */}
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/form" element={<Form/>} />
+            
 
             <Route path="/create" element={<TeamCreate />} />
             <Route path="/join" element={<TeamJoin />} />

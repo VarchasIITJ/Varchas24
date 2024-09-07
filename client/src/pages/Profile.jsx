@@ -16,7 +16,7 @@ export default function Profiles() {
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
     const configuration = {
       method: "get",
-      url: "https://api.varchas23.in/account/displayProfile/",
+      url: "http://127.0.0.1:8000/account/displayProfile/",
     };
     await axios(configuration)
       .then((result) => {
