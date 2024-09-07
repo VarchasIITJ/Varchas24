@@ -537,8 +537,9 @@ const events = [
   },
 ];
 
-const signupFields = [
-  {
+
+const signupFields=[
+   {
     labelText: "Email address",
     labelFor: "email",
     id: "email",
@@ -548,26 +549,7 @@ const signupFields = [
     isRequired: true,
     placeholder: "Email address",
   },
-  {
-    labelText: "First Name",
-    labelFor: "First Name",
-    id: "first_name",
-    name: "First Name",
-    type: "text",
-    autoComplete: "First Name",
-    isRequired: true,
-    placeholder: "First Name",
-  },
-  {
-    labelText: "Last Name",
-    labelFor: "Last Name",
-    id: "last_name",
-    name: "Last Name",
-    type: "text",
-    autoComplete: "Last Name",
-    isRequired: true,
-    placeholder: " Last Name",
-  },
+
   {
     labelText: "Password",
     labelFor: "password",
@@ -588,6 +570,41 @@ const signupFields = [
     isRequired: true,
     placeholder: "Confirm Password",
   },
+
+]
+
+const addInfoFields = [
+  // {
+  //   labelText: "Email address",
+  //   labelFor: "email",
+  //   id: "email",
+  //   name: "email",
+  //   type: "email",
+  //   autoComplete: "email",
+  //   isRequired: true,
+  //   placeholder: "Email address",
+  // },
+  {
+    labelText: "First Name",
+    labelFor: "First Name",
+    id: "first_name",
+    name: "First Name",
+    type: "text",
+    autoComplete: "First Name",
+    isRequired: true,
+    placeholder: "First Name",
+  },
+  {
+    labelText: "Last Name",
+    labelFor: "Last Name",
+    id: "last_name",
+    name: "Last Name",
+    type: "text",
+    autoComplete: "Last Name",
+    isRequired: true,
+    placeholder: " Last Name",
+  },
+  
   {
     labelText: "gender",
     labelFor: "gender",
@@ -686,6 +703,8 @@ const signupFields = [
     ],
   },
 ];
+
+
 
 const loginFields = [
   {
@@ -932,4 +951,4 @@ export const teamTypeOptions = [
   "Single",
 ];
 
-export { events, signupFields, loginFields };
+export { events, signupFields, loginFields, addInfoFields };
