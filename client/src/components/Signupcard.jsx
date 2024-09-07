@@ -27,7 +27,8 @@ export default function Signupcard() {
     console.log(signupState);
     const configuration = {
       method: "post",
-      url: "https://api.varchas23.in/account/userregister/",
+      // url: "https://api.varchas23.in/account/userregister/",
+      url: "http://127.0.0.1:8000/account/userregister/",
       data: signupState,
     };
     axios(configuration)

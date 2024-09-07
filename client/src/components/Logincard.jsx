@@ -28,7 +28,8 @@ export default function Logincard() {
   const authenticateUser = () => {
     const configuration = {
       method: "post",
-      url : "https://api.varchas23.in/account/userlogin/",
+      // url : "https://api.varchas23.in/account/userlogin/",
+      url: "http://127.0.0.1:8000/account/userlogin/",
       data: loginState,
     };
 

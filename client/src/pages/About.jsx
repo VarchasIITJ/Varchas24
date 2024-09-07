@@ -12,7 +12,7 @@ const About = () => {
   return (
     <main className="bg-black h-[120vh] w-screen flex flex-col">
   <div className="bg-white h-2/5 flex flex-row">
-    <div className="bg-black w-1/3 py-10 flex pl-10 h-full text-6xl font-robm text-white transition-colors duration-500 ease-in-out text-yellow-300">
+    <div className="bg-black w-1/3 py-10 flex pl-10 h-full text-6xl font-robm transition-colors duration-500 ease-in-out text-yellow-300">
       <span>{typeEffect}</span>
     </div>
     <div className="bg-black w-2/3 h-full text-2xl font-robm py-10 text-white">
