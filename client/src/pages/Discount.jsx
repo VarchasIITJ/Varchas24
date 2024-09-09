@@ -1,24 +1,92 @@
-import {useState} from "react";
 import { motion } from "framer-motion";
-import { cn } from "../utils/Lamp.js";
+import { cn } from "@/lib/utils";
 
 export default function LampDemo() {
-  const [toggle, setToggle] = useState(false);
-
   return (
-    (<LampContainer>
-      <motion.div
-        initial={{ opacity: 0.5, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.3,
-          duration: 0.8,
-          ease: "easeInOut",
-        }}
-        className="mt-8 bg-gradient-to-br from-slate-300 to-slate-400 py-4 bg-clip-text text-4xl font-medium tracking-tight text-transparent md:text-xl"
-      >
-      </motion.div>
-    </LampContainer>)
+    <div className="relative">
+      <LampContainer className="items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0.5, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="mt-7 bg-gradient-to-br from-slate-300 to-white py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-2xl">
+          <p className="py-4 text-4xl mb-4">Contingent Leader</p>
+          <div className="text-left text-xl w-[900px]">
+          Win FREE ACCOMODATION at IIT Jodhpur and a JODHPUR CITY tour.<br/>
+          Simply bring 20 registrations to Varcahs'24 website along with<br/>
+          20 accomodations to Varchs'24 Sports fest.
+        </div>
+        </motion.div>
+      </LampContainer>
+      <div className="flex justify-center align-middle w-full top-[400px] absolute text-white bg-[#010616] p-4 text-left z-10  ">
+        <div className="delayed-appear items-center w-[900px] text-xl">
+        <ul >
+                    <li className="mt-[15px] mb-4">
+                      <b>Deliverables</b>: Contingent leaders get FREE Accommodation,
+                      Food, Pronite passes and a Jodhpur City TOUR.
+                    </li>
+                    <li className="mt-4 mb-4">
+                      
+                      <b>Contingent Leader must</b>: regsiter at least 20 students
+                      along with accommodation
+                    </li>
+                    <li className="mt-4 mb-4">
+                      
+                      Contingent leader and the other registrations must be of
+                      students(UG/PG)of a registered College/University.
+                    </li>
+                    <li className="mt-4 mb-4">
+                      
+                      In case any one person fails to provide legal documents
+                      and a valid student id proof, the scheme stands null and
+                      the Contingent leader will be fined an amount of
+                      Rs.12,000
+                    </li>
+        </ul>
+        <p className="text-4xl text-center mt-[50px] mb-[40px]">Bulk Discount</p>
+        <ul>
+                  <li className="mb-5">
+                    
+                    For contingent size of 40+, bulk discount of Rs.49 will be
+                    provided for each accommodation. 
+                    <p>
+                    *Must have atleast 40
+                    people opting accommodation
+                    </p>
+                  </li>
+                  <li className="mb-5">
+                    
+                    For contingent size of 50+, bulk discount of Rs.149 will be
+                    provided for each accommodation. 
+                    <p>
+                      *Must have atleast 50
+                    people opting accommodation
+                      </p>
+                  </li>
+                  <li className="mb-5">
+                    
+                    For contingent size of 80+, bulk discount of Rs.199 will be
+                    provided for each accommodation. 
+                    <p>
+
+                    *Must have atleast 80
+                    people opting accommodation
+                    </p>
+                  </li>
+                  <li className="mb-5">
+                    
+                    To avail Bulk Discount, select the total number of
+                    accomodations on the payment page and the Bulk Discount will
+                    be auto-applied
+                  </li>
+                </ul>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -27,9 +95,9 @@ export const LampContainer = ({
   className
 }) => {
   return (
-    (<div
+    <div
       className={cn(
-        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full rounded-md z-0",
+        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full z-0",
         className
       )}>
       <div
@@ -45,7 +113,7 @@ export const LampContainer = ({
           style={{
             backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
           }}
-          className="absolute inset-auto right-1/2 h-56 overflow-visible w-[30rem] bg-gradient-conic from-orange-400 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top]">
+          className="absolute inset-auto right-1/2 h-56 overflow-visible w-[30rem] bg-gradient-conic from-orange-500 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top]">
           <div
             className="absolute  w-[100%] left-0 bg-slate-950 h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
           <div
@@ -62,7 +130,7 @@ export const LampContainer = ({
           style={{
             backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
           }}
-          className="absolute inset-auto left-1/2 h-56 w-[30rem] bg-gradient-conic from-transparent via-transparent to-orange-400 text-white [--conic-position:from_290deg_at_center_top]">
+          className="absolute inset-auto left-1/2 h-56 w-[30rem] bg-gradient-conic from-transparent via-transparent to-orange-500 text-white [--conic-position:from_290deg_at_center_top]">
           <div
             className="absolute  w-40 h-[100%] right-0 bg-slate-950  bottom-0 z-20 [mask-image:linear-gradient(to_left,white,transparent)]" />
           <div
@@ -73,7 +141,7 @@ export const LampContainer = ({
         <div
           className="absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md"></div>
         <div
-          className="absolute inset-auto z-50 h-36 w-[28rem] -translate-y-1/2 rounded-full opacity-50 blur-3xl"></div>
+          className="absolute inset-auto z-50 h-36 w-[28rem] -translate-y-1/2 rounded-full bg-orange-500 opacity-50 blur-3xl"></div>
         <motion.div
           initial={{ width: "8rem" }}
           whileInView={{ width: "16rem" }}
@@ -99,6 +167,6 @@ export const LampContainer = ({
       <div className="relative z-50 flex -translate-y-80 flex-col items-center px-5">
         {children}
       </div>
-    </div>)
+    </div>
   );
 };
