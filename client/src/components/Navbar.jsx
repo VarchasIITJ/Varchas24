@@ -101,7 +101,7 @@ const Navbar = () => {
 
         
         
-        <motion.li 
+        <motion.li
         whileHover={{scale: 1.07}}
         whileTap={{scale: 0.93}}
         className="p-1 mt-2 hover:text-[#ffeb3b]  navbar center-underline-hover">
@@ -119,11 +119,10 @@ const Navbar = () => {
           )}
         </motion.li>
         <motion.li
-        onClick={handleLogout}
         whileTap={{scale: 0.93}}
-        className="p-1 px-6 mt-2 mr-4 hover:text-black  navbar border-yellow-300 border-2 rounded-l-full rounded-r-full bg-yellow-300 text-black">
+        className="p-1 px-6 mt-2 mr-4 hover:text-black  border-yellow-300 border-2 rounded-l-full rounded-r-full bg-yellow-300 text-black">
           {token ? (
-            <button>Log Out</button>
+            <button onClick={handleLogout}>Log Out</button>
           ) : (
             <NavLink to="/signup">SignUp</NavLink>
           )}
