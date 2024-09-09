@@ -55,11 +55,11 @@ import {
   Kuldeep,
   Prince,
   Barwar,
-  Shivangi
+  Shivangi,
 } from "../assets/team";
 
 import { chess } from "../assets";
-import { Linkedin } from "lucide-react";
+
 
 export const Teamdata = [
   {
