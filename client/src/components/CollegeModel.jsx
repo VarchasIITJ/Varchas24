@@ -55,7 +55,7 @@ export default function CollegeModel() {
       <Model url="assets/clg model9.glb" setIsHovering={setIsHovering} />
       <OrbitControls
         enableZoom={isHovering}
-        minDistance={125}
+        minDistance={120}
         maxDistance={180}
       />
     </Canvas>

@@ -54,7 +54,7 @@ function Footer_1 () {
         </div>
         <div className='flex w-1/5 justify-around'>
         <div className='w-6'>
-          <a href='https://www.linkedin.com/in/varchas-inter-college-sports-fest-of-iit-jodhpur-802b4b233?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' target='none'> <img src={Llogo}alt="" /></a>
+          <a href='http://www.linkedin.com/in/varchas-inter-college-sports-fest-of-iit-jodhpur' target='none'> <img src={Llogo}alt="" /></a>
           
         </div>
         <div className='w-8'>

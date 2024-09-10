@@ -80,7 +80,6 @@ const SignUp = () => {
           logoUrl={"/NewLogo.png"}
         />
         <SignupCard/>
-        <h4 className="text-white mt-4">Or</h4>
         <button
         onClick={() => signup_google()}
         className="
