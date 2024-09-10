@@ -12,6 +12,7 @@ import Payment from "./pages/Payment";
 import VTeam from "./pages/viewTeam";
 import Discount from "./pages/Discount";
 import Forgot from "./pages/Forgot";
+import Not_Found from "./pages/Not_Found";
 import SignUp from "./pages/Signup";
 import Form from "./pages/Form"
 

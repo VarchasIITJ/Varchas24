@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './CountdownTimer.css';
 
-const CountdownTimer = () => {
+const   CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({});
 
   useEffect(() => {
@@ -44,7 +44,7 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container w-1/2">
       <Segment title="Days" digits={flipAllCards(timeLeft.days || 0)} />
       <Segment title="Hours" digits={flipAllCards(timeLeft.hours || 0)} />
       <Segment title="Minutes" digits={flipAllCards(timeLeft.minutes || 0)} />
@@ -78,7 +78,7 @@ const FlipCard = ({ digit }) => {
   }, [digit, currentDigit]);
 
   return (
-    <div className={`flip-card ${isFlipping ? 'flipping' : ''}, bg-yellow-300 text-black`}>
+    <div className={`flip-card ${isFlipping ? 'flipping' : ''}, bg-black text-yellow-400`}>
       <div className="flip-card-inner">{currentDigit}</div>
     </div>
   );

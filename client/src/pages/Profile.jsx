@@ -42,27 +42,26 @@ export default function Profiles() {
   }, []);
 
   return (
-    <section className="bg-black h-screen flex flex-col items-center justify-center gap-4 w-full">
-  <div className="flex flex-col font-mono items-center w-[90%] md:w-[60%] lg:w-[35%] px-5 md:px-10 pt-10 h-[70%] lg:h-[65%] backdrop-blur bg-zinc-900 text-white rounded-xl mb-10">
+    <section className="bg-black h-screen flex flex-col items-center justify-center gap-4 w-full overflow-y-auto">
+  <div className="flex flex-col font-mono items-center w-[90%] md:w-[80%] lg:w-[60%] px-5 md:px-10 pt-10 h-auto lg:h-[65%] backdrop-blur bg-zinc-900 text-white rounded-xl mb-10">
     <div className="w-full">
-      {console.log(details)}
-      <div className="flex flex-col justify-between mb-[10%] md:mb-[15%]">
-        <div className="text-[1.75rem] md:text-[2.25rem] mb-2 md:mb-5">{details.first_name} {details.last_name }</div>
+      <div className="flex flex-col justify-between mb-5">
+        <div className="text-[1.5rem] md:text-[2rem] mb-2 md:mb-4">{details.first_name} {details.last_name}</div>
         <div className="h-[2px] w-full bg-yellow-300"></div>
       </div>  
-      <div className="flex flex-col md:flex-row justify-between text-[1rem] md:text-[1.25rem] gap-5 md:gap-10 mb-5">
+      <div className="flex flex-col md:flex-row justify-between text-[0.875rem] md:text-[1.125rem] gap-4 md:gap-6 mb-4">
         <div className="text-gray-400 hover:text-white">Email</div>
         <div className="text-yellow-300">{details.email}</div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between text-[1rem] md:text-[1.25rem] gap-5 md:gap-10 mb-5">
+      <div className="flex flex-col md:flex-row justify-between text-[0.875rem] md:text-[1.125rem] gap-4 md:gap-6 mb-4">
         <div className="text-gray-400 hover:text-white">Phone</div>
         <div className="text-yellow-300">{details.phone}</div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between text-[1rem] md:text-[1.25rem] gap-5 md:gap-10 mb-5">
+      <div className="flex flex-col md:flex-row justify-between text-[0.875rem] md:text-[1.125rem] gap-4 md:gap-6 mb-4">
         <div className="text-gray-400 hover:text-white">College</div>
         <div className="text-yellow-300">{details.college}</div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between text-[1rem] md:text-[1.25rem] gap-5 md:gap-10 mb-5">
+      <div className="flex flex-col md:flex-row justify-between text-[0.875rem] md:text-[1.125rem] gap-4 md:gap-6 mb-4">
         <div className="text-gray-400 hover:text-white">Registered Teams</div>
         <div className="text-yellow-300 flex flex-col items-end">
           {details.team_id && details.team_id.map((e, index) => (

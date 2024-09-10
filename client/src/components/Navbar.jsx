@@ -36,25 +36,27 @@ const Navbar = () => {
   return (
     <nav
       id="NAV"
-      className="w-screen flex items-center sm:py-5 fixed sm:top-2 z-20 justify-center "
+      className="w-screen flex flex-wrap items-center sm:py-5 fixed sm:top-2 z-20 justify-center "
     >
       <ul
         className="px-4 list-none hidden sm:flex w-full justify-between items-center 
         text-lg text-white 
-      glass font-sans fixed uppercase
+      glass font-sans fixed uppercase flex-col lg:flex-row
       "
       >
-        <li className="p-1  mt-2 hover:text-[#ffeb3b] ">
+        <div className="mt-4 sm:pt-4 lg:pt-0 xl:w-20 xl:h-20 h-16 w-16 overflow-hidden hover:text-[#ffeb3b] ">
           <NavLink to="/">
-            <img src="/NewLogo.png" className="xl:h-16 xl:w-16 h-12 w-12" />
+             <img src="/NewLogo.png" className="overflow-hidden"/>
           </NavLink>
-        </li>
+        </div>
+        <div className="flex sm:w-1/2 md:w-3/4 xl:w-1/2 text-sm md:text-sm lg:text-lg lg:w-3/4 justify-end sm:justify-center space-x-4">
+
         <motion.li
         whileHover={{scale: 1.03}}
         whileTap={{scale: 0.93}}
-        className="ml-96 p-1 mt-2 hover:text-[#ffeb3b] navbar center-underline-hover"
+        className="p-1 mt-2 hover:text-[#ffeb3b]  navbar center-underline-hover"
         >
-          <NavLink id="events" to="/events">Events</NavLink>
+          <NavLink to="/events">Events</NavLink>  
         </motion.li>
         <motion.li 
         whileHover={{scale: 1.03}}
@@ -63,32 +65,32 @@ const Navbar = () => {
           <NavLink to="/discount">Discount</NavLink>
         </motion.li>
 
-        <li className="p-1 mt-2 hover:text-[#ffeb3b] navbar relative text-lg " ref={dropdownRef}>
+        <li className="p-1 mt-2 hover:text-[#ffeb3b]  navbar relative text-lg " ref={dropdownRef}>
           <motion.button 
             whileHover={{scale: 1.03}}
             whileTap={{scale: 0.93}}
             onClick={() => setTeamDropdown(!teamDropdown)}
             className="px-1 sm:flex
-            text-lg text-white 
+             text-white 
             font-sans uppercase
             hover:text-[#ffeb3b]
-            center-underline-hover
+            center-underline-hover text-sm md:text-sm lg:text-lg
             "
           >
             Team
           </motion.button>
           {teamDropdown && (
-            <ul className="bg-gray-800 rounded-xl text-white absolute left-0 mt-2 w-48 shadow-lg ring-1 ring-black ring-opacity-5">
-              <li className="px-4 py-2 text-sm hover:bg-black hover:text-white hover:rounded-t-xl">
+            <div className="absolute bg-white left-0 mt-2 w-48 text-white rouded-xl text-sm md:text-sm lg:text-lg shadow-lg  ring-1 ring-black ring-opacity-5">
+              <li className="px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gray-100 ease-in-out transition-colors duration-500">
                 <NavLink to="/team" onClick={() => setTeamDropdown(false)}>Our Team</NavLink>
               </li>
-              <li className="px-4 py-2 text-sm hover:bg-black hover:text-white">
+              <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ease-in-out transition-colors duration-500">
                 <NavLink to="/create" onClick={() => setTeamDropdown(false)}>Create Team</NavLink>
               </li>
-              <li className="px-4 py-2 text-sm hover:bg-black hover:text-white hover:rounded-b-xl">
+              <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ease-in-out transition-colors duration-500">
                 <NavLink to="/join" onClick={() => setTeamDropdown(false)}>Join Team</NavLink>
               </li>
-            </ul>
+            </div>
           )}
         </li>
         
@@ -96,7 +98,7 @@ const Navbar = () => {
         whileHover={{scale: 1.03}}
         whileTap={{scale: 0.93}}
         className="p-1 mt-2 hover:text-[#ffeb3b]  navbar center-underline-hover">
-          <NavLink to="/sponsors">Sponsors</NavLink>
+          <NavLink to="/sponsors">Sponsors</NavLink>  
         </motion.li>
 
         
@@ -127,7 +129,9 @@ const Navbar = () => {
             <NavLink to="/signup">SignUp</NavLink>
           )}
         </motion.li>
+        </div>
       </ul>
+      
       <div className="sm:hidden flex flex-1 justify-between gap-8 w-full items-center backdrop-blur-sm bg-white/10 ... ">
         <div className="">
           <NavLink to="/">
@@ -167,7 +171,7 @@ const Navbar = () => {
                 setToggle(!toggle);
               }}
             >
-              <NavLink to="/team">Our Team</NavLink>
+              <NavLink to="/team" className="">Our Team</NavLink>
             </li>
             <li
               className={` cursor-pointer text-[16px] text-white hover:text-[#ffeb3b]  `}

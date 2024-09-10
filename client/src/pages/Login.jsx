@@ -68,44 +68,40 @@ const Login = () => {
   }, [user, navigate]);
 
   return (
-    <section className="relative h-screen w-screen flex items-center justify-center bg-black">
-      <BackgroundBeamsWithCollision>
-  {/* <!-- Background Image --> */}
-  {/* <img
-    src="../../public/BlendGroup.png"
-    alt="Background Image"
-    className="absolute inset-0 w-full h-full object-cover z-0"
-  /> */}
-  
-  {/* <!-- Card Container --> */}
-  <div className="relative z-10 flex flex-col items-center p-4 bg-zinc-900 rounded-2xl">
-    <Header
-      heading="Login into your account"
-      paragraph="Don't have an account yet?"  
-      linkName="Signup"
-      linkUrl="/signup"
-      logoUrl="/NewLogo.png"
-    />
-    <Logincard />
-    {/* <h4 className="text-white mt-4">Or</h4> */}
-    <button
-      onClick={() => login_google()}
-      className="
-        bg-black text-gray-200
-        border border-gray-400 rounded-full
-        py-2 px-6
-        text-md font-semibold
-        flex items-center justify-center
-        transition-colors duration-300
-        hover:border-yellow-400 mt-6
-        w-96
-      "
-    >
-      Login with Google 
-    </button>
-  </div>
+    <section className="relative h-[100vh] w-screen flex items-center justify-center bg-black">
+  <BackgroundBeamsWithCollision>
+    {/* Card Container */}
+    <div className="relative z-10 flex flex-col items-center p-3 bg-zinc-900 rounded-2xl w-[90%] sm:w-[80%] sm:h[80%] md:w-[60%] lg:w-[50%] xl:w-[40%] max-w-md h-fit max-h-[90%] overflow-auto">
+      <Header
+        heading="Login into your account"
+        paragraph="Don't have an account yet?"
+        linkName="Signup"
+        linkUrl="/signup"
+        logoUrl="/NewLogo.png"
+      />
+      <Logincard />
+      <button
+        onClick={() => login_google()}
+        className="
+          bg-black text-gray-200
+          border border-gray-400 rounded-full
+          py-2 px-6
+          text-md font-semibold
+          flex items-center justify-center
+          transition-colors duration-300
+          hover:border-yellow-400 mt-4
+          w-full sm:w-80 lg:w-96
+        "
+      >
+        Login with Google
+      </button>
+    </div>
   </BackgroundBeamsWithCollision>
 </section>
+
+  
+
+
 
     
   )
