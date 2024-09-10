@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
 import Header from "../components/header";
 import SignupCard from "../components/SignupCard";
 import { useGoogleLogin } from "@react-oauth/google";
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -70,31 +69,35 @@ const SignUp = () => {
 
 
   return (
-    <section className="h-screen flex items-center  justify-center bg-[#222222]">
-      <div className="sm:w-fit flex flex-col  items-center p-4 shadow shadow-[#09fbd3] hover:shadow-lg hover:shadow-emerald-300 rounded-2xl ">
+    <section className="h-screen flex items-center  justify-center bg-black">
+      <div className="w-[500px] flex flex-col  items-center p-4 shadow hover:shadow-lg bg-[#18171c] rounded-2xl ">
 
         <Header
           heading="Create an account"
           paragraph="Already have an account? "
           linkName="Login"
           linkUrl="/login"
-          logoUrl={"/VLW.png"}
-          />
+          logoUrl={"/NewLogo.png"}
+        />
         <SignupCard/>
         <h4 className="text-white mt-4">Or</h4>
         <button
         onClick={() => signup_google()}
         className="
-            bg-white text-black
-            border-none rounded-md
-            py-2 px-4
-            text-lg font-semibold
-            flex items-center justify-center
-            transition-colors duration-300
-            hover:bg-blue-500 mt-4
-        "
+        bg-black text-white
+        rounded-full
+        py-2 px-6  /* Increase padding for width */
+        text-lg font-semibold
+        flex items-center justify-center
+        transition-colors duration-300
+        hover:bg-gray-800
+        mt-4
+        border-2 border-white  
+        w-96
+        mb-8
+    "
     >
-        Sign up with Google 🚀
+        Sign up with Google 
     </button>
       </div>
     </section>)

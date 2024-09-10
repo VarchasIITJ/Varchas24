@@ -171,7 +171,7 @@ export const Teamdata = [
     imgPath: Dheeraj,
     Name: "Dheeraj",
     Designation: "Publicity & Media",
-    instaLink: "",
+    instaLink: "https://www.instagram.com/noob_otaku_dj?igsh=bTR5YWRiZ3I5dnc4",
     linkedIn: "https://www.linkedin.com/in/dheeraj-dhakad-9580-ok/"
   },
   {
@@ -241,7 +241,7 @@ export const Teamdata = [
 
   {
     title: "24",
-    imgPath: Abhishek,
+    imgPath: Abhishek2,
     Name: "Abhishek",
     Designation: "Informals",
     instaLink: "",
@@ -356,15 +356,15 @@ export const Teamdata = [
     imgPath: Krushnai,
     Name: "Krushnai",
     Designation: "Public Relations",
-    instaLink: "",
-    linkedIn: ""
+    instaLink: "https://www.instagram.com/krushnai_344/",
+    linkedIn: "https://www.linkedin.com/in/krushnai-chinchkar-9601b2256/"
   },
   {
     title: "39",
     imgPath: Kamal,
     Name: "Kamal",
     Designation: "Public Relations",
-    instaLink: "",
+    instaLink: "https://www.instagram.com/kamalrajput2607?igsh=MTBubm0zcWJ2eHd5eQ%3D%3D&utm_source=qr",
     linkedIn: "https://www.linkedin.com/in/kamal-kumar-009a0a256/"
   },
   

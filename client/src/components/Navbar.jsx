@@ -50,14 +50,14 @@ const Navbar = () => {
           </NavLink>
         </li>
         <motion.li
-        whileHover={{scale: 1.07}}
+        whileHover={{scale: 1.03}}
         whileTap={{scale: 0.93}}
         className="ml-96 p-1 mt-2 hover:text-[#ffeb3b] navbar center-underline-hover"
         >
           <NavLink id="events" to="/events">Events</NavLink>
         </motion.li>
         <motion.li 
-        whileHover={{scale: 1.07}}
+        whileHover={{scale: 1.03}}
         whileTap={{scale: 0.93}}
         className="p-1 mt-2 hover:text-[#ffeb3b]  navbar center-underline-hover">
           <NavLink to="/discount">Discount</NavLink>
@@ -65,7 +65,7 @@ const Navbar = () => {
 
         <li className="p-1 mt-2 hover:text-[#ffeb3b] navbar relative text-lg " ref={dropdownRef}>
           <motion.button 
-            whileHover={{scale: 1.07}}
+            whileHover={{scale: 1.03}}
             whileTap={{scale: 0.93}}
             onClick={() => setTeamDropdown(!teamDropdown)}
             className="px-1 sm:flex
@@ -93,7 +93,7 @@ const Navbar = () => {
         </li>
         
         <motion.li 
-        whileHover={{scale: 1.07}}
+        whileHover={{scale: 1.03}}
         whileTap={{scale: 0.93}}
         className="p-1 mt-2 hover:text-[#ffeb3b]  navbar center-underline-hover">
           <NavLink to="/sponsors">Sponsors</NavLink>
@@ -102,7 +102,7 @@ const Navbar = () => {
         
         
         <motion.li
-        whileHover={{scale: 1.07}}
+        whileHover={{scale: 1.03}}
         whileTap={{scale: 0.93}}
         className="p-1 mt-2 hover:text-[#ffeb3b]  navbar center-underline-hover">
           <NavLink to="/payment">Payment</NavLink>
