@@ -14,6 +14,7 @@ import VTeam from "./pages/viewTeam";
 import Discount from "./pages/Discount";
 import Forgot from "./pages/Forgot";
 import Dcricket from "./sports/c";
+import Not_Found from "./pages/Not_Found";
 
 const App = () => {
 
@@ -58,6 +59,7 @@ const App = () => {
             <Route path="/chess" element={<Forgot />} />
             <Route path="/forgot" element={<Forgot />} />
             <Route path="/forgot" element={<Forgot />} />
+            <Route path="*" element={<Not_Found/>}></Route>
           </Routes>
         </Router>
       </div >

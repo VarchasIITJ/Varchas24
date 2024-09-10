@@ -9,7 +9,7 @@
     "watch": "vite build --watch",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "host":"vite --host"
+    "host": "vite --host"
   },
   "dependencies": {
     "@mediapipe/tasks-vision": "^0.10.15",
