@@ -3,440 +3,487 @@ import {
   mobile,
   backend,
   creator,
-  Cricket,
-  Football,
-  Athletics,
-  Badminton,
-  Basketball,
-  TableTennis,
-  LawnTennis,
-  VolleyBall,
-  Kabaddi,
-  Hockey,
-  Squash,
+  cricket,
+  football,
+  athletics,
+  badminton,
+  basketball,
+  chess,
+  tableTennis,
+  lawnTennis,
+  volleyBall,
+  kabaddi,
+  squash,
   BGMI,
   Valo,
-  ClashRoyale,
+  ClashRoyale
 } from "../assets";
 
+// import cricket from "../assets/Sports"
+
 import {
-  ankit,
-  aryan,
-  aradhya,
-  ashish,
-  balaji,
-  bhanu,
-  divyanshu,
-  harsh,
-  hima,
-  avinash,
-  jatin,
-  jesika,
-  karan,
-  pranav,
-  pratap,
-  rachit,
-  rajat,
-  rajkumar,
-  rohit,
-  sahil,
-  saurabh,
-  shivangi,
-  shobhit,
-  sumit,
-  swapnil,
-  tushar,
-  utkarshs,
-  utkarshgupta,
-  vijay,
-  vishal,
-  khetan,
-  jason,
-  harendra,
-  akarsh,
-  navneet,
-  harshita,
-  ritu,
+  Abhishek2,
+  Ankush,
+  Anup,
+  Aryan,
+  BD,
+  Buddhav,
+  Chinmay,
+  Dheeraj,
+  Abhishek,
+  Dhruv,
+  Gyani,
+  Kamal,
+  Kowshika,
+  Krushnai,
+  Mohanshi,
+  Naveen,
+  Palak,
+  Poras,
+  PraveenOla,
+  Pritam,
+  Priyansh,
+  Pujit,
+  Rathod,
+  Ravindra,
+  Rishi,
+  Sanjeet,
+  Saroj,
+  Sashwat,
+  Tushar,
+  Vishal,
+  Saurabh,
+  Prateek,
+  Kuldeep,
+  Prince,
+  Barwar,
+  Shivangi,
 } from "../assets/team";
 
-import { chess } from "../assets";
+// import { chess } from "../assets";
+
 
 export const Teamdata = [
   {
     title: "1",
-    imgPath: navneet,
-    Name: "Navneet Meena",
+    imgPath: Kuldeep,
+    Name: "Kuldeep",
     Designation: "Festival Chief",
-    instaLink: "https://www.instagram.com/_navneet_meena_/",
+    instaLink: "https://www.instagram.com/varchas_iitj/",
+    linkedIn: "https://www.linkedin.com/in/varchas-inter-college-sports-fest-of-iit-jodhpur-802b4b233/"
   },
   {
     title: "2",
-    imgPath: harendra,
-    Name: "Harendra Pal",
+    imgPath: Prateek,
+    Name: "Prateek Kumar",
     Designation: "Festival Chief",
-    instaLink: "https://www.instagram.com/tomarharendrapal__up80_/",
+    instaLink: "https://www.instagram.com/prateek_kumar_15/",
+    linkedIn: "https://www.linkedin.com/in/prateek-kumar-m07-d15-y2003/"
   },
   {
     title: "3",
-    imgPath: aryan,
-    Name: "Aryan Jain",
+    imgPath: Prince,
+    Name: "Prince",
     Designation: "Festival Chief",
-    instaLink: "https://www.instagram.com/whatisthisaryan/",
+    instaLink: "https://www.instagram.com/_choudhary1028/",
+    linkedIn: "https://www.linkedin.com/in/prince-chaudhary-117338259/"
   },
   {
     title: "4",
-    imgPath: khetan,
-    Name: "Ketan Tomar",
+    imgPath: Barwar,
+    Name: "Harshit Barwar",
     Designation: "Festival Chief",
-    instaLink: "https://instagram.com/k10_kt?igshid=MWZjMTM2ODFkZg==",
-  },
-  {
-    title: "23",
-    imgPath: aradhya,
-    Name: "Dr. Aradhya Giri",
-    Designation: "Public Relations",
-    instaLink: "https://www.instagram.com/ara_dhyagiri/?hl=en",
-  },
-  {
-    title: "24",
-    imgPath: shivangi,
-    Name: "Shivangi Garg",
-    Designation: "Public Relations",
-    instaLink: "https://instagram.com/shivangigarg00?igshid=MzMyNGUyNmU2YQ==",
-  },
-  {
-    title: "25",
-    imgPath: harsh,
-    Name: "Harsh Vardhan",
-    Designation: "Public Relations",
-    instaLink: "https://instagram.com/_hvk__27_?igshid=MzRlODBiNWFlZA==",
-  },
-  {
-    title: "26",
-    imgPath: utkarshgupta,
-    Name: "Utkarsh Gupta",
-    Designation: "Public Relations",
-    instaLink: "https://instagram.com/utkarshgupta__07?igshid=OGQ5ZDc2ODk2ZA==",
-  },
-  {
-    title: "40",
-    imgPath: avinash,
-    Name: "Avinash Krishna",
-    Designation: "Public Relations",
-    instaLink: "https://www.instagram.com/avinash_krishna1/",
-  },
-  {
-    title: "7",
-    imgPath: karan,
-    Name: "Karan Shisode",
-    Designation: "Sports",
-    instaLink: "https://www.instagram.com/admiral.karan/",
-  },
-  {
-    title: "8",
-    imgPath: rachit,
-    Name: "Rachit Kataria",
-    Designation: "Sports",
-    instaLink: "https://instagram.com/rachitkatxria?igshid=NzZlODBkYWE4Ng==",
-  },
-  {
-    title: "9",
-    imgPath: saurabh,
-    Name: "Saurabh",
-    Designation: "Sports",
-    instaLink: "https://www.instagram.com/meenakumarsaurabh/",
-  },
-  {
-    title: "10",
-    imgPath: balaji,
-    Name: "Balaji Kharte",
-    Designation: "Sports",
-    instaLink: "https://instagram.com/khartebalaji9575?igshid=OGQ5ZDc2ODk2ZA==",
-  },
-  {
-    title: "39",
-    imgPath: pratap,
-    Name: "Pratap",
-    Designation: "Sports",
-    instaLink: "",
-  },
-  {
-    title: "100",
-    imgPath: harshita,
-    Name: "Harshita Sehra",
-    Designation: "Design & Creativity",
-    instaLink: "https://instagram.com/harshita_sehra?igshid=OGQ5ZDc2ODk2ZA==",
-  },
-  {
-    title: "101",
-    imgPath: ritu,
-    Name: "Ritu Badgoti",
-    Designation: "Design & Creativity",
-    instaLink: "https://instagram.com/__ritu.3?igshid=OGQ5ZDc2ODk2ZA==",
-  },
-  {
-    title: "6",
-    imgPath: pranav,
-    Name: "Pranav Kumar",
-    Designation: "Design & Creativity",
-    instaLink: "https://www.instagram.com/pel_synergy/",
+    instaLink: "https://www.instagram.com/harshit_barwar/",
+    linkedIn: "https://www.linkedin.com/in/harshit-barwar-aab443304/"
   },
   {
     title: "5",
-    imgPath: jesika,
-    Name: "Jesika Rai",
-    Designation: "Design & Creativity",
-    instaLink: "https://www.instagram.com/jesika_rai_/",
+    imgPath: Saurabh,
+    Name: "Saurabh Rajmane",
+    Designation: "Web Development",
+    instaLink: "https://www.instagram.com/Saurabh.r23/",
+    linkedIn: "https://www.linkedin.com/in/saurabh-rajmane-a67b5226b/"
   },
   {
-    title: "32",
-    imgPath: jason,
-    Name: "Jason Daniel",
+    title: "6",
+    imgPath: Chinmay,
+    Name: "Chinmay",
     Designation: "Web Development",
-    instaLink: "https://www.instagram.com/jason_dan_iel/",
+    instaLink: "https://www.instagram.com/chinmayvashishth/",
+    linkedIn: "https://www.linkedin.com/in/chinmay-vashishth-1a41271b0/"
   },
   {
-    title: "33",
-    imgPath: akarsh,
-    Name: "Akarsh",
+    title: "7",
+    imgPath: Rathod,
+    Name: "Aditya Rathor",
     Designation: "Web Development",
-    instaLink: "https://www.instagram.com/",
+    instaLink: "",
+    linkedIn: "https://www.linkedin.com/in/aditya-rathor-87829324b/"
   },
-
+  {
+    title: "8",
+    imgPath: BD,
+    Name: "Bhavyadeep",
+    Designation: "Marketing",
+    instaLink: "https://www.instagram.com/bhavya_passive/",
+    linkedIn: "https://www.linkedin.com/in/bhavyadeep-hada-b07a7516a/"
+  },
+  {
+    title: "9",
+    imgPath: Aryan,
+    Name: "Aryan Sharma",
+    Designation: "Marketing",
+    instaLink: "https://www.instagram.com/__aryan_shhh/",
+    linkedIn: "https://www.linkedin.com/in/aryan-sharma-b642b0258/"
+  },
+  {
+    title: "10",
+    imgPath: PraveenOla,
+    Name: "Praveen",
+    Designation: "Marketing",
+    instaLink: "https://www.instagram.com/praveen.ola/",
+    linkedIn: "https://www.linkedin.com/in/praveen-ola-991a66256/"
+  },
   {
     title: "11",
-    imgPath: rohit,
-    Name: "Rohit Nair",
+    imgPath: Rishi,
+    Name: "Rishi Yadav",
     Designation: "Marketing",
-    instaLink: "https://instagram.com/rohit__1398?igshid=MzMyNGUyNmU2YQ==",
+    instaLink: "",
+    linkedIn: "https://www.linkedin.com/in/rishiyadav07/"
   },
   {
     title: "12",
-    imgPath: divyanshu,
-    Name: "Divyanshu Singhal",
-    Designation: "Marketing",
-    instaLink:
-      "https://instagram.com/divyanshu.singhal29?igshid=MzRlODBiNWFlZA==",
+    imgPath: Vishal,
+    Name: "Vishal",
+    Designation: "Publicity & Media",
+    instaLink: "https://www.instagram.com/vishal_meena.7/",
+    linkedIn: "https://www.linkedin.com/in/vishal-meena-a93761256/"
   },
   {
     title: "13",
-    imgPath: jatin,
-    Name: "Jatin Kumar",
-    Designation: "Marketing",
-    instaLink: "https://www.instagram.com/i_m_jatink5/",
+    imgPath: Ravindra,
+    Name: "Ravindar",
+    Designation: "Publicity & Media",
+    instaLink: "https://www.instagram.com/_ravindar.naik_/",
+    linkedIn: "https://www.linkedin.com/in/azmeera-ravindar-naik-585a21256/"
   },
   {
     title: "14",
-    imgPath: tushar,
-    Name: "Tushar Mehta",
-    Designation: "Marketing",
-    instaLink: "https://instagram.com/tusharm.ehta?igshid=OGQ5ZDc2ODk2ZA==",
+    imgPath: Dheeraj,
+    Name: "Dheeraj",
+    Designation: "Publicity & Media",
+    instaLink: "https://www.instagram.com/noob_otaku_dj?igsh=bTR5YWRiZ3I5dnc4",
+    linkedIn: "https://www.linkedin.com/in/dheeraj-dhakad-9580-ok/"
   },
   {
     title: "15",
-    imgPath: rajat,
-    Name: "Rajat Jindal",
+    imgPath: Sashwat,
+    Name: "Shashwat",
     Designation: "Publicity & Media",
-    instaLink: "https://instagram.com/eudaimonic__life?igshid=MzMyNGUyNmU2YQ==",
+    instaLink: "https://www.instagram.com/shashwat2m/",
+    linkedIn: "https://www.linkedin.com/in/shashwat-meena-ab6611256/"
   },
   {
     title: "16",
-    imgPath: ashish,
-    Name: "Ashish Meena",
-    Designation: "Publicity & Media",
-    instaLink: "https://www.instagram.com/aashish______/",
+    imgPath: Naveen,
+    Name: "Naveen",
+    Designation: "ATS",
+    instaLink: "https://www.instagram.com/__.naveen_kumar._/",
+    linkedIn: "https://www.linkedin.com/in/j-naveen-kumar-a6557725a/"
   },
   {
     title: "17",
-    imgPath: sumit,
-    Name: "Sumit Kumar",
-    Designation: "Publicity & Media",
-    instaLink: "https://www.instagram.com/ruminative_soul_",
+    imgPath: Mohanshi,
+    Name: "Mohanshi Jain",
+    Designation: "ATS",
+    instaLink: "https://www.instagram.com/mohanshi.jain/",
+    linkedIn: "https://www.linkedin.com/in/mohanshi-jain-9565aa288/"
   },
   {
     title: "18",
-    imgPath: utkarshs,
-    Name: "Utkarsh Srivastava",
-    Designation: "Publicity & Media",
-    instaLink: "https://www.instagram.com/utkarsh__srivastav_/",
-  },
-  {
-    title: "19",
-    imgPath: shobhit,
-    Name: "Shobhit Singh",
+    imgPath: Poras,
+    Name: "Poras",
     Designation: "ATS",
-    instaLink: "https://www.instagram.com/thakur_shobhitsingh_chouhan/",
+    instaLink: "https://www.instagram.com/thardak_poras/",
+    linkedIn: ""
   },
   {
     title: "20",
-    imgPath: sahil,
-    Name: "Sahil Bohra ",
+    imgPath: Anup,
+    Name: "Anup",
     Designation: "ATS",
-    instaLink: "https://instagram.com/bohrasahil81?igshid=OGQ5ZDc2ODk2ZA==",
+    instaLink: "https://www.instagram.com/anupkumar_iitj/",
+    linkedIn: "https://www.linkedin.com/in/anup-kumar-642100146/"
   },
   {
     title: "21",
-    imgPath: vijay,
-    Name: "Vijay Anand",
+    imgPath: Dhruv,
+    Name: "Dhruv",
     Designation: "ATS",
-    instaLink: "",
+    instaLink: "https://www.instagram.com/dhruv.shivhare_001/",
+    linkedIn: "https://www.linkedin.com/in/dhruv-shivhare-a7a5a0259/"
   },
   {
     title: "22",
-    imgPath: hima,
-    Name: "Hima Varshitha Nandi",
-    Designation: "ATS",
-    instaLink:
-      "https://instagram.com/hima_varshi.02?utm_source=qr&igshid=MThlNWY1MzQwNA==",
+    imgPath: Saroj,
+    Name: "Saroj",
+    Designation: "Informals",
+    instaLink: "https://www.instagram.com/sarojkr__/",
+    linkedIn: "https://www.linkedin.com/in/saroj-kumar-65736b25a/"
+  },
+  {
+    title: "23",
+    imgPath: Palak,
+    Name: "Palak",
+    Designation: "Informals",
+    instaLink: "https://www.instagram.com/palakkbhawsar/",
+    linkedIn: "https://www.linkedin.com/in/palak-bhawsar-a77436262/"
   },
 
   {
-    title: "27",
-    imgPath: swapnil,
-    Name: "Swapnil Shimpi ",
+    title: "24",
+    imgPath: Abhishek2,
+    Name: "Abhishek",
     Designation: "Informals",
-    instaLink: "https://instagram.com/swapverse?igshid=NzZlODBkYWE4Ng==",
+    instaLink: "",
+    linkedIn: ""
+  },
+  {
+    title: "25",
+    imgPath: Kamal,
+    Name: "kamal",
+    Designation: "Design & Creativity",
+    instaLink:"",
+    linkedIn: "https://www.linkedin.com/in/kamal-aietaan-684b88258/"
+  },
+  {
+    title: "26",
+    imgPath: Kamal,
+    Name: "Vighnesh",
+    Designation: "Design & Creativity",
+    instaLink:"https://www.instagram.com/vighumandy/",
+    linkedIn: "https://www.linkedin.com/in/vighnesh-mandavkar-3103b8254/"
+  },
+  {
+    title: "27",
+    imgPath: Buddhav,
+    Name: "Buddhav Garg",
+    Designation: "Design & Creativity",
+    instaLink: "https://www.instagram.com/buddhav_04/",
+    linkedIn: "https://www.linkedin.com/in/buddhav-garg/"
   },
   {
     title: "28",
-    imgPath: rajkumar,
-    Name: "Rajkumar Mina ",
-    Designation: "Informals",
-    instaLink: "https://instagram.com/rajkumar_meena28?igshid=OGQ5ZDc2ODk2ZA==",
+    imgPath: Shivangi,
+    Name: "Shivangi Mehra",
+    Designation: "Design & Creativity",
+    instaLink: "https://www.instagram.com/poppythephool/",
+    linkedIn: "https://www.linkedin.com/in/shivangi-mehra-79048a256/"
   },
   {
     title: "29",
-    imgPath: vishal,
-    Name: "Vishal Jharwal",
-    Designation: "Informals",
-    instaLink: "https://instagram.com/vishal.jharwal?igshid=MzRlODBiNWFlZA==",
+    imgPath: Ankush,
+    Name: "Ankush",
+    Designation: "Sports",
+    instaLink: "https://www.instagram.com/_.ankush._05/",
+    linkedIn: "https://www.linkedin.com/in/ankush-choudhary-915261260/"
   },
   {
     title: "30",
-    imgPath: ankit,
-    Name: "Ankit Meena",
-    Designation: "Resources",
-    instaLink: "https://www.instagram.com/Ankit.meena_18/ ",
+    imgPath: Pujit,
+    Name: "Pujit",
+    Designation: "Sports",
+    instaLink: "https://www.instagram.com/shirley_itsaboobjob/",
+    linkedIn: "https://www.linkedin.com/in/pujit-jha-a10aa0258/"
   },
   {
     title: "31",
-    imgPath: bhanu,
-    Name: "Bhanu Pratap Singh",
-    Designation: "Resources",
-    instaLink: "https://instagram.com/pratap_mandovra?igshid=OGQ5ZDc2ODk2ZA==",
+    imgPath: Sanjeet,
+    Name: "Sanjeet",
+    Designation: "Sports",
+    instaLink: "https://www.instagram.com/sanjeetathawale/",
+    linkedIn: "https://www.linkedin.com/in/sanjeet-athawale/"
   },
+  {
+    title: "32",
+    imgPath: Abhishek,
+    Name: "Abhishek Yadav",
+    Designation: "Sports",
+    instaLink: "",
+    linkedIn: ""
+  },
+  {
+    title: "33",
+    imgPath: Priyansh,
+    Name: "Priyansh",
+    Designation: "Sports",
+    instaLink: "https://www.instagram.com/priyansh_star07/",
+    linkedIn: "https://www.linkedin.com/in/priyansh-bhavsar-2b4b95260/"
+  },
+  {
+    title: "34",
+    imgPath: Gyani,
+    Name: "Gyanendra ",
+    Designation: "Resources",
+    instaLink: "https://www.instagram.com/gyanendra_bhardwaj910/",
+    linkedIn: "https://www.linkedin.com/in/gyanendra-bhardwaj-451292250/"
+  },
+  {
+    title: "35",
+    imgPath: Tushar,
+    Name: "Tushar",
+    Designation: "Resources",
+    instaLink: "https://www.instagram.com/tushar_kumar85/",
+    linkedIn: "https://www.linkedin.com/in/tushar-kumar-0195b3256/"
+  },
+  {
+    title: "36",
+    imgPath: Pritam,
+    Name: "Preetam",
+    Designation: "Public Relations",
+    instaLink: "https://www.instagram.com/pkumar_skr77/",
+    linkedIn: "https://www.linkedin.com/in/preetam-jaat-060042259/"
+  },
+  {
+    title: "37",
+    imgPath: Kowshika,
+    Name: "Kowshika",
+    Designation: "Public Relations",
+    instaLink: "https://www.instagram.com/kowshika_raj_/",
+    linkedIn: "https://www.linkedin.com/in/sri-kowshika-raj-banoth/"
+  },
+  {
+    title: "38",
+    imgPath: Krushnai,
+    Name: "Krushnai",
+    Designation: "Public Relations",
+    instaLink: "https://www.instagram.com/krushnai_344/",
+    linkedIn: "https://www.linkedin.com/in/krushnai-chinchkar-9601b2256/"
+  },
+  {
+    title: "39",
+    imgPath: Kamal,
+    Name: "Kamal",
+    Designation: "Public Relations",
+    instaLink: "https://www.instagram.com/kamalrajput2607?igsh=MTBubm0zcWJ2eHd5eQ%3D%3D&utm_source=qr",
+    linkedIn: "https://www.linkedin.com/in/kamal-kumar-009a0a256/"
+  },
+  
 ];
 
 const events = [
   {
     id: "1",
     title: "Athletics",
-    icon: Athletics,
+    icon: athletics,
     category: " M / W",
     team: "solo",
     registerPath: "/create",
     detailsPath : "/athletics",
-    rulebook : "https://www.canva.com/design/DAFwNvDQjw0/5g9BG60T6QKiz8GzfbBOzg/view?utm_content=DAFwNvDQjw0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Feel the rush, break the limits",
+    rulebook : "https://docs.google.com/document/d/1Wx94x73yZbvmQnT4N3wYWDNEBpFt9DZq/edit?usp=drive_link"
+    
   },
   {
     id: "2",
     title: "Badminton",
-    icon: Badminton,
+    icon: badminton,
     category: " M / W",
     team: "solo",
     registerPath: "/create",
     detailsPath : "/badminton",
-    rulebook : "https://www.canva.com/design/DAFwNS9hnVc/WWTBdlP0w7ynDKjZGB3YlA/view?utm_content=DAFwNS9hnVc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Smash through the air, own the court",
+    rulebook : "https://docs.google.com/document/d/1YwVk6gV-BTD3HCYLHe7n9442R9ELLVoy/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
   },
   {
     id: "3",
     title: "Basketball",
-    icon: Basketball,
+    icon: basketball,
     category: " M / W",
     team: "team",
     registerPath: "/create",
     detailsPath : "/basketball",
-    rulebook : "https://www.canva.com/design/DAFwNlu02xQ/Ba6SbquTIelw9KBQtRVhRA/view?utm_content=DAFwNlu02xQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Dribble, shoot, score!",
+    rulebook : "https://docs.google.com/document/d/1YuJuX5yOKsWk4xlKIbTweD_-xCOWFFtu/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
   },
   {
     id: "4",
     title: "Cricket",
-    icon: Cricket,
+    icon: cricket,
     category: " M / W",
     team: "team",
     registerPath: "/create",
     detailsPath : "/cricket",
-    rulebook : "https://www.canva.com/design/DAFwNcg45lM/UumJx7LHSimuECQYe6qznA/view?utm_content=DAFwNcg45lM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Swing the bat, aim for the stars",
+    rulebook : "https://docs.google.com/document/d/1Z9W39DC0iJwAvQUGA4VvcpS4GcSgkyR-/edit?rtpof=true&sd=true&pli=1"
   },
   {
     id: "5",
     title: "Football",
-    icon: Football,
+    icon: football,
     category: " M / W",
     team: "team",
     registerPath: "/create",
     detailsPath : "/football",
-    rulebook : "https://www.canva.com/design/DAFwPHWol04/i-KCuAYW6PyybKXeShqrNA/view?utm_content=DAFwPHWol04&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Every kick, every pass, a step closer to glory",
+    rulebook : "https://docs.google.com/document/d/1WhaQlU6zQ_wh0UiChoKTUsQjnDDYvSaY/edit?usp=drive_link"
   },
   {
     id: "6",
     title: "Table Tennis",
-    icon: TableTennis,
+    icon: tableTennis,
     category: " M / W",
     team: "Doubles / Mixed",
     registerPath: "/create",
     detailsPath : "/table-tennis",
-    rulebook : "https://www.canva.com/design/DAFwOL5vgac/LG3YCOM_jtFJMTpRK4WNQg/view?utm_content=DAFwOL5vgac&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Quick reflexes, sharp spins",
+    rulebook : "https://docs.google.com/document/d/1Z5erUfw0WxtxymivqXfBQ5WFL6gFWQL3/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
   },
   {
     id: "7",
     title: "Lawn Tennis",
-    icon: LawnTennis,
+    icon: lawnTennis,
     category: " M / W",
     team: "doubles / mixed",
     registerPath: "/create",
     detailsPath : "/lawn-tennis",
-    rulebook : "https://www.canva.com/design/DAFwN9PrY0M/DjVxBpukTD-iKoNh54tnJA/view?utm_content=DAFwN9PrY0M&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Serve with power, rally with finesse",
+    rulebook : "https://docs.google.com/document/d/1YkMYmdny4J4DTUl7hrwIIyvgKchAvG6i/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
   },
   {
     id: "8",
     title: "Volleyball",
-    icon: VolleyBall,
+    icon: volleyBall,
     category: " M / W",
     team: "team",
     registerPath: "/create",
     detailsPath : "/volleeyball",
-    rulebook : "https://www.canva.com/design/DAFwN3YUlYY/G8f8edC8rzm3wN5x54215A/view?utm_content=DAFwN3YUlYY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Set high, spike hard",
+    rulebook : "https://docs.google.com/document/d/1YtlQmNvI7868Bik3mNSerCKeuUfxEOb6/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
   },
   {
     id: "9",
     title: "Kabaddi",
-    icon: Kabaddi,
+    icon: kabaddi,
     category: " M / W",
     team: "team",
     registerPath: "/create",
     detailsPath : "/kabaddi",
-    rulebook : "https://www.canva.com/design/DAFwNZ5Wihs/fxsMfxLEanzI_AS7ficNsQ/view?utm_content=DAFwNZ5Wihs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Hold your breath, dive into the action",
+    rulebook : "https://docs.google.com/document/d/1WsH9_SG6WtVbN6LmU-8pkbvgFhssnm4j/edit?usp=drive_link"
   },
-  {
-    id: "10",
-    title: "Hockey",
-    icon: Hockey,
-    category: " M / W",
-    team: "team",
-    registerPath: "/create",
-    detailsPath : "/hockey",
-    rulebook : "https://www.canva.com/design/DAFwNXk87gY/vb2mmez9SfX9xUQVoxD2vQ/view?utm_content=DAFwNXk87gY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
-  },
+  
   {
     id: "11",
     title: "Squash",
-    icon: Squash,
+    icon: squash,
     category: " M / W",
     team: "team",
     registerPath: "/create",
     detailsPath : "/squash",
-    rulebook : "https://www.canva.com/design/DAFwOGYgma0/OuHL_yT5ruFWAyvmGS1R4w/view?utm_content=DAFwOGYgma0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Hit the walls, chase the ball",
+    rulebook : "https://docs.google.com/document/d/1Yxto7Hx6wMizmjCt-l3sBmzMpyVZiXND/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
   },
   {
     id: "12",
@@ -446,7 +493,8 @@ const events = [
     team: "team",
     registerPath: "/create",
     detailsPath : "/chess",
-    rulebook : "https://www.canva.com/design/DAFwNTLw2k4/lAM5K2aQMkCls_lhpTCLZQ/view?utm_content=DAFwNTLw2k4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Every move is a battle, every game a war",
+    rulebook : "https://docs.google.com/document/d/1ZGN2pl2sAF4jQwee5ILhf105URn-gNDH/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
   },
   {
     id: "13",
@@ -462,7 +510,8 @@ const events = [
       { value: "id4", label: "id4" },
     ],
     detailsPath : "/esports/bgmi",
-    rulebook : "https://www.canva.com/design/DAFwOIZ0OSw/82BAJQT_oTNrsl_X94-Kgg/view?utm_content=DAFwOIZ0OSw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Land, loot, survive",
+    rulebook : "https://docs.google.com/document/d/1WZ-b7VMUYv_fqBv-Ey1sr5xFkbCNe2WC/edit?usp=drive_link"
   },
   {
     id: "14",
@@ -479,7 +528,8 @@ const events = [
       { value: "id5", label: "id5" },
     ],
     detailsPath : "/esports/valorant",
-    rulebook : "https://www.canva.com/design/DAFwOb-QXdU/LeIzgc7nD_JQHUFfK2EL6Q/view?utm_content=DAFwOb-QXdU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Aim true, play smar",
+    rulebook : "https://docs.google.com/document/d/1WcdUyHpr8osZnm2I4CQaNIGcq2sS5rZ0/edit?usp=drive_link"
   },
   {
     id: "15",
@@ -490,12 +540,14 @@ const events = [
     registerPath: "/create",
     team_id: [{ value: "id1", label: "id1" }],
     detailsPath : "/esports/clash-royale",
-    rulebook : "https://www.canva.com/design/DAFwO-vD7pI/YrLYWlrlbGiwEIOAMev8XQ/view?utm_content=DAFwO-vD7pI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Deploy your troops, outthink your foes",
+    rulebook : "https://docs.google.com/document/d/1_-32YCzpinbZ_kiKo6sjN2Cull2MvY6c/edit?usp=drive_link"
   },
 ];
 
-const signupFields = [
-  {
+
+const signupFields=[
+   {
     labelText: "Email address",
     labelFor: "email",
     id: "email",
@@ -505,26 +557,7 @@ const signupFields = [
     isRequired: true,
     placeholder: "Email address",
   },
-  {
-    labelText: "First Name",
-    labelFor: "First Name",
-    id: "first_name",
-    name: "First Name",
-    type: "text",
-    autoComplete: "First Name",
-    isRequired: true,
-    placeholder: "First Name",
-  },
-  {
-    labelText: "Last Name",
-    labelFor: "Last Name",
-    id: "last_name",
-    name: "Last Name",
-    type: "text",
-    autoComplete: "Last Name",
-    isRequired: true,
-    placeholder: " Last Name",
-  },
+
   {
     labelText: "Password",
     labelFor: "password",
@@ -545,6 +578,41 @@ const signupFields = [
     isRequired: true,
     placeholder: "Confirm Password",
   },
+
+]
+
+const addInfoFields = [
+  // {
+  //   labelText: "Email address",
+  //   labelFor: "email",
+  //   id: "email",
+  //   name: "email",
+  //   type: "email",
+  //   autoComplete: "email",
+  //   isRequired: true,
+  //   placeholder: "Email address",
+  // },
+  {
+    labelText: "First Name",
+    labelFor: "First Name",
+    id: "first_name",
+    name: "First Name",
+    type: "text",
+    autoComplete: "First Name",
+    isRequired: true,
+    placeholder: "First Name",
+  },
+  {
+    labelText: "Last Name",
+    labelFor: "Last Name",
+    id: "last_name",
+    name: "Last Name",
+    type: "text",
+    autoComplete: "Last Name",
+    isRequired: true,
+    placeholder: " Last Name",
+  },
+  
   {
     labelText: "gender",
     labelFor: "gender",
@@ -643,6 +711,8 @@ const signupFields = [
     ],
   },
 ];
+
+
 
 const loginFields = [
   {
@@ -889,4 +959,4 @@ export const teamTypeOptions = [
   "Single",
 ];
 
-export { events, signupFields, loginFields };
+export { events, signupFields, loginFields, addInfoFields };

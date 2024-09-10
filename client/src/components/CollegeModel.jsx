@@ -3,7 +3,6 @@ import { OrbitControls } from '@react-three/drei';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { useLoader } from '@react-three/fiber';
 import { useState, useRef } from 'react';
-import * as THREE from 'three';
 
 function Model({ url, setIsHovering }) {
   const gltf = useLoader(GLTFLoader, url);
@@ -48,12 +47,12 @@ export default function CollegeModel() {
       className='bg-black h-1/2 my-0'
       camera={{
         far: 50000,
-        position: [170, 100, 100],
+        position: [110, 60, 50],
         rotation: [0, Math.PI / 4, 0],
       }}
       onWheel={(event) => event.stopPropagation()}
     >
-      <Model url="assets/clg model8.glb" setIsHovering={setIsHovering} />
+      <Model url="assets/clg model9.glb" setIsHovering={setIsHovering} />
       <OrbitControls
         enableZoom={isHovering}
         minDistance={125}

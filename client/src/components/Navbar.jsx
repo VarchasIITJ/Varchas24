@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { menu, close } from "../assets";
 import { useNavigate, useLocation } from "react-router-dom";
-import {animate, motion} from "framer-motion"
+import {motion} from "framer-motion"
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -52,14 +52,20 @@ const Navbar = () => {
         <div className="flex sm:w-1/2 md:w-3/4 text-sm md:text-sm lg:text-lg lg:w-3/4 justify-end sm:justify-center space-x-4">
 
         <motion.li
-        whileHover={{scale: 1.07}}
+        whileHover={{scale: 1.03}}
         whileTap={{scale: 0.93}}
+<<<<<<< HEAD
         className="p-1 mt-2 hover:text-[#ffeb3b]  navbar center-underline-hover"
         >
           <NavLink to="/events">Events</NavLink>  
+=======
+        className="ml-96 p-1 mt-2 hover:text-[#ffeb3b] navbar center-underline-hover"
+        >
+          <NavLink id="events" to="/events">Events</NavLink>
+>>>>>>> e0698d22d03cff2d821faf5ee9e6302870c7bd64
         </motion.li>
         <motion.li 
-        whileHover={{scale: 1.07}}
+        whileHover={{scale: 1.03}}
         whileTap={{scale: 0.93}}
         className="p-1 mt-2 hover:text-[#ffeb3b]  navbar center-underline-hover">
           <NavLink to="/discount">Discount</NavLink>
@@ -67,7 +73,7 @@ const Navbar = () => {
 
         <li className="p-1 mt-2 hover:text-[#ffeb3b]  navbar relative text-lg " ref={dropdownRef}>
           <motion.button 
-            whileHover={{scale: 1.07}}
+            whileHover={{scale: 1.03}}
             whileTap={{scale: 0.93}}
             onClick={() => setTeamDropdown(!teamDropdown)}
             className="px-1 sm:flex
@@ -80,6 +86,7 @@ const Navbar = () => {
             Team
           </motion.button>
           {teamDropdown && (
+<<<<<<< HEAD
             <div className="absolute bg-white left-0 mt-2 w-48 text-white rouded-xl text-sm md:text-sm lg:text-lg shadow-lg  ring-1 ring-black ring-opacity-5">
               <li className="px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-gray-100 ease-in-out transition-colors duration-500">
                 <NavLink to="/team" onClick={() => setTeamDropdown(false)}>Our Team</NavLink>
@@ -88,6 +95,16 @@ const Navbar = () => {
                 <NavLink to="/create" onClick={() => setTeamDropdown(false)}>Create Team</NavLink>
               </li>
               <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ease-in-out transition-colors duration-500">
+=======
+            <ul className="bg-gray-800 rounded-xl text-white absolute left-0 mt-2 w-48 shadow-lg ring-1 ring-black ring-opacity-5">
+              <li className="px-4 py-2 text-sm hover:bg-black hover:text-white hover:rounded-t-xl">
+                <NavLink to="/team" onClick={() => setTeamDropdown(false)}>Our Team</NavLink>
+              </li>
+              <li className="px-4 py-2 text-sm hover:bg-black hover:text-white">
+                <NavLink to="/create" onClick={() => setTeamDropdown(false)}>Create Team</NavLink>
+              </li>
+              <li className="px-4 py-2 text-sm hover:bg-black hover:text-white hover:rounded-b-xl">
+>>>>>>> e0698d22d03cff2d821faf5ee9e6302870c7bd64
                 <NavLink to="/join" onClick={() => setTeamDropdown(false)}>Join Team</NavLink>
               </li>
             </div>
@@ -95,7 +112,7 @@ const Navbar = () => {
         </li>
         
         <motion.li 
-        whileHover={{scale: 1.07}}
+        whileHover={{scale: 1.03}}
         whileTap={{scale: 0.93}}
         className="p-1 mt-2 hover:text-[#ffeb3b]  navbar center-underline-hover">
           <NavLink to="/sponsors">Sponsors</NavLink>  
@@ -103,8 +120,8 @@ const Navbar = () => {
 
         
         
-        <motion.li 
-        whileHover={{scale: 1.07}}
+        <motion.li
+        whileHover={{scale: 1.03}}
         whileTap={{scale: 0.93}}
         className="p-1 mt-2 hover:text-[#ffeb3b]  navbar center-underline-hover">
           <NavLink to="/payment">Payment</NavLink>
@@ -122,9 +139,9 @@ const Navbar = () => {
         </motion.li>
         <motion.li
         whileTap={{scale: 0.93}}
-        className="p-1 px-6 mt-2 mr-4 hover:text-black  navbar border-yellow-300 border-2 rounded-l-full rounded-r-full bg-yellow-300 text-black">
+        className="p-1 px-6 mt-2 mr-4 hover:text-black  border-yellow-300 border-2 rounded-l-full rounded-r-full bg-yellow-300 text-black">
           {token ? (
-            <p onClick={handleLogout}>Log Out</p>
+            <button onClick={handleLogout}>Log Out</button>
           ) : (
             <NavLink to="/signup">SignUp</NavLink>
           )}
@@ -224,7 +241,7 @@ const Navbar = () => {
               }}
             >
               {token ? (
-                <p onClick={handleLogout}>Log Out</p>
+                <button onClick={handleLogout}>Log Out</button>
               ) : (
                 <NavLink to="/signup">SignUp</NavLink>
               )}

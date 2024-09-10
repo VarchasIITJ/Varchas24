@@ -2,6 +2,7 @@ import { useState } from "react";
 import Input from "../components/input";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { BackgroundBeamsWithCollision } from "../components/background-beams-with-collision";
 
 const Forgot = () => {
   const [eid, setEid] = useState("");
@@ -117,16 +118,17 @@ const Forgot = () => {
     }
   }
   return (
-    <section className="h-screen w-screen flex justify-center items-center">
+    <section className="h-screen w-screen flex justify-center items-center bg-black" >
+      <BackgroundBeamsWithCollision>
       {!req ? (
-        <div className="border sm:w-[33%] sm:h-1/2 h-[80%] w-[80%] text-white p-2 flex flex-col items-center justify-center gap-2">
-          <div className="text-center sm:text-[2rem] text-[1.125rem] font-mono">
+        <div className="border border-yellow-400 sm:w-[33%] sm:h-1/2 h-[80%] w-[80%]  p-2 flex flex-col items-center justify-center gap-2 bg-zinc-900 z-50">
+          <div className="text-center sm:text-[2rem] text-[1.125rem] font-mono text-yellow-400">
             {" "}
             Reset Password
           </div>
-          <div className="text-center">
+          <div className="text-center text-gray-500">
             {" "}
-            Enter your registered email address and we will send you a code to
+            Enter your <span className="text-white">registered email address</span> and we will send you a code to
             reset your password
           </div>
 
@@ -146,7 +148,7 @@ const Forgot = () => {
               />
               <button
                 type={"submit"}
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-full text-black bg-yellow-400 hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-4  00"
                 onSubmit={handleOtpgenerate}
               >
                 Send OTP
@@ -181,7 +183,7 @@ const Forgot = () => {
               />
               <button
                 type={"submit"}
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-400 hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300"
                 onSubmit={handleOtpsubmit}
               >
                 Send OTP
@@ -228,7 +230,7 @@ const Forgot = () => {
               />
               <button
                 type={"submit"}
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-400 hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300"
                 onSubmit={handleChangePassword}
               >
                 Change Password
@@ -237,6 +239,7 @@ const Forgot = () => {
           </div>
         </div>
       )}
+      </BackgroundBeamsWithCollision>
     </section>
   );
 };
