@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import Header from "../components/header";
 import Logincard from "../components/Logincard";
 import { useGoogleLogin } from "@react-oauth/google";
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { BackgroundBeamsWithCollision } from "../components/background-beams-with-collision";
 
 
 const Login = () => {
@@ -41,7 +42,7 @@ const Login = () => {
             console.log('Backend Response:', result.data);
             if(result.data.message==='User Created now needs additional information'){
               // alert("account not registered")
-              navigate('/form');
+              navigate("/form", { state: { email: email}});
             }
             else{
               sessionStorage.setItem('Token', result.data.access_token);
@@ -66,40 +67,48 @@ const Login = () => {
     }
   }, [user, navigate]);
 
-
-
-
-
-
   return (
-    <section className="h-screen flex items-center  justify-center bg-[#222222]">
-      <div className="sm:w-fit flex flex-col  items-center p-4 shadow shadow-[#09fbd3] hover:shadow-lg hover:shadow-emerald-300 rounded-2xl ">
-
-        <Header
-          heading="Login to your account"
-          paragraph="Don't have an account yet?"
-          linkName="Signup"
-          linkUrl="/signup"
-          logoUrl={"/VLW.png"}
-        />
-        <Logincard />
-        <h4 className="text-white mt-4">Or</h4>
-        <button
-        onClick={() => login_google()}
-        className="
-            bg-white text-black
-            border-none rounded-md
-            py-2 px-4
-            text-lg font-semibold
-            flex items-center justify-center
-            transition-colors duration-300
-            hover:bg-blue-500 mt-4
-        "
+    <section className="relative h-screen w-screen flex items-center justify-center bg-black">
+      <BackgroundBeamsWithCollision>
+  {/* <!-- Background Image --> */}
+  {/* <img
+    src="../../public/BlendGroup.png"
+    alt="Background Image"
+    className="absolute inset-0 w-full h-full object-cover z-0"
+  /> */}
+  
+  {/* <!-- Card Container --> */}
+  <div className="relative z-10 flex flex-col items-center p-4 bg-zinc-900 rounded-2xl">
+    <Header
+      heading="Login into your account"
+      paragraph="Don't have an account yet?"  
+      linkName="Signup"
+      linkUrl="/signup"
+      logoUrl="/NewLogo.png"
+    />
+    <Logincard />
+    {/* <h4 className="text-white mt-4">Or</h4> */}
+    <button
+      onClick={() => login_google()}
+      className="
+        bg-black text-gray-200
+        border border-gray-400 rounded-full
+        py-2 px-6
+        text-md font-semibold
+        flex items-center justify-center
+        transition-colors duration-300
+        hover:border-yellow-400 mt-6
+        w-96
+      "
     >
-        Log in with Google 🚀
+      Login with Google 
     </button>
-      </div>
-    </section>)
+  </div>
+  </BackgroundBeamsWithCollision>
+</section>
+
+    
+  )
     ;
 };
 

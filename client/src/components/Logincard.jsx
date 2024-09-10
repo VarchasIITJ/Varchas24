@@ -4,7 +4,7 @@ import FormAction from "./formaction";
 import FormExtra from "./formextra";
 import Input from "./input";
 import axios from "axios";
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 const fields = loginFields;
@@ -57,8 +57,8 @@ export default function Logincard() {
   };
 
   return (
-    <form className="mt-4 space-y-6 w-72 xl:w-96" onSubmit={handleSubmit}>
-      <div className="-space-y-px ">
+    <form className="mt-4 space-y-6 w-72 xl:w-96 bg-zinc-900" onSubmit={handleSubmit}>
+      <div className="-space-y-px">
         {fields.map((field) => (
           <Input
             key={field.id}

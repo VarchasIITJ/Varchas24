@@ -1,10 +1,17 @@
 "use client";
 
+import { Navigate } from "react-router-dom";
 import { CardBody, CardContainer, CardItem } from "./3d-card";
 // import { BackgroundBeamsWithCollision } from "./background-beams-with-collision";
 // import Link from "next/link"; // Commented out if not needed
 
-export function ThreeDCardDemo({imageUrl,name,slogan}) {
+export function ThreeDCardDemo({imageUrl,name,slogan,ruleBook}) {
+  
+  const handleRegisterClick = () => {
+
+    window.location.href = '/create';
+  };
+  
   return (
  
     <CardContainer className="inter-var relative group">
@@ -30,7 +37,7 @@ export function ThreeDCardDemo({imageUrl,name,slogan}) {
             <CardItem
               translateZ={20}
               as={'a'}
-              href="https://twitter.com/mannupaaji"
+              href={ruleBook}
               target="_blank"
               className="px-2 py-2 rounded-xl text-s font-normal dark:text-white text-gray-100">
               Rule Book →
@@ -38,9 +45,10 @@ export function ThreeDCardDemo({imageUrl,name,slogan}) {
             <CardItem
               translateZ={20}
               as="button"
-              className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold">
+              className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold" 
+              onClick = {handleRegisterClick}>
               Register
-            </CardItem>
+            </CardItem> 
           </div>
         </CardBody>
       </CardContainer>

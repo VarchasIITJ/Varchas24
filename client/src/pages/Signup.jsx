@@ -40,7 +40,7 @@ const SignUp = () => {
         .then((result) => {
             console.log('Backend Response:', result.data);
             if(result.data.message==='User Created now needs additional information'){
-              navigate('/form');
+              navigate("/form", { state: { email: email}});
             }
             else{
               sessionStorage.setItem('Token', result.data.access_token);

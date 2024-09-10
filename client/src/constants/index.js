@@ -3,21 +3,23 @@ import {
   mobile,
   backend,
   creator,
-  Cricket,
-  Football,
-  Athletics,
-  Badminton,
-  Basketball,
-  TableTennis,
-  LawnTennis,
-  VolleyBall,
-  Kabaddi,
-  Hockey,
-  Squash,
+  cricket,
+  football,
+  athletics,
+  badminton,
+  basketball,
+  chess,
+  tableTennis,
+  lawnTennis,
+  volleyBall,
+  kabaddi,
+  squash,
   BGMI,
   Valo,
-  ClashRoyale,
+  ClashRoyale
 } from "../assets";
+
+// import cricket from "../assets/Sports"
 
 import {
   ankit,
@@ -59,7 +61,7 @@ import {
   ritu,
 } from "../assets/team";
 
-import { chess } from "../assets";
+// import { chess } from "../assets";
 
 export const Teamdata = [
   {
@@ -331,112 +333,114 @@ const events = [
   {
     id: "1",
     title: "Athletics",
-    icon: Athletics,
+    icon: athletics,
     category: " M / W",
     team: "solo",
     registerPath: "/create",
     detailsPath : "/athletics",
-    rulebook : "https://www.canva.com/design/DAFwNvDQjw0/5g9BG60T6QKiz8GzfbBOzg/view?utm_content=DAFwNvDQjw0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Feel the rush, break the limits",
+    rulebook : "https://docs.google.com/document/d/1Wx94x73yZbvmQnT4N3wYWDNEBpFt9DZq/edit?usp=drive_link"
+    
   },
   {
     id: "2",
     title: "Badminton",
-    icon: Badminton,
+    icon: badminton,
     category: " M / W",
     team: "solo",
     registerPath: "/create",
     detailsPath : "/badminton",
-    rulebook : "https://www.canva.com/design/DAFwNS9hnVc/WWTBdlP0w7ynDKjZGB3YlA/view?utm_content=DAFwNS9hnVc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Smash through the air, own the court",
+    rulebook : "https://docs.google.com/document/d/1YwVk6gV-BTD3HCYLHe7n9442R9ELLVoy/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
   },
   {
     id: "3",
     title: "Basketball",
-    icon: Basketball,
+    icon: basketball,
     category: " M / W",
     team: "team",
     registerPath: "/create",
     detailsPath : "/basketball",
-    rulebook : "https://www.canva.com/design/DAFwNlu02xQ/Ba6SbquTIelw9KBQtRVhRA/view?utm_content=DAFwNlu02xQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Dribble, shoot, score!",
+    rulebook : "https://docs.google.com/document/d/1YuJuX5yOKsWk4xlKIbTweD_-xCOWFFtu/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
   },
   {
     id: "4",
     title: "Cricket",
-    icon: Cricket,
+    icon: cricket,
     category: " M / W",
     team: "team",
     registerPath: "/create",
     detailsPath : "/cricket",
-    rulebook : "https://www.canva.com/design/DAFwNcg45lM/UumJx7LHSimuECQYe6qznA/view?utm_content=DAFwNcg45lM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Swing the bat, aim for the stars",
+    rulebook : "https://docs.google.com/document/d/1Z9W39DC0iJwAvQUGA4VvcpS4GcSgkyR-/edit?rtpof=true&sd=true&pli=1"
   },
   {
     id: "5",
     title: "Football",
-    icon: Football,
+    icon: football,
     category: " M / W",
     team: "team",
     registerPath: "/create",
     detailsPath : "/football",
-    rulebook : "https://www.canva.com/design/DAFwPHWol04/i-KCuAYW6PyybKXeShqrNA/view?utm_content=DAFwPHWol04&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Every kick, every pass, a step closer to glory",
+    rulebook : "https://docs.google.com/document/d/1WhaQlU6zQ_wh0UiChoKTUsQjnDDYvSaY/edit?usp=drive_link"
   },
   {
     id: "6",
     title: "Table Tennis",
-    icon: TableTennis,
+    icon: tableTennis,
     category: " M / W",
     team: "Doubles / Mixed",
     registerPath: "/create",
     detailsPath : "/table-tennis",
-    rulebook : "https://www.canva.com/design/DAFwOL5vgac/LG3YCOM_jtFJMTpRK4WNQg/view?utm_content=DAFwOL5vgac&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Quick reflexes, sharp spins",
+    rulebook : "https://docs.google.com/document/d/1Z5erUfw0WxtxymivqXfBQ5WFL6gFWQL3/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
   },
   {
     id: "7",
     title: "Lawn Tennis",
-    icon: LawnTennis,
+    icon: lawnTennis,
     category: " M / W",
     team: "doubles / mixed",
     registerPath: "/create",
     detailsPath : "/lawn-tennis",
-    rulebook : "https://www.canva.com/design/DAFwN9PrY0M/DjVxBpukTD-iKoNh54tnJA/view?utm_content=DAFwN9PrY0M&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Serve with power, rally with finesse",
+    rulebook : "https://docs.google.com/document/d/1YkMYmdny4J4DTUl7hrwIIyvgKchAvG6i/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
   },
   {
     id: "8",
     title: "Volleyball",
-    icon: VolleyBall,
+    icon: volleyBall,
     category: " M / W",
     team: "team",
     registerPath: "/create",
     detailsPath : "/volleeyball",
-    rulebook : "https://www.canva.com/design/DAFwN3YUlYY/G8f8edC8rzm3wN5x54215A/view?utm_content=DAFwN3YUlYY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Set high, spike hard",
+    rulebook : "https://docs.google.com/document/d/1YtlQmNvI7868Bik3mNSerCKeuUfxEOb6/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
   },
   {
     id: "9",
     title: "Kabaddi",
-    icon: Kabaddi,
+    icon: kabaddi,
     category: " M / W",
     team: "team",
     registerPath: "/create",
     detailsPath : "/kabaddi",
-    rulebook : "https://www.canva.com/design/DAFwNZ5Wihs/fxsMfxLEanzI_AS7ficNsQ/view?utm_content=DAFwNZ5Wihs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Hold your breath, dive into the action",
+    rulebook : "https://docs.google.com/document/d/1WsH9_SG6WtVbN6LmU-8pkbvgFhssnm4j/edit?usp=drive_link"
   },
-  {
-    id: "10",
-    title: "Hockey",
-    icon: Hockey,
-    category: " M / W",
-    team: "team",
-    registerPath: "/create",
-    detailsPath : "/hockey",
-    rulebook : "https://www.canva.com/design/DAFwNXk87gY/vb2mmez9SfX9xUQVoxD2vQ/view?utm_content=DAFwNXk87gY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
-  },
+  
   {
     id: "11",
     title: "Squash",
-    icon: Squash,
+    icon: squash,
     category: " M / W",
     team: "team",
     registerPath: "/create",
     detailsPath : "/squash",
-    rulebook : "https://www.canva.com/design/DAFwOGYgma0/OuHL_yT5ruFWAyvmGS1R4w/view?utm_content=DAFwOGYgma0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Hit the walls, chase the ball",
+    rulebook : "https://docs.google.com/document/d/1Yxto7Hx6wMizmjCt-l3sBmzMpyVZiXND/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
   },
   {
     id: "12",
@@ -446,7 +450,8 @@ const events = [
     team: "team",
     registerPath: "/create",
     detailsPath : "/chess",
-    rulebook : "https://www.canva.com/design/DAFwNTLw2k4/lAM5K2aQMkCls_lhpTCLZQ/view?utm_content=DAFwNTLw2k4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Every move is a battle, every game a war",
+    rulebook : "https://docs.google.com/document/d/1ZGN2pl2sAF4jQwee5ILhf105URn-gNDH/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
   },
   {
     id: "13",
@@ -462,7 +467,8 @@ const events = [
       { value: "id4", label: "id4" },
     ],
     detailsPath : "/esports/bgmi",
-    rulebook : "https://www.canva.com/design/DAFwOIZ0OSw/82BAJQT_oTNrsl_X94-Kgg/view?utm_content=DAFwOIZ0OSw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Land, loot, survive",
+    rulebook : "https://docs.google.com/document/d/1WZ-b7VMUYv_fqBv-Ey1sr5xFkbCNe2WC/edit?usp=drive_link"
   },
   {
     id: "14",
@@ -479,7 +485,8 @@ const events = [
       { value: "id5", label: "id5" },
     ],
     detailsPath : "/esports/valorant",
-    rulebook : "https://www.canva.com/design/DAFwOb-QXdU/LeIzgc7nD_JQHUFfK2EL6Q/view?utm_content=DAFwOb-QXdU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Aim true, play smar",
+    rulebook : "https://docs.google.com/document/d/1WcdUyHpr8osZnm2I4CQaNIGcq2sS5rZ0/edit?usp=drive_link"
   },
   {
     id: "15",
@@ -490,7 +497,8 @@ const events = [
     registerPath: "/create",
     team_id: [{ value: "id1", label: "id1" }],
     detailsPath : "/esports/clash-royale",
-    rulebook : "https://www.canva.com/design/DAFwO-vD7pI/YrLYWlrlbGiwEIOAMev8XQ/view?utm_content=DAFwO-vD7pI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+    slogan:"Deploy your troops, outthink your foes",
+    rulebook : "https://docs.google.com/document/d/1_-32YCzpinbZ_kiKo6sjN2Cull2MvY6c/edit?usp=drive_link"
   },
 ];
 
