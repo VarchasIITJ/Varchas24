@@ -12,7 +12,6 @@ import Payment from "./pages/Payment";
 import VTeam from "./pages/viewTeam";
 import Discount from "./pages/Discount";
 import Forgot from "./pages/Forgot";
-import Dcricket from "./sports/c";
 import SignUp from "./pages/Signup";
 import Form from "./pages/Form"
 
@@ -37,7 +36,6 @@ const App = () => {
 
             <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<Login />} />
-            {/* <Route path="/signup" element={<Signup />} /> */}
             <Route path="/signup" element={<SignUp />} />
             <Route path="/form" element={<Form/>} />
             
@@ -50,19 +48,6 @@ const App = () => {
             <Route path="/discount" element={<Discount />} />
             <Route path="/forgot" element={<Forgot />} />
 
-            <Route path="/cricket" element={<Dcricket />} />
-            <Route path="/hockey" element={<Forgot />} />
-            <Route path="/kabaddi" element={<Forgot />} />
-            <Route path="/table-tennis" element={<Forgot />} />
-            <Route path="/lawn-tennis" element={<Forgot />} />
-            <Route path="/basketball" element={<Forgot />} />
-            <Route path="/volleyball" element={<Forgot />} />
-            <Route path="/esports/bgmi" element={<Forgot />} />
-            <Route path="/esports/valorant" element={<Forgot />} />
-            <Route path="/esport/clash-royale" element={<Forgot />} />
-            <Route path="/chess" element={<Forgot />} />
-            <Route path="/forgot" element={<Forgot />} />
-            <Route path="/forgot" element={<Forgot />} />
           </Routes>
         </Router>
       </div >

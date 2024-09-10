@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/header";
-import Comingsoon from "../components/comingsoon";
 import FormAction from "../components/formaction";
 import { eventOptions, categoryOptions, teamTypeOptions } from "../constants";
 import Select from "react-select";
@@ -137,87 +136,84 @@ const TeamCreate = () => {
   };
 
   return (
-    <section className="bg-[#222222] h-screen flex items-center justify-center ">
-      {/* <Comingsoon /> */}
-      <div className="flex flex-col items-center p-4 rounded-2xl hover:shadow-xl hover:shadow-emerald-300 overflow-auto max-h-[70%] w-fit h-fit shadow shadow-[#09fbd3]">
-        <Header heading="Event Registration" logoUrl={"/VLW.png"} />
-        <form className="mt-4 space-y-6 w-72 xl:w-96" onSubmit={handleSubmit}>
-          <div className="">
-            <div>
-              <label>Select an Event:</label>
-              <select
-                value={selectedEvent}
-                onChange={eventChangeHandler}
-                className={fixedInputClass}
-                required
-              >
-                <option value="">Select an Event</option>
-                {eventOptions.map((event) => (
-                  <option key={event.value} value={event.value}>
-                    {event.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-            {
-              <div>
-                <label>Select a Category:</label>
-                <select
-                  value={selectedCategory}
-                  onChange={categoryChangeHandler}
-                  className={fixedInputClass}
-                  required
-                >
-                  <option value="">Select a Category</option>
-                  {categoryList.map((category) => (
-                    <option key={category} value={category}>
-                      {category}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            }
-            {
-              <div>
-                <label>Select a Team Type:</label>
-                <Select
-                  closeMenuOnSelect={false}
-                  defaultValue={"Select a Team Type"}
-                  isMulti
-                  required
-                  options={teamList}
-                  value={selectedTeamType.map((x) => ({
-                    value: x,
-                    label: x,
-                  }))}
-                  onChange={(selectedOptions) => {
-                    setSelectedTeamType(
-                      selectedOptions.map((option) => option.value)
-                    );
-                  }}
-                />
-              </div>
-            }
-            {idList &&
-              idList.map((field, index) => (
-                <Input
-                  key={index}
-                  handleChange={handleChange}
-                  value={iD[field.id]}
-                  labelText={field.labelText}
-                  labelFor={field.labelFor}
-                  id={field.id}
-                  name={field.name}
-                  type={field.type}
-                  isRequired={field.isRequired}
-                  placeholder={field.placeholder}
-                />
-              ))}
-            <FormAction handleSubmit={handleSubmit} text="Create Team" />
-          </div>
-        </form>
-      </div>
-    </section>
+    <section className="bg-black h-screen flex items-center justify-center">
+  <div className="flex flex-col items-center p-4 bg-zinc-900 rounded-2xl overflow-auto h-[80%] w-[40%]">
+    <Header heading="Event Registration" logoUrl={"/NewLogo.png"} />
+    <form className="mt-4 space-y-10 w-72 xl:w-96 h-[90%]" onSubmit={handleSubmit}>
+  <div className="h-[100%] ">
+    <div>
+      <label className="text-yellow-400 mb-5">Select an Event:</label>
+      <select
+        value={selectedEvent}
+        onChange={eventChangeHandler}
+        className={fixedInputClass}
+        required
+      >
+        <option value="">Select an Event</option>
+        {eventOptions.map((event) => (
+          <option key={event.value} value={event.value}>
+            {event.label}
+          </option>
+        ))}
+      </select>
+    </div>
+    <div>
+      <label className="text-yellow-400">Select a Category:</label>
+      <select
+        value={selectedCategory}
+        onChange={categoryChangeHandler}
+        className={fixedInputClass}
+        required
+      >
+        <option value="">Select a Category</option>
+        {categoryList.map((category) => (
+          <option key={category} value={category}>
+            {category}
+          </option>
+        ))}
+      </select>
+    </div>
+    <div>
+      <label className="text-yellow-400">Select a Team Type:</label>
+      <Select
+        closeMenuOnSelect={false}
+        defaultValue={"Select a Team Type"}
+        isMulti
+        required
+        options={teamList}
+        value={selectedTeamType.map((x) => ({
+          value: x,
+          label: x,
+        }))}
+        onChange={(selectedOptions) => {
+          setSelectedTeamType(
+            selectedOptions.map((option) => option.value)
+          );
+        }}
+      />
+    </div>
+    
+  </div>
+  {idList &&
+      idList.map((field, index) => (
+        <Input
+          key={index}
+          handleChange={handleChange}
+          value={iD[field.id]}
+          labelText={field.labelText}
+          labelFor={field.labelFor}
+          id={field.id}
+          name={field.name}
+          type={field.type}
+          isRequired={field.isRequired}
+          placeholder={field.placeholder}
+        />
+      ))}
+    <FormAction handleSubmit={handleSubmit} text="Create Team" />
+</form>
+  </div>
+</section>
+
   );
 };
 

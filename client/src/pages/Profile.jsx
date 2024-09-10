@@ -47,7 +47,7 @@ export default function Profiles() {
     <div className="w-full">
       {console.log(details)}
       <div className="flex flex-col justify-between mb-[10%] md:mb-[15%]">
-        <div className="text-[1.75rem] md:text-[2.25rem] mb-2 md:mb-5">{details.first_name} {details.last_name}</div>
+        <div className="text-[1.75rem] md:text-[2.25rem] mb-2 md:mb-5">{details.first_name} {details.last_name }</div>
         <div className="h-[2px] w-full bg-yellow-300"></div>
       </div>  
       <div className="flex flex-col md:flex-row justify-between text-[1rem] md:text-[1.25rem] gap-5 md:gap-10 mb-5">
