@@ -9,7 +9,7 @@ const Gallery = () => {
       <div className="ml-32 text-6xl text-yellow-300 mb-4 font-bold font-robm">
         Gallery
       </div>
-      <p className="text-white ml-32 mb-4 text-xl font-robm">Relive the action and capture the spirit of Varchas through<br/> unforgettable moments frozen in time!</p>
+      <p className="text-white text-center ml-auto md:text-left md:ml-32 mb-4 text-xl font-robm">Relive the action and capture the spirit of Varchas through<br/> unforgettable moments frozen in time!</p>
       <div className="slider mt-10" style={{
         "--width": "500px",
         "--height": "400px",

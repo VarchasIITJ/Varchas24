@@ -14,7 +14,7 @@ function Footer_1 () {
         {/* Address and Contacts div */}
         <div className='md:w-2/3 flex flex-col md:flex-row justify-between w-fit md:justify-between'>
         {/* Address Div */}
-          <div className='mx-auto w-[20vw] flex flex-col pt-4'>
+          <div className='mx-auto w-[100vw] md:w-[20vw] pl-2 text-center flex flex-col pt-4'>
             <div className='text-white text-2xl mb-4 '>Address</div>
             <div className='text-[#d1cbcb] hover:text-yellow-400 transition-colors duration-1000 ease-in-out text-lg leading-10'>
               Indian Institute of Technology Jodhpur NH 62 Nagaur Road Karwar
@@ -22,7 +22,7 @@ function Footer_1 () {
             </div>
           </div>
 {/* Contacts Div */}
-          <div className='mx-auto flex flex-col w-1/3 pt-4'>
+          <div className='mx-auto text-center pl-2 flex flex-col w-full md:w-1/3 pt-4'>
             <div className='text-white text-2xl pb-4'>
               Contacts
             </div>
@@ -49,7 +49,7 @@ function Footer_1 () {
         </div>
       </div>
       <div className='text-white flex justify-between pr-12 pb-7'>
-        <div className='w-1/3 pl-12 hover:text-yellow-400 transition-colors duration-1000 ease-in-out'>
+        <div className='w-1/2 md:w-1/3 pl-12 hover:text-yellow-400 transition-colors duration-1000 ease-in-out'>
         &copy; IIT Jodhpur, India All Rights Reserved
         </div>
         <div className='flex w-1/5 justify-around'>

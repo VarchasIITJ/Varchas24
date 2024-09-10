@@ -74,6 +74,12 @@ module.exports = {
       fontFamily:{
         roboto: ['Roboto', 'sans-serif'],
       },
+      fontSize:{
+        lin_404:['10rem']
+      },
+      textShadow:{
+        y_shadow:['0 0 5px green']
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

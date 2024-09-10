@@ -13,9 +13,13 @@ import VTeam from "./pages/viewTeam";
 import Discount from "./pages/Discount";
 import Forgot from "./pages/Forgot";
 import Dcricket from "./sports/c";
+<<<<<<< HEAD
+import Not_Found from "./pages/Not_Found";
+=======
 import SignUp from "./pages/Signup";
 import Form from "./pages/Form"
 
+>>>>>>> e0698d22d03cff2d821faf5ee9e6302870c7bd64
 
 const App = () => {
 
@@ -63,6 +67,7 @@ const App = () => {
             <Route path="/chess" element={<Forgot />} />
             <Route path="/forgot" element={<Forgot />} />
             <Route path="/forgot" element={<Forgot />} />
+            <Route path="*" element={<Not_Found/>}></Route>
           </Routes>
         </Router>
       </div >
