@@ -34,6 +34,8 @@ import Kuldeep from "./Kuldeep.jpg"
 import Prince from "./Prince.jpg"
 import Barwar from "./Barwar.jpg"
 import Shivangi from "./Shivangi.jpeg"
+import dncKamal from "./dncKamal.jpg"
+import Vighnesh from "./Vighnesh.png"
 
 export {
   Abhishek2,
@@ -71,5 +73,7 @@ export {
   Kuldeep,
   Prince,
   Barwar,
-  Shivangi
+  Shivangi,
+  dncKamal,
+  Vighnesh
 };

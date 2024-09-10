@@ -58,6 +58,8 @@ import {
   Prince,
   Barwar,
   Shivangi,
+  dncKamal,
+  Vighnesh
 } from "../assets/team";
 
 // import { chess } from "../assets";
@@ -70,7 +72,7 @@ export const Teamdata = [
     Name: "Kuldeep",
     Designation: "Festival Chief",
     instaLink: "https://www.instagram.com/varchas_iitj/",
-    linkedIn: "https://www.linkedin.com/in/varchas-inter-college-sports-fest-of-iit-jodhpur-802b4b233/"
+    linkedIn: "http://www.linkedin.com/in/varchas-inter-college-sports-fest-of-iit-jodhpur"
   },
   {
     title: "2",
@@ -117,7 +119,7 @@ export const Teamdata = [
     imgPath: Rathod,
     Name: "Aditya Rathor",
     Designation: "Web Development",
-    instaLink: "",
+    instaLink: "https://www.instagram.com/varchas_iitj/",
     linkedIn: "https://www.linkedin.com/in/aditya-rathor-87829324b/"
   },
   {
@@ -206,7 +208,7 @@ export const Teamdata = [
     Name: "Poras",
     Designation: "ATS",
     instaLink: "https://www.instagram.com/thardak_poras/",
-    linkedIn: ""
+    linkedIn: "https://www.linkedin.com/in/porassingh"
   },
   {
     title: "20",
@@ -246,20 +248,20 @@ export const Teamdata = [
     imgPath: Abhishek2,
     Name: "Abhishek",
     Designation: "Informals",
-    instaLink: "",
-    linkedIn: ""
+    instaLink: "https://www.instagram.com/abhixhek777?igsh=dnd1eDRqdmJhb281",
+    linkedIn: "https://www.linkedin.com/in/abhishek-kumar-9b8a03256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
   {
     title: "25",
-    imgPath: Kamal,
+    imgPath: dncKamal,
     Name: "kamal",
     Designation: "Design & Creativity",
-    instaLink:"",
+    instaLink:"https://www.instagram.com/ak_verma_9104?igsh=YjZsZDdjM2VjY2Vn",
     linkedIn: "https://www.linkedin.com/in/kamal-aietaan-684b88258/"
   },
   {
     title: "26",
-    imgPath: Kamal,
+    imgPath: Vighnesh,
     Name: "Vighnesh",
     Designation: "Design & Creativity",
     instaLink:"https://www.instagram.com/vighumandy/",
@@ -310,8 +312,8 @@ export const Teamdata = [
     imgPath: Abhishek,
     Name: "Abhishek Yadav",
     Designation: "Sports",
-    instaLink: "",
-    linkedIn: ""
+    instaLink: "https://www.instagram.com/abhi_ydvv02?igsh=MXVwamg1cnRhbTgxZA==",
+    linkedIn: "https://www.linkedin.com/in/abhishek-yadav-7a7466288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
   {
     title: "33",
