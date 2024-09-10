@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+
 export default function Header({
     logoUrl,
     heading,
@@ -9,9 +10,8 @@ export default function Header({
 }) {
     return (
         <div className="">
-            <div className="flex justify-center ">
-                <img alt="" className="h-16 w-16"
-                    src={logoUrl} />
+            <div className="flex justify-center">
+                <img alt="Logo" className="h-16 w-16" src={logoUrl} />
             </div>
             <h2 className="mt-6 text-center text-3xl font-extrabold text-white">
                 {heading}
@@ -23,5 +23,5 @@ export default function Header({
                 </Link>
             </p>
         </div>
-    )
+    );
 }

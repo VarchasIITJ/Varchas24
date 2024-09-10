@@ -78,7 +78,7 @@ const FlipCard = ({ digit }) => {
   }, [digit, currentDigit]);
 
   return (
-    <div className={`flip-card ${isFlipping ? 'flipping' : ''}`}>
+    <div className={`flip-card ${isFlipping ? 'flipping' : ''}, bg-yellow-300 text-black`}>
       <div className="flip-card-inner">{currentDigit}</div>
     </div>
   );

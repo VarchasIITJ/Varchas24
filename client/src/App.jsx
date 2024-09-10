@@ -22,7 +22,7 @@ const App = () => {
   return (
 
     <div>
-      <div className="relative z-0  bg-primary bg-cover bg-no-repeat bg-center">
+      <div className="relative z-0 bg-black bg-cover bg-no-repeat bg-center">
         <Router>
           <div className="">
             <Navbar />
