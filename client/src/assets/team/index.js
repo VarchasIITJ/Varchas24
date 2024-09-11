@@ -11,7 +11,7 @@ import Dhruv from "./Dhruv.jpg";
 import Gyani from "./Gyani.png";
 import Kamal from "./Kamal.jpg";
 import Kowshika from "./Kowshika.jpg";
-import Krushnai from "./Krushnai.jpg";
+import Krushnai from "./krushnai.jpg";
 import Mohanshi from "./Mohanshi.jpg";
 import Naveen from "./Naveen.jpg";
 import Palak from "./Palak.jpg";
