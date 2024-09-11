@@ -2,14 +2,14 @@
    "rewrites": [
      {
        "source": "/(.*)", 
-       "destination": "/",
-       "headers": [
+       "destination": "/"
+     }
+   ],
+   "headers": [
         {
           "key": "Content-Type",
           "value": "model/gltf-binary"
         }
       ]
-     }
-   ]
  }
  
