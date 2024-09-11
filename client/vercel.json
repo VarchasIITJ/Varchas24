@@ -1,12 +1,12 @@
 {
-   "rewrites": [
-     {
-       "source": "/(.*)", 
-       "destination": "/"
-     }
-   ],
-   "routes": [
-    { "src": "^/assets/(.*).glb$", "dest": "/assets/$1.glb" }
+  "rewrites": [
+    {
+      "source": "/assets/:file(.*/.glb)",
+      "destination": "/assets/:file"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
   ]
 }
- 
