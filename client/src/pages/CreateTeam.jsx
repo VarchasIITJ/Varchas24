@@ -2,15 +2,53 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/header";
-import Comingsoon from "../components/comingsoon";
 import FormAction from "../components/formaction";
 import { eventOptions, categoryOptions, teamTypeOptions } from "../constants";
 import Select from "react-select";
 import Input from "../components/input";
 import axios from "axios";
 
+const customStyles = {
+  control: (provided) => ({
+    ...provided,
+    backgroundColor: 'black',
+    color: 'white',
+    border: '1px solid white',
+  }),
+  menu: (provided) => ({
+    ...provided,
+    backgroundColor: 'black',
+    color: 'white',
+  }),
+  option: (provided, state) => ({
+    ...provided,
+    backgroundColor: state.isSelected ? 'gray' : 'black',
+    color: 'white',
+    '&:hover': {
+      backgroundColor: 'gray',
+    },
+  }),
+  multiValue: (provided) => ({
+    ...provided,
+    backgroundColor: 'gray',
+    color: 'white',
+  }),
+  multiValueLabel: (provided) => ({
+    ...provided,
+    color: 'white',
+  }),
+  multiValueRemove: (provided) => ({
+    ...provided,
+    color: 'white',
+    '&:hover': {
+      backgroundColor: 'red',
+      color: 'white',
+    },
+  }),
+};
+
 const fixedInputClass =
-  "rounded-md appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm";
+  "rounded-md appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-yellow-400 focus:border-yellow-400 focus:z-10 sm:text-sm";
 
 let categoryList = [];
 let teamList = [];
@@ -109,9 +147,10 @@ const TeamCreate = () => {
     console.log(data_t);
     const token = sessionStorage.getItem("Token");
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+    console.log(token)
     const configuration = {
       method: "post",
-      url: "https://api.varchas23.in/registration/createteam/",
+      url: "http://127.0.0.1:8000/registration/createteam/",
       data: data_t,
     };
     axios(configuration)
@@ -136,87 +175,86 @@ const TeamCreate = () => {
   };
 
   return (
-    <section className="bg-[#222222] h-screen flex items-center justify-center ">
-      {/* <Comingsoon /> */}
-      <div className="flex flex-col items-center p-4 rounded-2xl hover:shadow-xl hover:shadow-emerald-300 overflow-auto max-h-[70%] w-fit h-fit shadow shadow-[#09fbd3]">
-        <Header heading="Event Registration" logoUrl={"/VLW.png"} />
-        <form className="mt-4 space-y-6 w-72 xl:w-96" onSubmit={handleSubmit}>
-          <div className="">
-            <div>
-              <label>Select an Event:</label>
-              <select
-                value={selectedEvent}
-                onChange={eventChangeHandler}
-                className={fixedInputClass}
-                required
-              >
-                <option value="">Select an Event</option>
-                {eventOptions.map((event) => (
-                  <option key={event.value} value={event.value}>
-                    {event.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-            {
-              <div>
-                <label>Select a Category:</label>
-                <select
-                  value={selectedCategory}
-                  onChange={categoryChangeHandler}
-                  className={fixedInputClass}
-                  required
-                >
-                  <option value="">Select a Category</option>
-                  {categoryList.map((category) => (
-                    <option key={category} value={category}>
-                      {category}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            }
-            {
-              <div>
-                <label>Select a Team Type:</label>
-                <Select
-                  closeMenuOnSelect={false}
-                  defaultValue={"Select a Team Type"}
-                  isMulti
-                  required
-                  options={teamList}
-                  value={selectedTeamType.map((x) => ({
-                    value: x,
-                    label: x,
-                  }))}
-                  onChange={(selectedOptions) => {
-                    setSelectedTeamType(
-                      selectedOptions.map((option) => option.value)
-                    );
-                  }}
-                />
-              </div>
-            }
-            {idList &&
-              idList.map((field, index) => (
-                <Input
-                  key={index}
-                  handleChange={handleChange}
-                  value={iD[field.id]}
-                  labelText={field.labelText}
-                  labelFor={field.labelFor}
-                  id={field.id}
-                  name={field.name}
-                  type={field.type}
-                  isRequired={field.isRequired}
-                  placeholder={field.placeholder}
-                />
-              ))}
-            <FormAction handleSubmit={handleSubmit} text="Create Team" />
-          </div>
-        </form>
+    <section className="bg-black h-screen flex items-center justify-center">
+  <div className="flex flex-col items-center p-4 bg-zinc-900 rounded-2xl overflow-auto h-[80%] w-[90%] sm:w-[80%] md:w-[60%] lg:w-[50%] xl:w-[40%]">
+    <Header heading="Event Registration" logoUrl={"/NewLogo.png"} />
+    <form className="mt-4 space-y-10 w-full sm:w-72 xl:w-96 h-[90%]" onSubmit={handleSubmit}>
+      <div className="h-2/3 flex flex-col justify-evenly">
+        <div>
+          <label className="text-yellow-400">Select an Event:</label>
+          <select
+            value={selectedEvent}
+            onChange={eventChangeHandler}
+            className={`${fixedInputClass} bg-black text-white mt-2`}
+            required
+          >
+            <option value="">Select an Event</option>
+            {eventOptions.map((event) => (
+              <option key={event.value} value={event.value}>
+                {event.label}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label className="text-yellow-400">Select a Category:</label>
+          <select
+            value={selectedCategory}
+            onChange={categoryChangeHandler}
+            className={`${fixedInputClass} bg-black text-white mt-2`}
+            required
+          >
+            <option value="">Select a Category</option>
+            {categoryList.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label className="text-yellow-400">Select a Team Type:</label>
+          <Select
+            closeMenuOnSelect={false}
+            className="mt-2"
+            defaultValue={{ value: 'Select a Team Type', label: 'Select a Team Type' }}
+            styles={customStyles}
+            isMulti
+            required
+            options={teamList}
+            value={selectedTeamType.map((x) => ({
+              value: x,
+              label: x,
+            }))}
+            onChange={(selectedOptions) => {
+              setSelectedTeamType(
+                selectedOptions.map((option) => option.value)
+              );
+            }}
+          />
+        </div>
       </div>
-    </section>
+      {idList &&
+        idList.map((field, index) => (
+          <Input
+            key={index}
+            handleChange={handleChange}
+            value={iD[field.id]}
+            labelText={field.labelText}
+            labelFor={field.labelFor}
+            id={field.id}
+            name={field.name}
+            type={field.type}
+            isRequired={field.isRequired}
+            placeholder={field.placeholder}
+          />
+        ))}
+      <br />
+      <FormAction handleSubmit={handleSubmit} text="Create Team" />
+    </form>
+  </div>
+</section>
+
   );
 };
 

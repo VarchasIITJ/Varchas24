@@ -5,21 +5,20 @@ import creator from "./creator.png"
 import logo from "./logo.svg"
 import menu from "./menu.svg"
 import close from "./close.svg"
-import Cricket from "./cricket.png"
-import Football from "./football.png"
-import Athletics from "./athletics.png"
-import Badminton from "./badminton.png"
-import Basketball from "./basketball.png"
-import TableTennis from "./tabletennis.png"
-import LawnTennis from "./lawntennis.png"
-import VolleyBall from "./volleyball.png"
-import Kabaddi from "./kabaddi.png"
-import Hockey from "./hockey.png"
-import Squash from "./squash.png"
-import BGMI from "./bgmi.png"
-import Valo from "./valorant.png"
-import ClashRoyale from "./clashroyale.png"
-import chess from "./chess.png"
+import athletics from "./Sports/athletics.jpg"
+import badminton from "./Sports/badminton.jpg"
+import basketball from "./Sports/basketball.jpg"
+import chess from "./Sports/chess.jpg"
+import cricket from "./Sports/cricket.webp"
+import football from "./Sports/football.webp"
+import kabaddi from "./Sports/kabaddi.jpg"
+import lawnTennis from "./Sports/lawntennis.jpg"
+import squash from "./Sports/squash.jpg"
+import tableTennis from "./Sports/tableTennis.jpg"
+import volleyBall from "./Sports/volleyball.jpg"
+import BGMI from "./Sports/BGMI.jpg"
+import Valo from "./Sports/Valorant.jpg"
+import ClashRoyale from "./Sports/clashRoyale.jpg"
 import CB from "./CB.svg"
 import cosco from "./cosco.png"
 import redbull from "./redbull.svg"
@@ -48,17 +47,17 @@ export {
     logo,
     menu,
     close,
-    Cricket,
-    Football,
-    Athletics,
-    Badminton,
-    Basketball,
-    TableTennis,
-    LawnTennis,
-    VolleyBall,
-    Kabaddi,
-    Hockey,
-    Squash,
+    cricket,
+    football,
+    athletics,
+    badminton,
+    basketball,
+    // chess,
+    tableTennis,
+    lawnTennis,
+    volleyBall,
+    kabaddi,
+    squash,
     BGMI,
     Valo,
     ClashRoyale

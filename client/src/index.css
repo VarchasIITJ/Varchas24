@@ -17,6 +17,7 @@
   scroll-behavior: smooth;
   color-scheme: light;
   
+  
 }
 
 .gallery-bg {
@@ -101,8 +102,7 @@ border: 1px solid rgba(37, 0, 91, 0.1);
   );
 }
 .glass {
-  background: rgba(0, 17, 91, 0.25);
-border-radius: 16px;
+  background: rgba(0, 0, 0, 0.25);
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(8.2px);
 -webkit-backdrop-filter: blur(8.2px);
@@ -110,9 +110,8 @@ border: 1px solid rgba(0, 17, 91, 0.1);
 }
 
 .navbar .active {
-  color: #67d4df;
+  color: #ffeb3b;
   padding-bottom: 5px;
-  border-bottom: 2px solid #67d4df;
 }
 
 
@@ -300,4 +299,53 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(4.5px);
 -webkit-backdrop-filter: blur(4.5px);
 border: 1px solid rgba(0, 255, 189, 0.25);
+}
+
+
+.center-underline-hover {
+  position: relative;
+  text-decoration: none;
+}
+
+.center-underline-hover::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 50%;
+  background-color: currentColor;
+  transition: width 0.35s ease;
+  transform: translateX(-50%);
+}
+
+.center-underline-hover:hover::after {
+  width: 100%;
+}
+
+
+
+.gradient-border {
+  border: 2.5px solid transparent;
+  box-sizing: border-box;
+}
+
+.gradient-border:hover {
+  border-image: linear-gradient(to right, #d4ca15, #e06f18);
+  border-image-slice: 1;
+  transform: scale(1.05);
+  padding: 4px;
+  transition: border 0.5s ease, transform 0.5s ease;
+}
+
+
+.delayed-appear {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }

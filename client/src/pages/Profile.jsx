@@ -16,7 +16,7 @@ export default function Profiles() {
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
     const configuration = {
       method: "get",
-      url: "https://api.varchas23.in/account/displayProfile/",
+      url: "http://127.0.0.1:8000/account/displayProfile/",
     };
     await axios(configuration)
       .then((result) => {
@@ -42,40 +42,41 @@ export default function Profiles() {
   }, []);
 
   return (
-    <section className="bg-[#222222]  h-screen items-center flex w-screen flex-col justify-center gap-4">
-      <div className="flex flex-col font-mono items-center justify-center  w-fit p-10 rounded-2xl max-h-[70%] shadow-sm shadow-[#09fbd3] backdrop-blur bg-green-100/10 text-white">
-        <div className=" text-[3rem]">User Profile</div>
-        <div className="w-full">
-          {console.log(details)}
-          <div className="flex justify-between text-[1.25rem] gap-10">
-            <div className="">Name -{">"}</div>
-            <div className="">{details.name}</div>
-          </div>
-          <div className="flex justify-between text-[1.25rem] gap-10">
-            <div className="">Email -{">"}</div>
-            <div className="">{details.email}</div>
-          </div>
-          <div className="flex justify-between text-[1.25rem] gap-10">
-            <div className="">Phone -{">"}</div>
-            <div className="">{details.phone}</div>
-          </div>
-          <div className="flex justify-between text-[1.25rem] gap-10">
-            <div className="">College -{">"}</div>
-            <div className="">{details.college}</div>
-          </div>
-        </div>
-        <br />
-        <div className="text-[1.25rem]">Registered Teams</div>
-
-        {details.team_id && details.team_id.map((e, index) => (
-          <div className="w-full text-center" key={index}>{e}</div>
-        ))}
+    <section className="bg-black h-screen flex flex-col items-center justify-center gap-4 w-full overflow-y-auto">
+  <div className="flex flex-col font-mono items-center w-[90%] md:w-[80%] lg:w-[60%] px-5 md:px-10 pt-10 h-auto lg:h-[65%] backdrop-blur bg-zinc-900 text-white rounded-xl mb-10">
+    <div className="w-full">
+      <div className="flex flex-col justify-between mb-5">
+        <div className="text-[1.5rem] md:text-[2rem] mb-2 md:mb-4">{details.first_name} {details.last_name}</div>
+        <div className="h-[2px] w-full bg-yellow-300"></div>
+      </div>  
+      <div className="flex flex-col md:flex-row justify-between text-[0.875rem] md:text-[1.125rem] gap-4 md:gap-6 mb-4">
+        <div className="text-gray-400 hover:text-white">Email</div>
+        <div className="text-yellow-300">{details.email}</div>
       </div>
-      <Link to="/view_team" >
-        <button className="p-4 border border-[#09fbd3] border-rounded text-white bg-[#09fbd3] rounded-lg bg-opacity-90 hover:shadow-md hover:shadow-[#09fbd3]">
-          View Team
-        </button>
-      </Link>
-    </section >
+      <div className="flex flex-col md:flex-row justify-between text-[0.875rem] md:text-[1.125rem] gap-4 md:gap-6 mb-4">
+        <div className="text-gray-400 hover:text-white">Phone</div>
+        <div className="text-yellow-300">{details.phone}</div>
+      </div>
+      <div className="flex flex-col md:flex-row justify-between text-[0.875rem] md:text-[1.125rem] gap-4 md:gap-6 mb-4">
+        <div className="text-gray-400 hover:text-white">College</div>
+        <div className="text-yellow-300">{details.college}</div>
+      </div>
+      <div className="flex flex-col md:flex-row justify-between text-[0.875rem] md:text-[1.125rem] gap-4 md:gap-6 mb-4">
+        <div className="text-gray-400 hover:text-white">Registered Teams</div>
+        <div className="text-yellow-300 flex flex-col items-end">
+          {details.team_id && details.team_id.map((e, index) => (
+            <div key={index}>{e}</div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+  <Link to="/view_team">
+    <button className="py-2 px-4 text-black bg-yellow-400 rounded-full bg-opacity-100 hover:bg-yellow-500">
+      View Team
+    </button>
+  </Link>
+</section>
+
   );
 }

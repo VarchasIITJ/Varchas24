@@ -62,29 +62,29 @@ const TeamJoin = () => {
   };
 
   return (
-    <section className="bg-[#222222] h-screen flex items-center justify-center">
-      {/* <Comingsoon /> */}
-      <div className="flex flex-col items-center p-4 rounded-2xl hover:shadow-xl hover:shadow-emerald-300 overflow-auto max-h-[70%] w-fit h-fit shadow shadow-[#09fbd3]">
-        <Header heading="Join Team" logoUrl={"/VLW.png"} />
-        <form className="mt-4 space-y-6 w-72 xl:w-96" onSubmit={handleSubmit}>
-          <div className="">
-              <Input
-                key="teamId"
-                handleChange={handleChange}
-                value={joinState["teamId"]}
-                labelText="Team ID"
-                labelFor="Team ID"
-                id="teamId"
-                name="Team ID"
-                type="text"
-                isRequired={true}
-                placeholder="Enter Team ID"
-              />
-            <FormAction handleSubmit={handleSubmit} text="Join" />
-          </div>
-        </form>
+    <section className="bg-black h-screen flex items-center justify-center">
+  <div className="flex flex-col items-center p-4 bg-zinc-900 rounded-2xl overflow-auto max-h-[70%] w-[90%] sm:w-[80%] md:w-[60%] lg:w-[50%] xl:w-[40%] h-fit">
+    <Header heading="Join Team" logoUrl={"/NewLogo.png"} />
+    <form className="mt-4 space-y-6 w-full sm:w-72 xl:w-96" onSubmit={handleSubmit}>
+      <div className="h-2/3 flex flex-col justify-evenly">
+        <Input
+          key="teamId"
+          handleChange={handleChange}
+          value={joinState["teamId"]}
+          labelText="Team ID"
+          labelFor="Team ID"
+          id="teamId"
+          name="Team ID"
+          type="text"
+          isRequired={true}
+          placeholder="Enter Team ID"
+          className="bg-black text-white mt-2"
+        />
+        <FormAction handleSubmit={handleSubmit} text="Join" />
       </div>
-    </section>
+    </form>
+  </div>
+</section>
   );
 };
 
