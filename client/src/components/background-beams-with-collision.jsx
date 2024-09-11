@@ -1,5 +1,5 @@
-"use client";
-import { cn } from "@/lib/utils";
+// "use client";
+import { cn } from "../lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useRef, useState, useEffect } from "react";
 
@@ -134,7 +134,7 @@ const CollisionMechanism = React.forwardRef(
       const animationInterval = setInterval(checkCollision, 50);
 
       return () => clearInterval(animationInterval);
-    }, [cycleCollisionDetected, containerRef]);
+    }, [cycleCollisionDetected, containerRef,parentRef]);
 
     useEffect(() => {
       if (collision.detected && collision.coordinates) {

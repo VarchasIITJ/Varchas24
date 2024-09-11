@@ -1,6 +1,4 @@
-"use client";
-
-import { Navigate } from "react-router-dom";
+// "use client";
 import { CardBody, CardContainer, CardItem } from "./3d-card";
 // import { BackgroundBeamsWithCollision } from "./background-beams-with-collision";
 // import Link from "next/link"; // Commented out if not needed

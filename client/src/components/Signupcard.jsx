@@ -1,11 +1,8 @@
-
 import { signupFields } from "../constants";
 import FormAction from "./formaction";
-// import FormExtra from "./formextra";
-
 import Input from "./input";
 import axios from "axios";
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 const fields = signupFields;

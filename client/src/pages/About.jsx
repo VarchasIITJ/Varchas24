@@ -15,7 +15,7 @@ return (
       <div className="bg-black w-full lg:w-1/3 justify-center py-10 flex pl-10 h-full text-6xl font-robm transition-colors duration-500 ease-in-out text-yellow-300">
         <span className="my-auto">{typeEffect}</span>
       </div>
-      <div className="bg-black w-full h-fit text-2xl font-robm py-10 text-white px-4 text-center lg:text-left">
+      <div className="bg-black w-full h-fit text-2xl font-robm py-10 text-white px-4 text-center lg:text-left mb-20">
         <span className="text-yellow-400">Varchas</span>, the annual sports festival of <span className="text-yellow-400">IIT Jodhpur</span>, ignites the flames of competition and stands as the largest sporting event in North-West India. With the intensity of <span className="text-yellow-400">Inferno Glory</span>, this event is a powerful celebration of sportsmanship, where teams fuel their pursuit of excellence with relentless dedication and unyielding determination. Varchas is not just a platform, it’s an arena where champions are forged, and the spirit of victory burns brightest.
       </div>
     </div>
