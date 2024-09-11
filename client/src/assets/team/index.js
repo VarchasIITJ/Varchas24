@@ -27,8 +27,8 @@ import Sanjeet from "./Sanjeet.jpg";
 import Saroj from "./Saroj.jpg";
 import Sashwat from "./Sashwat.jpg";
 import Tushar from "./Tushar.jpg";
-import Vishal from "./Vishal.jpg";
-import Saurabh from "./Saurabh.jpg"
+import Vishal from "./vishal.jpg";
+import Saurabh from "./saurabh.jpg"
 import Prateek from "./Prateek.png"
 import Kuldeep from "./Kuldeep.jpg"
 import Prince from "./Prince.jpg"
