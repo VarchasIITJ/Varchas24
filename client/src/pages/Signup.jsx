@@ -1,5 +1,5 @@
 import Header from "../components/header";
-import SignupCard from "../components/SignupCard";
+import SignupCard from "../components/Signupcard";
 import { useGoogleLogin } from "@react-oauth/google";
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
