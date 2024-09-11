@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/assets/:file(.*/.glb)",
-      "destination": "/assets/:file"
+      "source": "client/public/assets/clg model9.glb",
+      "destination": "client/dist/assets/clg model9.glb"
     },
     {
       "source": "/(.*)",
