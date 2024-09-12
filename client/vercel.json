@@ -1,18 +1,10 @@
 {
-  "version": 2,
-  "routes": [
-    {
-      "src": "/public/(.*)",
-      "dest": "/public/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
+  "rewrites": [
+    { "source": "/public/(.*)", "destination": "/public/$1" }
   ],
   "headers": [
     {
-      "source": "/public/(.*//.glb)",
+      "source": "/public/(.*\\.glb)",
       "headers": [
         {
           "key": "Content-Type",
