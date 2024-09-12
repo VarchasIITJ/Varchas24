@@ -1,8 +1,24 @@
 {
-  "rewrites": [
+  "version": 2,
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/"
+      "src": "/public/(.*)",
+      "dest": "/public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/public/(.*//.glb)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "model/gltf-binary"
+        }
+      ]
     }
   ]
 }
