@@ -5,9 +5,7 @@ import { useLoader } from '@react-three/fiber';
 import { useState, useRef, Suspense } from 'react';
 
 function Model({ url, setIsHovering }) {
-  const gltf = useLoader(GLTFLoader, url, undefined, (error) => {
-    console.error('An error happened while loading the model:', error);
-  });
+  const gltf = useLoader(GLTFLoader, url);
   const [rotation, setRotation] = useState([0, 0, 0]);
   const groupRef = useRef();
 
@@ -44,7 +42,7 @@ export default function CollegeModel() {
 
   return (
     <Canvas
-      style={{ height: '100vh' }}
+      style={{ height: '100vh', width: '100%' }}
       color="black"
       className='bg-black h-1/2 my-0'
       camera={{
@@ -55,7 +53,7 @@ export default function CollegeModel() {
       onWheel={(event) => event.stopPropagation()}
     >
       <Suspense fallback={null}>
-        <Model url="public/clgmodel10.glb" setIsHovering={setIsHovering} />
+        <Model url="/clgmodel10.glb" setIsHovering={setIsHovering} />
       </Suspense>
       <OrbitControls
         enableZoom={isHovering}
