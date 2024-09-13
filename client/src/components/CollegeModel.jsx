@@ -52,7 +52,7 @@ export default function CollegeModel() {
       }}
       onWheel={(event) => event.stopPropagation()}
     >
-      <Model url="public\clgmodel10.glb" setIsHovering={setIsHovering} />
+      <Model url="public/clgmodel10.glb" setIsHovering={setIsHovering} />
       <OrbitControls
         enableZoom={isHovering}
         minDistance={120}
