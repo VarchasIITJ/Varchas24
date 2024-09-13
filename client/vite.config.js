@@ -6,6 +6,7 @@ import autoprefixer from 'autoprefixer';
 import tailwindcss from 'tailwindcss';
 
 export default defineConfig({
+  assetsInclude: ["**/*.glb", "**/*.gltf"],
   plugins: [react(), glsl()],  
   resolve: {
     alias: {
