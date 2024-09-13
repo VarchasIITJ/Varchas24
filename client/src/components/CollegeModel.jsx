@@ -1,30 +1,23 @@
-import React, { Suspense, useEffect, useState, useRef } from "react";
-import { Canvas, useFrame, useThree, useLoader } from "@react-three/fiber";
-import { OrbitControls, Preload } from "@react-three/drei";
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { useLoader } from '@react-three/fiber';
+import { useState, useRef, Suspense } from 'react';
 
-const CollegeModel = ({ url }) => {
-  const [isHovering, setIsHovering] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+function Model({ url, setIsHovering }) {
+  const gltf = useLoader(GLTFLoader, url, undefined, (error) => {
+    console.error('An error happened while loading the model:', error);
+  });
   const [rotation, setRotation] = useState([0, 0, 0]);
   const groupRef = useRef();
-  const gltf = useLoader(GLTFLoader, url);
-  const { raycaster } = useThree();
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width:768px)");
-    setIsMobile(mediaQuery.matches);
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
-    };
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
-  }, []);
 
   useFrame(() => {
     setRotation([rotation[0], rotation[1] - 0.002, rotation[2]]);
+  });
+
+  const { raycaster, camera } = useThree();
+
+  useFrame(() => {
     if (groupRef.current) {
       const intersects = raycaster.intersectObject(groupRef.current, true);
       setIsHovering(intersects.length > 0);
@@ -41,45 +34,34 @@ const CollegeModel = ({ url }) => {
       <primitive
         object={gltf.scene}
         rotation={rotation}
-        scale={isMobile ? 0.5 : 1}
       />
     </group>
   );
-};
+}
 
-const CollegeModelCanvas = () => {
+export default function CollegeModel() {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
     <Canvas
-      className="canvas"
-      shadows
-      frameloop="demand"
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: false }}
+      style={{ height: '100vh' }}
+      color="black"
+      className='bg-black h-1/2 my-0'
       camera={{
-        fov: 45,
-        near: 0.1,
         far: 50000,
         position: [110, 60, 50],
         rotation: [0, Math.PI / 4, 0],
       }}
-      style={{ height: '100vh' }}
       onWheel={(event) => event.stopPropagation()}
     >
-      <Suspense>
-        <CollegeModel url="/public/clgmodel10.glb" setIsHovering={setIsHovering} />
-        <OrbitControls
-          enableZoom={isHovering}
-          minDistance={120}
-          maxDistance={180}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Preload all />
+      <Suspense fallback={null}>
+        <Model url="public/clgmodel10.glb" setIsHovering={setIsHovering} />
       </Suspense>
+      <OrbitControls
+        enableZoom={isHovering}
+        minDistance={120}
+        maxDistance={180}
+      />
     </Canvas>
   );
-};
-
-export default CollegeModelCanvas;
+}
