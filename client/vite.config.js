@@ -6,8 +6,8 @@ import autoprefixer from 'autoprefixer';
 import tailwindcss from 'tailwindcss';
 
 export default defineConfig({
-  assetsInclude: ["**/*.glb", "**/*.gltf"],
   plugins: [react(), glsl()],  
+  assetsInclude: ["**/*.glb", "**/*.gltf"],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
@@ -25,17 +25,17 @@ export default defineConfig({
       ],
     },
   },
-  // build: {
-  //   sourcemap: true,
-
-  //   rollupOptions: {
-  //     onLog(level, log, handler) {
-  //       if (log.cause && log.cause.message === `Can't resolve original location of error.`) {
-  //         return
-  //       }
-  //       handler(level, log)
-  //     }
-  //   }
-  // },
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name.endsWith('.glb')) {
+            return 'assets/models/[name]-[hash][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        },
+      },
+    },
+  },
   
 });
