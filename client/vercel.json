@@ -1,16 +1,8 @@
 {
   "rewrites": [
-    { "source": "/public/(.*)", "destination": "/public/$1" }
-  ],
-  "headers": [
     {
-      "source": "/public/(.*\\.glb)",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "model/gltf-binary"
-        }
-      ]
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }
