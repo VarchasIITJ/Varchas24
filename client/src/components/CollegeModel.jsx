@@ -5,7 +5,7 @@ import { useLoader } from '@react-three/fiber';
 import { useState, useRef, Suspense } from 'react';
 
 function Model({ url, setIsHovering }) {
-  const gltf = useLoader(GLTFLoader, `/clgmodel10.glb?v=${Date.now()}`);
+  const gltf = useLoader(GLTFLoader, url);
   const [rotation, setRotation] = useState([0, 0, 0]);
   const groupRef = useRef();
 
