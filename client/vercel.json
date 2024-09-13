@@ -1,9 +1,12 @@
 {
-   "rewrites": [
-     {
-       "source": "/(.*)", 
-       "destination": "/"
-     }
-   ]
- }
- 
+  "rewrites": [
+    {
+      "source": "client/public/assets/clg model9.glb",
+      "destination": "client/dist/assets/clg model9.glb"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}

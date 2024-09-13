@@ -11,7 +11,7 @@ import Dhruv from "./Dhruv.jpg";
 import Gyani from "./Gyani.png";
 import Kamal from "./Kamal.jpg";
 import Kowshika from "./Kowshika.jpg";
-import Krushnai from "./Krushnai.jpg";
+import Krushnai from "./krushnai.jpg";
 import Mohanshi from "./Mohanshi.jpg";
 import Naveen from "./Naveen.jpg";
 import Palak from "./Palak.jpg";
@@ -27,8 +27,8 @@ import Sanjeet from "./Sanjeet.jpg";
 import Saroj from "./Saroj.jpg";
 import Sashwat from "./Sashwat.jpg";
 import Tushar from "./Tushar.jpg";
-import Vishal from "./Vishal.jpg";
-import Saurabh from "./Saurabh.jpg"
+import Vishal from "./vishal.jpg";
+import Saurabh from "./saurabh.jpg"
 import Prateek from "./Prateek.png"
 import Kuldeep from "./Kuldeep.jpg"
 import Prince from "./Prince.jpg"
