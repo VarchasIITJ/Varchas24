@@ -1,9 +1,9 @@
 import Header from "../components/header";
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { addInfoFields } from "../constants";
 import Input from "../components/input";
-import { json, useNavigate,useLocation } from "react-router-dom";
+import { useNavigate,useLocation } from "react-router-dom";
 
 
 
@@ -24,13 +24,30 @@ const Form = () => {
       email: email,   
   });
 
+   useEffect(() => {
+    if (!email) {
+      navigate("/signup");
+    }
+  }, [email, navigate]);
+
     const handleChange = (e) =>
       setSignupState({ ...signupState, [e.target.id]: e.target.value });
 
     const handleSubmit = (e) => {
-      e.preventDefault();
-      createAccount();
-    };
+  e.preventDefault();
+
+
+  const phoneNumber = signupState["phone"]; 
+  const phonePattern = /^[0-9]{10}$/; 
+
+  if (!phonePattern.test(phoneNumber)) {
+    alert("Phone number must be exactly 10 digits.");
+    return;
+  }
+
+  // If validation passes, proceed with the form submission
+  createAccount();
+};
 
       //handle Signup API Integration here
   const createAccount = () => {
