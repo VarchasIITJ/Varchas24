@@ -12,7 +12,7 @@ const Informatics = () =>
         </div>
         <div className="sm:h-[50vh] md:h-[80vh] lg:h-screen w-screen lg:w-1/2 bg-black flex flex-col items-center justify-evenly">
           <div 
-            className="py-2 text-5xl font-bold md:text-6xl font-robm text-yellow-300 flex flex-col items-center justify-center" 
+            className="py-2 text-[43px] font-bold md:text-6xl font-robm text-yellow-300 flex flex-col items-center justify-center" 
             style={{ minHeight: '100px' }} 
           >
             <span>Past Year Metrics</span>
