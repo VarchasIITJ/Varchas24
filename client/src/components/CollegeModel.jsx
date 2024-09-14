@@ -2,7 +2,7 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { useLoader } from '@react-three/fiber';
-import { useState, useRef } from 'react';
+import { useState, useRef, Suspense } from 'react';
 
 function Model({ url, setIsHovering }) {
   const gltf = useLoader(GLTFLoader, url);
@@ -42,7 +42,7 @@ export default function CollegeModel() {
 
   return (
     <Canvas
-      style={{ height: '100vh' }}
+      style={{ height: '100vh', width: '100%' }}
       color="black"
       className='bg-black h-1/2 my-0'
       camera={{
