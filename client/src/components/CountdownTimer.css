@@ -52,7 +52,7 @@
   .container
   {
     height: 30vh;
-    width: 100vw;
+    width: 80vw;
   }
   .flip-card
   {
@@ -71,7 +71,7 @@
   .flip-card
   {
     font-size: x-large;
-    height: 60px;
-    width: 8vw;
+    height: 43px;
+    width: 7vw;
   }
 }

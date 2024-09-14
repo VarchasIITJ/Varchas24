@@ -42,9 +42,13 @@ export default function CollegeModel() {
 
   return (
     <Canvas
-      style={{ height: '100vh', width: '100%' }}
+    style={{
+      height: '100vh',
+      width: '100%',
+      [`${typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches ? 'height' : ''}`]: '40vh', // mobile height
+    }}
       color="black"
-      className='bg-black h-1/2 my-0'
+      className='bg-black my-0 '
       camera={{
         far: 50000,
         position: [110, 60, 50],
