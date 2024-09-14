@@ -1,8 +1,12 @@
 {
   "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/"
+      "src": "/clgmodel10.glb",
+      "dest": "/clgmodel10.glb",
+      "headers": { "Content-Type": "model/gltf-binary" }
     }
   ]
 }
