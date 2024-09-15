@@ -68,10 +68,10 @@ const Login = () => {
   }, [user, navigate]);
 
   return (
-    <section className="relative h-[100vh] w-screen flex items-center justify-center bg-black">
+    <section className="h-[100vh] w-screen flex items-center justify-center bg-black">
   <BackgroundBeamsWithCollision>
     {/* Card Container */}
-    <div className="relative z-10 flex flex-col items-center p-3 bg-zinc-900 rounded-2xl w-[90%] sm:w-[80%] sm:h[80%] md:w-[60%] lg:w-[50%] xl:w-[40%] max-w-md h-fit max-h-[90%] overflow-auto">
+    <div className="relative z-9 flex flex-col items-center p-3 bg-zinc-900 rounded-2xl w-[90%] sm:w-[80%] sm:h[80%] md:w-[60%] lg:w-[50%] xl:w-[40%] max-w-md h-fit max-h-[90%] overflow-auto">
       <Header
         heading="Login into your account"
         paragraph="Don't have an account yet?"

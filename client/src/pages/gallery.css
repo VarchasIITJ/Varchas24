@@ -26,7 +26,8 @@
   animation-delay: calc( (30s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
 }
 .slider .list .item img{
-  width: 100%;
+  width: 100vw;
+  height: 30vh;
 }
 @keyframes autoRun{
   from{
@@ -50,5 +51,15 @@
       left: calc(var(--width) * -1);
   }to{
       left: 100%;
+  }
+}
+@media only screen and (max-width:576px){
+  .slider .list .item{
+    height: 400px;
+    width: 80vw;
+  }
+  .slider{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
   }
 }

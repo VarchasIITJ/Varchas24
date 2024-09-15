@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import _ from "lodash";
@@ -9,7 +9,16 @@ const debouncedResize = _.debounce((resizeFunc) => resizeFunc(), 50);
 
 const ThreeScene = () => {
   const canvasRef = useRef();
-
+  const [f_size,setFSize] = useState('100vh');
+  useEffect(()=>{
+    if(window.innerWidth<576){
+      setFSize('50vh');
+    }else if(window.innerWidth<1024){
+      setFSize('60vh');
+    }else{
+      setFSize('100vh');
+    }
+  },[window.innerWidth])
   useEffect(() => {
     let width, height;
     let viewAngle = 45,
@@ -256,7 +265,7 @@ const ThreeScene = () => {
     };
   }, []);
 
-  return <div id="canvas" ref={canvasRef} style={{ width: "100%", height: "100vh" }} />;
+  return <div id="canvas" ref={canvasRef} style={{ width: "100%", height: f_size }} />;
 };
 
 export default ThreeScene;

@@ -44,7 +44,7 @@ export default function CollegeModel() {
     <Canvas
       style={{ height: '100vh', width: '100%' }}
       color="black"
-      className='bg-black h-1/2 my-0'
+      className='bg-black h-1/2 my-auto'
       camera={{
         far: 50000,
         position: [110, 60, 50],

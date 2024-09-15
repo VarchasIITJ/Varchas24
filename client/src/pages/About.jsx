@@ -19,11 +19,11 @@ return (
         <span className="text-yellow-400">Varchas</span>, the annual sports festival of <span className="text-yellow-400">IIT Jodhpur</span>, ignites the flames of competition and stands as the largest sporting event in North-West India. With the intensity of <span className="text-yellow-400">Inferno Glory</span>, this event is a powerful celebration of sportsmanship, where teams fuel their pursuit of excellence with relentless dedication and unyielding determination. Varchas is not just a platform, it’s an arena where champions are forged, and the spirit of victory burns brightest.
       </div>
     </div>
-    <div className="bg-yellow-400 h-[60vh] flex flex-col items-center justify-evenly rounded-2xl">
+    <div className="bg-yellow-400 h-full md:h-full flex flex-col items-center justify-evenly rounded-2xl">
       <div className=" text-5xl font-bold mt-12 mb-10">
-        <span className="font-robm text-5xl bg-black text-yellow-400 p-4 rounded-xl px-6">Varchas Begins In</span>
+        <span className="font-robm text-3xl md:text-5xl bg-black text-yellow-400 p-4 rounded-xl px-6">Varchas Begins In</span>
       </div>
-      <div className="rounded-2xl bg-yellow-400 h-[80%] w-[80%] max-w-screen flex items-center justify-center">
+      <div className="rounded-2xl bg-yellow-400 h-full w-full flex items-center justify-center">
         <CountdownTimer />
       </div>
     </div>
