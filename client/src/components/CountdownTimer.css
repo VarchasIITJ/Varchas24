@@ -52,13 +52,15 @@
   .container
   {
     height: 30vh;
-    width: 100vw;
+    width: 80vw;
+    gap: 0.45em;
   }
   .flip-card
   {
     font-size: x-large;
     height: 60px;
     width: 40px;
+    font-size: small;
   }
 }
 @media only screen and (max-width:768px)
@@ -67,11 +69,13 @@
   {
     height: 30vh;
     width: 100vw;
+    gap: 0.45em;
+    font-size: small;
   }
   .flip-card
   {
     font-size: x-large;
-    height: 60px;
-    width: 8vw;
+    height: 43px;
+    width: 7vw;
   }
 }

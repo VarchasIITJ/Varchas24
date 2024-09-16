@@ -70,9 +70,9 @@ const SignUp = () => {
 
 
   return (
-    <section className="h-screen flex items-center justify-center bg-black p-4 overflow-auto">
+    <section className="h-screen flex items-center justify-center bg-black p-4">
     <BackgroundBeamsWithCollision>
-      <div className="w-full max-w-md flex flex-col items-center p-4 shadow-lg bg-[#18171c] rounded-2xl z-50 overflow-auto">
+      <div className="relative z-10 flex flex-col items-center p-3 bg-zinc-900 rounded-2xl w-[90%] sm:w-[80%] sm:h[80%] md:w-[60%] lg:w-[50%] xl:w-[40%] max-w-md h-fit max-h-[90%] overflow-auto">
         <Header
           heading="Create an account"
           paragraph="Already have an account? "

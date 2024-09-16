@@ -6,14 +6,18 @@ const Gallery = () => {
   return (
     <main
     className="m-0 p-0 h-fit pb-48 bg-black">
-      <div className="ml-32 text-6xl text-yellow-300 mb-4 font-bold font-robm">
+      <div className="ml-3 md:ml-32 sm:ml-32  text-5xl md:text-6xl sm:text-6xl text-yellow-300 mb-10 md:mb-4 sm:mb-4 font-bold font-robm">
         Gallery
       </div>
-      <p className="text-white text-center ml-auto md:text-left md:ml-32 mb-4 text-xl font-robm">Relive the action and capture the spirit of Varchas through<br/> unforgettable moments frozen in time!</p>
-      <div className="slider mt-10" style={{
+      <p className="text-white ml-4 text-left md:ml-32 mb-0 md:mb-4 sm:mb-4 text-xl font-robm">
+        Relive the action and capture the spirit of Varchas through
+        {window.innerWidth > 768 ? <br /> : " "}
+        unforgettable moments frozen in time!
+      </p>
+      <div className="slider mt-20" style={{
         "--width": "500px",
         "--height": "400px",
-        "--quantity": "10"
+        "--quantity": "12"
       }}>
         <div className="list">
             <motion.img  src="/gallery/G1.JPG" alt="" className="sm:h-[18rem] sm:w-96 w-24 h-24 item" style={{ "--position": 1 }}/>

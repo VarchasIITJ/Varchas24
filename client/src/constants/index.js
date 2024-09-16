@@ -384,7 +384,7 @@ const events = [
     registerPath: "/create",
     detailsPath : "/athletics",
     slogan:"Feel the rush, break the limits",
-    rulebook : "https://docs.google.com/document/d/1Wx94x73yZbvmQnT4N3wYWDNEBpFt9DZq/edit?usp=drive_link"
+    rulebook : "https://docs.google.com/document/d/1hpdCvuOOIIKdfpVg_OvUfncUCa-1jjvxH_17ouMgbuM/edit?usp=sharing"
     
   },
   {
@@ -396,7 +396,7 @@ const events = [
     registerPath: "/create",
     detailsPath : "/badminton",
     slogan:"Smash through the air, own the court",
-    rulebook : "https://docs.google.com/document/d/1YwVk6gV-BTD3HCYLHe7n9442R9ELLVoy/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
+    rulebook : "https://docs.google.com/document/d/1Tzaje2tfx-k45EhlagOg05VeIf7_8dPD-5mX5OviZPQ/edit"
   },
   {
     id: "3",
@@ -407,7 +407,7 @@ const events = [
     registerPath: "/create",
     detailsPath : "/basketball",
     slogan:"Dribble, shoot, score!",
-    rulebook : "https://docs.google.com/document/d/1YuJuX5yOKsWk4xlKIbTweD_-xCOWFFtu/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
+    rulebook : "https://docs.google.com/document/d/15uEwkB2WQ6eqbRQi0-nu5UerkaY0NQgIlq7hQCS-MC0/edit"
   },
   {
     id: "4",
@@ -418,7 +418,7 @@ const events = [
     registerPath: "/create",
     detailsPath : "/cricket",
     slogan:"Swing the bat, aim for the stars",
-    rulebook : "https://docs.google.com/document/d/1Z9W39DC0iJwAvQUGA4VvcpS4GcSgkyR-/edit?rtpof=true&sd=true&pli=1"
+    rulebook : "https://docs.google.com/document/d/1Lr06DBZFyvIltNJfO7s8BaGHhpH8-P_EhkjILbl8w4w/edit?usp=sharing"
   },
   {
     id: "5",
@@ -429,7 +429,7 @@ const events = [
     registerPath: "/create",
     detailsPath : "/football",
     slogan:"Every kick, every pass, a step closer to glory",
-    rulebook : "https://docs.google.com/document/d/1WhaQlU6zQ_wh0UiChoKTUsQjnDDYvSaY/edit?usp=drive_link"
+    rulebook : "https://docs.google.com/document/d/1ZTMxBoSh5H0MTyPlUuoqGS-ljHu4ZR608DwNqgnCFp4/edit?usp=sharing"
   },
   {
     id: "6",
@@ -440,7 +440,7 @@ const events = [
     registerPath: "/create",
     detailsPath : "/table-tennis",
     slogan:"Quick reflexes, sharp spins",
-    rulebook : "https://docs.google.com/document/d/1Z5erUfw0WxtxymivqXfBQ5WFL6gFWQL3/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
+    rulebook : "https://docs.google.com/document/d/1Xuwh-TVG3ocvORt7fsjf8hEBgAiKEbAPstWB5wjjO9M/edit"
   },
   {
     id: "7",
@@ -451,7 +451,7 @@ const events = [
     registerPath: "/create",
     detailsPath : "/lawn-tennis",
     slogan:"Serve with power, rally with finesse",
-    rulebook : "https://docs.google.com/document/d/1YkMYmdny4J4DTUl7hrwIIyvgKchAvG6i/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
+    rulebook : "https://docs.google.com/document/d/1DVyrxxf8LkE-DBXiXcLo_x2jc-c-Ttv5ejettKglS0c/edit"
   },
   {
     id: "8",
@@ -462,7 +462,7 @@ const events = [
     registerPath: "/create",
     detailsPath : "/volleeyball",
     slogan:"Set high, spike hard",
-    rulebook : "https://docs.google.com/document/d/1YtlQmNvI7868Bik3mNSerCKeuUfxEOb6/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
+    rulebook : "https://docs.google.com/document/d/1cXqK9reJz5RxBk4dFvAfonYfvXDu8_UgKJR-sp40l8w/edit"
   },
   {
     id: "9",
@@ -473,7 +473,7 @@ const events = [
     registerPath: "/create",
     detailsPath : "/kabaddi",
     slogan:"Hold your breath, dive into the action",
-    rulebook : "https://docs.google.com/document/d/1WsH9_SG6WtVbN6LmU-8pkbvgFhssnm4j/edit?usp=drive_link"
+    rulebook : "https://docs.google.com/document/d/1o1YxBRE7ereGwht9DeO1hTSZmOx-NuapIKZc7jA2WUo/edit?usp=sharing"
   },
   
   {
@@ -485,7 +485,7 @@ const events = [
     registerPath: "/create",
     detailsPath : "/squash",
     slogan:"Hit the walls, chase the ball",
-    rulebook : "https://docs.google.com/document/d/1Yxto7Hx6wMizmjCt-l3sBmzMpyVZiXND/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
+    rulebook : "https://docs.google.com/document/d/1mUb5kpDqq27CrrEv0CcpziHXPq1vPkQvM3mJ-ZAvGUo/edit"
   },
   {
     id: "12",
@@ -496,7 +496,7 @@ const events = [
     registerPath: "/create",
     detailsPath : "/chess",
     slogan:"Every move is a battle, every game a war",
-    rulebook : "https://docs.google.com/document/d/1ZGN2pl2sAF4jQwee5ILhf105URn-gNDH/edit?usp=drivesdk&ouid=102018286161745021372&rtpof=true&sd=true"
+    rulebook : "https://docs.google.com/document/d/1tg4M2JQ3cxCKQx5s4UeHYRjx1cAJX1X5/edit?usp=sharing&ouid=107039715337623165752&rtpof=true&sd=true"
   },
   {
     id: "13",
