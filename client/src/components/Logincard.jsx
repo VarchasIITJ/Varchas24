@@ -5,6 +5,7 @@ import Input from "./input";
 import axios from "axios";
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const fields = loginFields;
 let fieldsState = {};
@@ -29,7 +30,7 @@ export default function Logincard() {
     const configuration = {
       method: "post",
       // url : "https://api.varchas23.in/account/userlogin/",
-      url: "http://127.0.0.1:8000/account/userlogin/",
+      url: `${backendUrl}/account/userlogin/`,
       data: loginState,
     };
 

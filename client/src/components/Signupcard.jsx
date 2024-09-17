@@ -5,6 +5,7 @@ import axios from "axios";
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
+
 const fields = signupFields;
 let fieldsState = {};
 fields.forEach((field) => (fieldsState[field.id] = ""));
@@ -12,6 +13,8 @@ fields.forEach((field) => (fieldsState[field.id] = ""));
 export default function Signup() {
   const [signupState, setSignupState] = useState(fieldsState);
   const navigate = useNavigate();
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
+  console.log(backendUrl);
 
   const handleChange = (e) =>
     setSignupState({ ...signupState, [e.target.id]: e.target.value });
@@ -28,13 +31,13 @@ export default function Signup() {
     console.log(signupState);
      const configuration = {
     method: "post",
-    url: "http://127.0.0.1:8000/account/userregister/",
+    url: `${backendUrl}/account/userregister/`,
     headers: {
     "Content-Type": "application/json",
     },
     data: signupState,
   };
-
+    console.log("URL",configuration.url);
     axios(configuration)
       .then(response => {
             console.log("Success:", response.data);
