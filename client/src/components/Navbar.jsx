@@ -28,9 +28,9 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <nav id="NAV" className="w-screen fixed top-0 z-20 flex items-center justify-center py-5">
+    <nav id="NAV" className="w-screen fixed top-0 z-20 flex items-center justify-center py-0">
 
-  <div className="hidden sm:flex w-full justify-between items-center px-8 text-lg text-white font-sans uppercase glass">
+  <div className="hidden sm:flex w-full justify-between items-center px-6 text-xl text-white font-sans uppercase glass">
 
     <div className="lg:w-1/4 hover:text-[#ffeb3b]">
       <NavLink to="/">
@@ -39,7 +39,7 @@ const Navbar = () => {
     </div>
 
 
-    <ul className="flex w-full justify-end space-x-6 lg:w-3/4 list-none">
+    <ul className="flex w-full justify-end space-x-8 lg:w-3/4 list-none items-center">
       <motion.li whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.93 }} className="navbar hover:text-[#ffeb3b] center-underline-hover">
         <NavLink id="events" to="/events">Events</NavLink>
       </motion.li>
