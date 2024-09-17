@@ -146,14 +146,14 @@ export const Teamdata = [
     instaLink: "https://www.instagram.com/praveen.ola/",
     linkedIn: "https://www.linkedin.com/in/praveen-ola-991a66256/"
   },
-  {
-    title: "11",
-    imgPath: Rishi,
-    Name: "Rishi Yadav",
-    Designation: "Marketing",
-    instaLink: "",
-    linkedIn: "https://www.linkedin.com/in/rishiyadav07/"
-  },
+  // {
+  //   title: "11",
+  //   imgPath: Rishi,
+  //   Name: "Rishi Yadav",
+  //   Designation: "Marketing",
+  //   instaLink: "",
+  //   linkedIn: "https://www.linkedin.com/in/rishiyadav07/"
+  // },
   {
     title: "12",
     imgPath: Vishal,
