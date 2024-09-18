@@ -7,6 +7,8 @@ import { eventOptions, categoryOptions, teamTypeOptions } from "../constants";
 import Select from "react-select";
 import Input from "../components/input";
 import axios from "axios";
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 
 const customStyles = {
   control: (provided) => ({
@@ -150,7 +152,7 @@ const TeamCreate = () => {
     console.log(token)
     const configuration = {
       method: "post",
-      url: "http://127.0.0.1:8000/registration/createteam/",
+      url: `${backendUrl}/registration/createteam/`,
       data: data_t,
     };
     axios(configuration)
