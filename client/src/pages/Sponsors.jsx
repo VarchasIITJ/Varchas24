@@ -1,4 +1,5 @@
 import { CB, OIL, cosco, mera, redbull, sbi, yonex } from "../assets";
+// import {Decathlon} from '../assets/Sponsors/Decathlon.png'
 import '../../index.css'; // Import global CSS for the animation
 
 const Sponsors = () => {
@@ -22,23 +23,37 @@ const Sponsors = () => {
       </div>
 
       <div className="h-full w-full lg:w-3/4 flex flex-col items-center justify-start lg:justify-evenly bg-black p-4">
-        <h3 className="text-gray-100 text-3xl lg:text-4xl mb-4">Ticketing Partner</h3>
-        <div className="flex flex-row justify-center items-center mb-8">
+      <div className="flex w-full justify-evenly">
+
+        <div className="flex justify-center items-center flex-col ">
+          <h3 className="text-gray-100 text-3xl lg:text-4xl my-2">Associate Sponsor</h3>
           <img
-            src={yonex}
-            alt="yonex"
-            className="h-10 lg:h-12 w-auto object-contain"
-          />
+            src='src/assets/Sponsors/Decathlon.png'
+            alt="Decathlon"
+            className="h-10 lg:h-16 w-auto object-contain"
+            />
+        </div>
+        <div className="flex justify-center items-center flex-col ">
+          <h3 className="text-gray-100 text-3xl lg:text-4xl mb-2">Sports Sponsor</h3>
+          <img
+            src='src/assets/Sponsors/STAG.png'
+            alt="STAG"
+            className="h-10 lg:h-16 w-auto object-contain"
+            />
         </div>
 
+            </div>
         <h3 className="text-gray-100 text-3xl lg:text-4xl mb-4">Past Sponsors</h3>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12 w-full">
-          <img src={CB} alt="CB" className="h-12 lg:h-16 w-auto object-contain mx-auto" />
-          <img src={OIL} alt="OIL" className="h-12 lg:h-16 w-auto object-contain mx-auto" />
-          <img src={cosco} alt="cosco" className="h-12 lg:h-16 w-auto object-contain mx-auto" />
-          <img src={mera} alt="mera" className="h-12 lg:h-16 w-auto object-contain mx-auto" />
-          <img src={redbull} alt="redbull" className="h-12 lg:h-16 w-auto object-contain mx-auto" />
-          <img src={sbi} alt="sbi" className="h-12 lg:h-16 w-auto object-contain mx-auto" />
+          <img src='/src/assets/Sponsors/SARAS.png' alt="SARAS" className="h-12 w-25 lg:h-20 object-contain mx-auto" />
+          <img src='/src/assets/Sponsors/WOMANERA.png' alt="WOMANERA" className="h-12 lg:h-16 w-auto object-contain mx-auto" />
+          <img src='/src/assets/Sponsors/934FM-removebg-preview.png' alt="94.3 FM" className="h-12 lg:h-16 w-auto object-contain mx-auto" />
+          <img src='/src/assets/Sponsors/DUBEAT.png' alt="DUBEAT" className="h-12 lg:h-16 w-auto object-contain mx-auto" />
+          <img src='/src/assets/Sponsors/SAGEDIGIX.png' alt="SAGEDIGIX" className="h-14 lg:h-20 w-24 object-contain mx-auto" />
+          <img src='/src/assets/Sponsors/RAJEVENTS.png' alt="RAJEVENTS" className="h-12 lg:h-20 w-24 object-contain mx-auto" />
+          <img src='/src/assets/Sponsors/NHCLUB.png' alt="NHCLUB" className="h-12 lg:h-20 w-24 object-contain mx-auto" />
+          <img src='/src/assets/Sponsors/KANAHOTEL.jpg' alt="KANAHOTEL" className="h-12 lg:h-20 w-24 object-contain mx-auto" />
+          <img src='/src/assets/Sponsors/SFFS.png' alt="KANAHOTEL" className="h-12 lg:h-20 w-24 object-contain mx-auto" />
         </div>
       </div>
     </main>
