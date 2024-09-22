@@ -45,7 +45,7 @@ const Sponsors = () => {
             </div>
         <h3 className="text-gray-100 text-3xl lg:text-4xl mb-4">Past Sponsors</h3>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12 w-full">
-          <img src='../src/assets/Sponsors/SARAS.png' alt="SARAS" className="h-12 w-25 lg:h-20 object-contain mx-auto" />
+          <img src='..assets/Sponsors/SARAS.png' alt="SARAS" className="h-12 w-25 lg:h-20 object-contain mx-auto" />
           <img src='../src/assets/Sponsors/WOMANERA.png' alt="WOMANERA" className="h-12 lg:h-16 w-auto object-contain mx-auto" />
           <img src='../src/assets/Sponsors/934FM-removebg-preview.png' alt="94.3 FM" className="h-12 lg:h-16 w-auto object-contain mx-auto" />
           <img src='../src/assets/Sponsors/DUBEAT.png' alt="DUBEAT" className="h-12 lg:h-16 w-auto object-contain mx-auto" />
