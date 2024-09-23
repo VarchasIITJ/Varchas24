@@ -7,7 +7,7 @@ import RAJ from './RAJEVENTS.png'
 import SAGE from './SAGEDIGIX.png'
 import SARAS from './SARAS.png'
 import SFFS from './SFFS.png'
-import WOMAN from './WOMANERA.PNG' 
+import WOMAN from './WOMANERA.png' 
 import STAGE from './STAG.png'
 export {
     Decathlon,STAGE,FM934,KANA,NH,DUBEAT,RAJ,SAGE,SARAS,SFFS,WOMAN
