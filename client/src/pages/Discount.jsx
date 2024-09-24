@@ -17,8 +17,8 @@ export default function LampDemo() {
           <p className="py-4 text-4xl mb-4">Contingent Leader</p>
           <div className="text-left text-xl w-[380px] md:w-[900px] sm:w-[900px]">
           Win FREE ACCOMODATION at IIT Jodhpur and a JODHPUR CITY tour.{window.innerWidth > 768 ? <br /> : " "}
-          Simply bring 20 registrations to Varcahs'24 website along with{window.innerWidth > 768 ? <br /> : " "}
-          20 accomodations to Varchs'24 Sports fest.
+          Simply bring 20 registrations to Varchas'24 website along with{window.innerWidth > 768 ? <br /> : " "}
+          20 accomodations to Varchas'24 Sports fest.
         </div>
         </motion.div>
       </LampContainer>
@@ -31,7 +31,7 @@ export default function LampDemo() {
                     </li>
                     <li className="mt-4 mb-4">
                       
-                      <b>Contingent Leader must</b>: regsiter at least 20 students
+                      <b>Contingent Leader must</b>: register at least 20 students
                       along with accommodation
                     </li>
                     <li className="mt-4 mb-4">

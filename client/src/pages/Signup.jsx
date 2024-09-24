@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BackgroundBeamsWithCollision } from "../components/background-beams-with-collision";
 import axios from 'axios';
-
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const SignUp = () => {
   const [ user, setUser ] = useState(null);
@@ -30,7 +30,7 @@ const SignUp = () => {
         .then((res) => {
         const { email } = res.data;
   
-        axios.post('http://127.0.0.1:8000/account/google-signup/', {
+        axios.post(`${backendUrl}/account/google-signup/`, {
           email: email,
         }, {
           headers: {

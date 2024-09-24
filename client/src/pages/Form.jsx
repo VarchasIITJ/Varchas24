@@ -4,7 +4,7 @@ import axios from 'axios';
 import { addInfoFields } from "../constants";
 import Input from "../components/input";
 import { useNavigate,useLocation } from "react-router-dom";
-
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 
 const fields = addInfoFields;
@@ -51,16 +51,19 @@ const Form = () => {
 
       //handle Signup API Integration here
   const createAccount = () => {
-    console.log(signupState);
+    console.log("signupState",signupState);
      const configuration = {
     method: "put",
-    url: "http://127.0.0.1:8000/account/updateInfo/",
+    url: `${backendUrl}/account/updateInfo/`,
+    
     headers: {
     "Content-Type": "application/json",
     },
     data: signupState,
+  
   };
 
+    console.log("url",configuration.url)
     axios(configuration)
       .then(response => {
             console.log("Success:", response.data);
@@ -74,7 +77,8 @@ const Form = () => {
                 console.log("Error data:", error.response.data);
                 alert(`Error: ${error.response.data.Error || 'An unexpected error occurred.'}`);
             } else if (error.request) {
-             
+
+              
                 console.log("Error request:", error.request);
                 alert("Error: No response from server.");
             } else {
