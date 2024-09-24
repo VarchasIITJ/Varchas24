@@ -15,7 +15,7 @@ import Forgot from "./pages/Forgot";
 import Not_Found from "./pages/Not_Found";
 import SignUp from "./pages/Signup";
 import Form from "./pages/Form"
-import { Helmet } from 'react-helmet-async';
+
 
 
 const App = () => {
@@ -23,11 +23,6 @@ const App = () => {
   return (
 
     <div>
-      <Helmet>
-        <meta name="description" content="Discover all the exciting events happening at our sports event." />
-        <meta name="keywords" content="sports events, competitions, schedule" />
-        <link rel="canonical" href="https://yourwebsite.com/events" />
-      </Helmet>
       <div className="relative z-0 bg-black bg-cover bg-no-repeat bg-center">
         <Router>
           <div className="">
