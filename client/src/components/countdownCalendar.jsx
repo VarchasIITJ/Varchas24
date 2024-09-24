@@ -44,11 +44,15 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container space-x-0 md:space-x-10 space-y-5">
+      <div className='flex justify-between space-x-10'>
       <Segment title="Days" digits={flipAllCards(timeLeft.days || 0)} />
       <Segment title="Hours" digits={flipAllCards(timeLeft.hours || 0)} />
-      <Segment title="Minutes" digits={flipAllCards(timeLeft.minutes || 0)} />
-      <Segment title="Seconds" digits={flipAllCards(timeLeft.seconds || 0)} />
+      </div>
+      <div className='flex justify-between space-x-10'>
+      <Segment title="Mins" digits={flipAllCards(timeLeft.minutes || 0)} />
+      <Segment title="Secs" digits={flipAllCards(timeLeft.seconds || 0)} />
+      </div>
     </div>
   );
 };

@@ -15,7 +15,7 @@ export default function LampDemo() {
           }}
           className="mt-7 bg-gradient-to-br from-slate-300 to-white py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-2xl">
           <p className="py-4 text-4xl mb-4">Contingent Leader</p>
-          <div className="text-left text-xl w-[380px] md:w-[900px] sm:w-[900px]">
+          <div className="text-xl w-[380px] sm:h-fit md:h-[16vh] text-center md:w-[900px] sm:w-[900px]">
           Win FREE ACCOMODATION at IIT Jodhpur and a JODHPUR CITY tour.{window.innerWidth > 768 ? <br /> : " "}
           Simply bring 20 registrations to Varchas'24 website along with{window.innerWidth > 768 ? <br /> : " "}
           20 accomodations to Varchas'24 Sports fest.
