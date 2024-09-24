@@ -86,8 +86,8 @@ const Form = () => {
   };
 
   return (
-    <section className="h-screen flex items-center justify-center bg-[#222222]">
-      <div className="lg:w-3/4 m-4 mt-20 lg:mt-16 flex flex-col items-center p-4 overflow-auto rounded-2xl lg:max-h-[85%] max-h-[80%] shadow-sm shadow-[#09fbd3]">
+    <section className="h-screen flex items-center justify-center bg-[#000]">
+      <div className="lg:w-3/4 m-4 mt-20 lg:mt-16 flex flex-col bg-[#222222] items-center p-4 overflow-auto rounded-2xl lg:max-h-[85%] max-h-[80%] shadow-sm shadow-[#ffeb3b]">
         <Header
           heading="👋 Provide us with basic details"
           logoUrl={"/VLW.png"}
@@ -114,8 +114,7 @@ const Form = () => {
                 />
               ))}
               <div>
-                <div className="font-bold text-white font-mono italic mb-2 underline">
-                  <br />I have read and accept the terms :{" "}
+                <div className="font-bold text-white font-mono italic mb-2 underline flex gap-4">
                   <input
                     type="checkbox"
                     id="agree"
@@ -123,10 +122,11 @@ const Form = () => {
                     checked={disabled}
                     onClick={(e) => setDisabled(e.target.checked)}
                   />
+                  <br />I have read and accepted all the terms and conditions {" "}
                 </div>
                 <button
                   type="submit"
-                  className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 "
+                  className="group relative w-full flex justify-center py-2 mt-8 px-4 border border-transparent text-md font-medium rounded-full text-black bg-[#ffeb3b] hover:bg-[#D8C83A] cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 "
                   disabled={!disabled}
                 >
                   Signup
@@ -134,7 +134,7 @@ const Form = () => {
               </div>
             </div>
 
-            <div className="col-span-1 text-[#a2c288]">
+            <div className="col-span-1 text-[#fff]">
               <div>
                 <h5>Undertaking :</h5>
                 <ul className="list-disc pl-2">
