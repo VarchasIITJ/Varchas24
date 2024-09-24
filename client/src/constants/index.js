@@ -759,7 +759,7 @@ export const eventOptions = [
     value: "2",
     label: "Badminton",
     category: ["men", "women", "mixed"],
-    teamTypes: ["Team"],
+    teamTypes: ["Team","Single"],
   },
   {
     value: "3",
@@ -783,13 +783,13 @@ export const eventOptions = [
     value: "6",
     label: "Table Tennis",
     category: ["men", "women"],
-    teamTypes: ["Team"],
+    teamTypes: ["Single"],
   },
   {
     value: "7",
     label: "Lawn Tennis",
     category: "men",
-    teamTypes: ["Team"],
+    teamTypes: ["Single"],
   },
   {
     value: "8",
@@ -803,12 +803,12 @@ export const eventOptions = [
     category: "men",
     teamTypes: ["Team"],
   },
-  {
-    value: "10",
-    label: "Hockey",
-    category: "men",
-    teamTypes: ["Team"],
-  },
+  // {
+  //   value: "10",
+  //   label: "Hockey",
+  //   category: "men",
+  //   teamTypes: ["Team"],
+  // },
   {
     value: "11",
     label: "Squash",
@@ -931,7 +931,7 @@ export const eventOptions = [
     value: "15",
     label: "Clash Royale",
     category: "open",
-    teamTypes: ["Team"],
+    teamTypes: ["Single"],
     team_id: [
       {
         labelText: "id1",
