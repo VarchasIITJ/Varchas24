@@ -1,60 +1,85 @@
-import Navbar from "./components/Navbar";
-import Events from "./pages/Events";
-import Sponsors from "./pages/Sponsors";
-import Team from "./pages/Team";
-import Home from "./pages/Home";
+import React, { Suspense, lazy, useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login";
-import Profile from "./pages/Profile";
-import TeamCreate from "./pages/CreateTeam";
-import TeamJoin from "./pages/Join";
-import Payment from "./pages/Payment";
-import VTeam from "./pages/viewTeam";
-import Discount from "./pages/Discount";
-import Forgot from "./pages/Forgot";
-import Not_Found from "./pages/Not_Found";
-import SignUp from "./pages/Signup";
-import Form from "./pages/Form"
+import Loader from "./components/Loader1";
+import Loader2 from "./components/Loader2";
+
+// Lazy load components
+const Navbar = lazy(() => import("./components/Navbar"));
+const Home = lazy(() => import("./pages/Home"));
+const Events = lazy(() => import("./pages/Events"));
+const Sponsors = lazy(() => import("./pages/Sponsors"));
+const Team = lazy(() => import("./pages/Team"));
+const Login = lazy(() => import("./pages/Login"));
+const Profile = lazy(() => import("./pages/Profile"));
+const TeamCreate = lazy(() => import("./pages/CreateTeam"));
+const TeamJoin = lazy(() => import("./pages/Join"));
+const Payment = lazy(() => import("./pages/Payment"));
+const VTeam = lazy(() => import("./pages/viewTeam"));
+const Discount = lazy(() => import("./pages/Discount"));
+const Forgot = lazy(() => import("./pages/Forgot"));
+const Not_Found = lazy(() => import("./pages/Not_Found"));
+const SignUp = lazy(() => import("./pages/Signup"));
+const Form = lazy(() => import("./pages/Form"));
+
+import { motion, AnimatePresence } from "framer-motion";
+
+const SuspenseWrapper = ({ children }) => {
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsReady(true), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <Suspense fallback={<Loader />}>
+      <AnimatePresence mode="wait">
+        {isReady ? (
+          <motion.div
+            key="content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            {children}
+          </motion.div>
+        ) : (
+          <Loader2 key="loader" />
+        )}
+      </AnimatePresence>
+    </Suspense>
+  );
+};
+
 
 
 
 const App = () => {
-
   return (
-
-    <div>
-      <div className="relative z-0 bg-black bg-cover bg-no-repeat bg-center">
-        <Router>
-          <div className="">
-            <Navbar />
-
-          </div>
-
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/sponsors" element={<Sponsors />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/team" element={<Team />} />
-
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/form" element={<Form/>} />
-            
-
-            <Route path="/create" element={<TeamCreate />} />
-            <Route path="/join" element={<TeamJoin />} />
-            <Route path="/payment" element={<Payment />} />
-            <Route path="/view_team" element={<VTeam />} />
-
-            <Route path="/discount" element={<Discount />} />
-            <Route path="/forgot" element={<Forgot />} />
-
-            <Route path="*" element={<Not_Found />} />
-
-          </Routes>
-        </Router>
-      </div >
+    <div className="relative z-0 bg-black bg-cover bg-no-repeat bg-center">
+      <Router>
+        <SuspenseWrapper>
+          <Navbar />
+        </SuspenseWrapper>
+        <Routes>
+          <Route path="/" element={<SuspenseWrapper><Home /></SuspenseWrapper>} />
+          <Route path="/sponsors" element={<SuspenseWrapper><Sponsors /></SuspenseWrapper>} />
+          <Route path="/events" element={<SuspenseWrapper><Events /></SuspenseWrapper>} />
+          <Route path="/team" element={<SuspenseWrapper><Team /></SuspenseWrapper>} />
+          <Route path="/profile" element={<SuspenseWrapper><Profile /></SuspenseWrapper>} />
+          <Route path="/login" element={<SuspenseWrapper><Login /></SuspenseWrapper>} />
+          <Route path="/signup" element={<SuspenseWrapper><SignUp /></SuspenseWrapper>} />
+          <Route path="/form" element={<SuspenseWrapper><Form /></SuspenseWrapper>} />
+          <Route path="/create" element={<SuspenseWrapper><TeamCreate /></SuspenseWrapper>} />
+          <Route path="/join" element={<SuspenseWrapper><TeamJoin /></SuspenseWrapper>} />
+          <Route path="/payment" element={<SuspenseWrapper><Payment /></SuspenseWrapper>} />
+          <Route path="/view_team" element={<SuspenseWrapper><VTeam /></SuspenseWrapper>} />
+          <Route path="/discount" element={<SuspenseWrapper><Discount /></SuspenseWrapper>} />
+          <Route path="/forgot" element={<SuspenseWrapper><Forgot /></SuspenseWrapper>} />
+          <Route path="*" element={<SuspenseWrapper><Not_Found /></SuspenseWrapper>} />
+        </Routes>
+      </Router>
     </div>
   );
 };

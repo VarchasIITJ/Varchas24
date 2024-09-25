@@ -60,7 +60,7 @@ const Home = () => {
         <main className="min-h-screen w-screen bg-black flex flex-col scroll-smooth"> {/* Updated here */}
             <motion.div 
                 initial = {{opacity: 0}}
-                animate={controls1}
+                whileInView={{opacity: 1,transition:{duration:1}}}
                 ref={ref1}
                 className="h-fit flex flex-col lg:flex-row-reverse">
                 <div className="w-full lg:w-1/2 h-1/2">
@@ -73,7 +73,7 @@ const Home = () => {
 
             <motion.div 
                 initial = {{opacity: 0}}
-                animate={controls2}
+                whileInView={{opacity: 1,transition:{duration:1}}}
                 ref={ref2}
             >
                 <About />
@@ -81,7 +81,7 @@ const Home = () => {
 
             <motion.div
                 initial = {{opacity: 0}}
-                animate={controls3}
+                whileInView={{opacity: 1,transition:{duration:1}}}
                 ref={ref3}
             >
                 <Informatics />
