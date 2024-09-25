@@ -753,13 +753,19 @@ export const eventOptions = [
       "5000m",
       "4x100m",
       "4x400m",
+      "Long Jump",
+      "Triple Jump",
+      "High Jump",
+      "Discuss Throw",
+      "Javelin Throw",
+      "Shot Put" 
     ],
   },
   {
     value: "2",
     label: "Badminton",
     category: ["men", "women", "mixed"],
-    teamTypes: ["Team"],
+    teamTypes: ["Team","Individual"],
   },
   {
     value: "3",
@@ -783,13 +789,13 @@ export const eventOptions = [
     value: "6",
     label: "Table Tennis",
     category: ["men", "women"],
-    teamTypes: ["Team"],
+    teamTypes: ["Individual"],
   },
   {
     value: "7",
     label: "Lawn Tennis",
     category: "men",
-    teamTypes: ["Team"],
+    teamTypes: ["Individual"],
   },
   {
     value: "8",
@@ -803,17 +809,17 @@ export const eventOptions = [
     category: "men",
     teamTypes: ["Team"],
   },
-  {
-    value: "10",
-    label: "Hockey",
-    category: "men",
-    teamTypes: ["Team"],
-  },
+  // {
+  //   value: "10",
+  //   label: "Hockey",
+  //   category: "men",
+  //   teamTypes: ["Team"],
+  // },
   {
     value: "11",
     label: "Squash",
     category: "men",
-    teamTypes: ["Single"],
+    teamTypes: ["Individual"],
   },
   {
     value: "12",
@@ -931,7 +937,7 @@ export const eventOptions = [
     value: "15",
     label: "Clash Royale",
     category: "open",
-    teamTypes: ["Team"],
+    teamTypes: ["Individual"],
     team_id: [
       {
         labelText: "id1",
@@ -958,7 +964,13 @@ export const teamTypeOptions = [
   "4x100m",
   "4x400m",
   "Team",
-  "Single",
+  "Individual",
+  "Long Jump",
+  "Triple Jump",
+  "High Jump",
+  "Discuss Throw",
+  "Javelin Throw",
+  "Shot Put" 
 ];
 
 export { events, signupFields, loginFields, addInfoFields };
