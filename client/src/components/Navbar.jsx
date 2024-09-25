@@ -170,7 +170,7 @@ const Navbar = () => {
                 setToggle(!toggle);
               }}
             >
-              <NavLink to="/team">Our Team</NavLink>
+              <NavLink to="/team">Team</NavLink>
             </li>
             <li
               className={` cursor-pointer text-[16px] text-white hover:text-[#ffeb3b]  `}
