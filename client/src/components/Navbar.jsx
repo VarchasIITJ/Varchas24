@@ -62,6 +62,12 @@ const Navbar = () => {
         className="p-1 mt-2 hover:text-[#ffeb3b]  navbar center-underline-hover">
           <NavLink to="/discount">Discount</NavLink>
         </motion.li>
+        <motion.li 
+        whileHover={{scale: 1.03}}
+        whileTap={{scale: 0.93}}
+        className="p-1 mt-2 hover:text-[#ffeb3b]  navbar center-underline-hover">
+          <NavLink to="/team">Team</NavLink>
+        </motion.li>
 
         <li className="p-1 mt-2 hover:text-[#ffeb3b] navbar relative text-lg " ref={dropdownRef}>
           <motion.button 
@@ -75,13 +81,10 @@ const Navbar = () => {
             center-underline-hover
             "
           >
-            Team
+            Registration
           </motion.button>
           {teamDropdown && (
             <ul className="bg-gray-800 rounded-xl text-white absolute left-0 mt-2 w-48 shadow-lg ring-1 ring-black ring-opacity-5">
-              <li className="px-4 py-2 text-sm hover:bg-black hover:text-white hover:rounded-t-xl">
-                <NavLink to="/team" onClick={() => setTeamDropdown(false)}>Our Team</NavLink>
-              </li>
               <li className="px-4 py-2 text-sm hover:bg-black hover:text-white">
                 <NavLink to="/create" onClick={() => setTeamDropdown(false)}>Create Team</NavLink>
               </li>
@@ -167,7 +170,7 @@ const Navbar = () => {
                 setToggle(!toggle);
               }}
             >
-              <NavLink to="/team">Our Team</NavLink>
+              <NavLink to="/team">Team</NavLink>
             </li>
             <li
               className={` cursor-pointer text-[16px] text-white hover:text-[#ffeb3b]  `}
