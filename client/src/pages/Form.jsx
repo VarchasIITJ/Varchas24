@@ -1,3 +1,4 @@
+import React from 'react';
 import Header from "../components/header";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -5,13 +6,17 @@ import { addInfoFields } from "../constants";
 import Input from "../components/input";
 import { useNavigate, useLocation } from "react-router-dom";
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
-
+import './Form.css'
 const fields = addInfoFields;
 let fieldsState = {};
 
 fields.forEach((field) => (fieldsState[field.id] = ""));
-
 const Form = () => {
+  const [height,setHeight] = useState(`200px`);
+  useEffect(()=>{
+    setHeight(String(window.innerHeight*0.5)+"px");
+    console.log(height);
+  },[window.innerHeight])
   const location = useLocation();
   const email = location.state?.email || "";
   const navigate = useNavigate();
@@ -86,17 +91,17 @@ const Form = () => {
   };
 
   return (
-    <section className="h-screen flex items-center justify-center bg-[#000]">
-      <div className="lg:w-3/4 m-4 mt-20 lg:mt-16 flex flex-col bg-[#222222] items-center p-4 overflow-auto rounded-2xl lg:max-h-[85%] max-h-[80%] shadow-sm shadow-[#ffeb3b]">
+    <section className="h-full lg:h-screen flex items-center justify-center bg-[#000]">
+      <div className="lg:w-3/4 m-4 mt-10 overflow-hidden lg:mt-16 flex flex-col bg-[#222222] items-center p-4  rounded-2xl lg:max-h-[85%] shadow-sm shadow-[#ffeb3b]">
         <Header
           heading="👋 Provide us with basic details"
-          logoUrl={"/VLW.png"}
+          logoUrl={"NewLogo.png"}
         />
         <form
-          className="mt-6  w-full lg:grid lg:grid-cols-2 flex flex-col gap-20"
+          className="mt-6 w-full h-fit space-x-3 flex flex-col md:flex-row "
           onSubmit={handleSubmit}
         >
-            <div className="col-span-1 space-y-4">
+            <div className="scroll-mr-4 md:overflow-y-scroll lg:overflow-y-scroll xl:overflow-y-scroll sm:h-full md:h-[300px] lg:h-[450px]">
               {fields.map((field) => (
                 <Input
                   key={field.id}
@@ -114,7 +119,7 @@ const Form = () => {
                 />
               ))}
               <div>
-                <div className="font-bold text-white font-mono italic mb-2 underline flex gap-4">
+                <div className="font-bold text-white font-mono italic mb-2 underline flex gap-3">
                   <input
                     type="checkbox"
                     id="agree"
@@ -122,11 +127,11 @@ const Form = () => {
                     checked={disabled}
                     onClick={(e) => setDisabled(e.target.checked)}
                   />
-                  <br />I have read and accepted all the terms and conditions {" "}
+                  I have read and accepted all the terms and conditions {" "}
                 </div>
                 <button
                   type="submit"
-                  className="group relative w-full flex justify-center py-2 mt-8 px-4 border border-transparent text-md font-medium rounded-full text-black bg-[#ffeb3b] hover:bg-[#D8C83A] cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 "
+                  className="w-1/2 group relative mx-auto flex justify-center py-2 mt-8 px-4 border border-transparent text-md font-medium rounded-full text-black bg-[#ffeb3b] hover:bg-[#D8C83A] cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 "
                   disabled={!disabled}
                 >
                   Signup
@@ -134,14 +139,14 @@ const Form = () => {
               </div>
             </div>
 
-            <div className="col-span-1 text-[#fff]">
+            <div className={`md:w-1/2 h-full md:h-[400px] lg:h-[450px] text-[#fff] overflow-y-scroll`}>
               <div>
                 <h5>Undertaking :</h5>
-                <ul className="list-disc pl-2">
+                <ul className="list-disc pl-2 max-h-full">
                   <li>
                     Indian Institute of Technology, Jodhpur and its students are
                     not responsible for any mishappening that may or may not occur
-                    during my visit to Varchas 2023.
+                    during my visit to Varchas 2024.
                   </li>
                   <li>
                     I will not inflict any damage on any object present in the
@@ -155,7 +160,7 @@ const Form = () => {
                   </li>
                   <li>
                     I will behave in a respectful and responsible manner towards
-                    everyone during my visit to Varchas, 2023.
+                    everyone during my visit to Varchas, 2024.
                   </li>
                   <li>
                     I will not invite anyone to my particular accommodation
@@ -173,7 +178,7 @@ const Form = () => {
                   </li>
                   <li>
                     I will have to keep the ID card given by the PR team at all
-                    times with me during my visit to Varchas, 2023, and if I lose
+                    times with me during my visit to Varchas, 2024, and if I lose
                     it by some means, I will be liable to pay a fine of INR 500
                     for issuing a new ID card.
                   </li>
@@ -193,7 +198,7 @@ const Form = () => {
                 above-mentioned guidelines, I am bound to fine/team
                 disqualification by the authority of the organizing committee or
                 any disciplinary action the committee wants to take against me,
-                and also I am not allowed to enter informal ground, Varchas, 2023.
+                and also I am not allowed to enter informal ground, Varchas, 2024.
               </div>
             </div>
         </form>
