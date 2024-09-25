@@ -1,6 +1,7 @@
 import React, { Suspense, lazy, useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loader from "./components/Loader1";
+import Loader2 from "./components/Loader2";
 
 // Lazy load components
 const Navbar = lazy(() => import("./components/Navbar"));
@@ -20,21 +21,38 @@ const Not_Found = lazy(() => import("./pages/Not_Found"));
 const SignUp = lazy(() => import("./pages/Signup"));
 const Form = lazy(() => import("./pages/Form"));
 
-// Custom Suspense wrapper with minimum delay
+import { motion, AnimatePresence } from "framer-motion";
+
 const SuspenseWrapper = ({ children }) => {
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsReady(true), 1000);
+    const timer = setTimeout(() => setIsReady(true), 2000);
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <Suspense fallback={<Loader />}>
-      {isReady ? children : <Loader />}
+      <AnimatePresence mode="wait">
+        {isReady ? (
+          <motion.div
+            key="content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            {children}
+          </motion.div>
+        ) : (
+          <Loader2 key="loader" />
+        )}
+      </AnimatePresence>
     </Suspense>
   );
 };
+
+
 
 const App = () => {
   return (
