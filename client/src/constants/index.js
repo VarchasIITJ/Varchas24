@@ -753,6 +753,12 @@ export const eventOptions = [
       "5000m",
       "4x100m",
       "4x400m",
+      "Long Jump",
+      "Triple Jump",
+      "High Jump",
+      "Discuss Throw",
+      "Javelin Throw",
+      "Shot Put" 
     ],
   },
   {
