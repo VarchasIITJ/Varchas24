@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Header from "../components/header";
 import Logincard from "../components/Logincard";
 import { useGoogleLogin } from "@react-oauth/google";
@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { BackgroundBeamsWithCollision } from "../components/background-beams-with-collision";
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 
 const Login = () => {
@@ -30,9 +31,12 @@ const Login = () => {
       
         .then((res) => {
         const { email } = res.data;
-  
-        axios.post('http://127.0.0.1:8000/account/google-signup/', {
+
+          
+        // google login
+        axios.post(`${backendUrl}/account/google-signup/`, {
           email: email,
+          
         }, {
           headers: {
             'Content-Type': 'application/json',
@@ -68,10 +72,10 @@ const Login = () => {
   }, [user, navigate]);
 
   return (
-    <section className="relative h-[100vh] w-screen flex items-center justify-center bg-black">
+    <section className="h-[100vh] w-screen flex items-center justify-center bg-black">
   <BackgroundBeamsWithCollision>
     {/* Card Container */}
-    <div className="relative z-10 flex flex-col items-center p-3 bg-zinc-900 rounded-2xl w-[90%] sm:w-[80%] sm:h[80%] md:w-[60%] lg:w-[50%] xl:w-[40%] max-w-md h-fit max-h-[90%] overflow-auto">
+    <div className="relative z-9 flex flex-col items-center p-3 bg-zinc-900 rounded-2xl w-[90%] sm:w-[80%] sm:h[80%] md:w-[60%] lg:w-[50%] xl:w-[40%] max-w-md h-fit max-h-[90%] overflow-auto">
       <Header
         heading="Login into your account"
         paragraph="Don't have an account yet?"
@@ -79,7 +83,7 @@ const Login = () => {
         linkUrl="/signup"
         logoUrl="/NewLogo.png"
       />
-      <Logincard />
+      <Logincard/>
       <button
         onClick={() => login_google()}
         className="

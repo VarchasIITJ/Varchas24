@@ -3,7 +3,7 @@
   gap: 1em;
   justify-content: center;
   align-items: center;
-  height: 45vh;
+  height: 40vh;
 }
 
 .container-segment {
@@ -51,27 +51,34 @@
 {
   .container
   {
-    height: 30vh;
-    width: 100vw;
+    height: 40vh;
+    width: 80vw;
+    /* font-size: xx-large; */
+    gap: 0.45em;
+    flex-direction: column;
   }
   .flip-card
   {
     font-size: x-large;
     height: 60px;
     width: 40px;
+    font-size: small;
   }
 }
 @media only screen and (max-width:768px)
 {
   .container
   {
-    height: 30vh;
+    height: 45vh;
     width: 100vw;
+    /* font-size: 42px; */
+    font-size: large;
+    flex-direction: column;
   }
   .flip-card
   {
-    font-size: x-large;
-    height: 60px;
-    width: 8vw;
+    font-size: xx-large;
+    height: 70px;
+    width: 10vw;
   }
 }

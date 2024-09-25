@@ -3,6 +3,7 @@ import { useState } from "react";
 import { events } from "../constants"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const VTeam = () => {
 
@@ -14,7 +15,7 @@ const VTeam = () => {
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`
     const configuration = {
       method: "get",
-      url: "http://localhost:8000/account/displayTeam/",
+      url: `${backendUrl}/account/displayTeam/`,
     }
     axios(configuration)
       .then((result) => {

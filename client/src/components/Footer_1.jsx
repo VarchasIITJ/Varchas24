@@ -7,7 +7,7 @@ function Footer_1 () {
     <div className='font-robm bg-[#000000]'>
       <div className='w-screen flex justify-between flex-col md:flex-row lg:flex-row pb-12'>
         {/* Logo Div */}
-        <div className='pl-10 w-full md:w-1/2 lg:w-1/2 mr-10 my-auto h-inherit space-y-5'>
+        <div className='pl-0 md:pl-10 sm:pl-10 w-full md:w-1/2 lg:w-1/2 mr-10 my-auto h-inherit space-y-5'>
           <img src={logo} alt='' />
         </div>
 
@@ -52,15 +52,15 @@ function Footer_1 () {
         <div className='w-1/2 md:w-1/3 pl-12 hover:text-yellow-400 transition-colors duration-1000 ease-in-out'>
         &copy; IIT Jodhpur, India All Rights Reserved
         </div>
-        <div className='flex w-1/5 justify-around'>
-        <div className='w-6'>
+        <div className='flex w-2/5 md:w-1/5 sm:w-1/5 justify-around'>
+        <div className='w-6 m-2'>
           <a href='http://www.linkedin.com/in/varchas-inter-college-sports-fest-of-iit-jodhpur' target='none'> <img src={Llogo}alt="" /></a>
           
         </div>
-        <div className='w-8'>
+        <div className='w-8 m-2'>
           <a href='https://www.instagram.com/varchas_iitj?igsh=MXdqaXl3ZGU2djd6Mg==' target='none'> <img src={InstaLogo} alt="" /></a>
         </div>
-        <div className='w-6'>
+        <div className='w-8 m-2'>
           <a href='mailto:pr_varchas@iitj.ac.in' target='none'> <img src={mailLogo} alt="" /></a>
         </div>
         </div>

@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BackgroundBeamsWithCollision } from "../components/background-beams-with-collision";
 import axios from 'axios';
-
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const SignUp = () => {
   const [ user, setUser ] = useState(null);
@@ -30,7 +30,7 @@ const SignUp = () => {
         .then((res) => {
         const { email } = res.data;
   
-        axios.post('http://127.0.0.1:8000/account/google-signup/', {
+        axios.post(`${backendUrl}/account/google-signup/`, {
           email: email,
         }, {
           headers: {
@@ -70,9 +70,9 @@ const SignUp = () => {
 
 
   return (
-    <section className="h-screen flex items-center justify-center bg-black p-4 overflow-auto">
+    <section className="h-screen flex items-center justify-center bg-black p-4">
     <BackgroundBeamsWithCollision>
-      <div className="w-full max-w-md flex flex-col items-center p-4 shadow-lg bg-[#18171c] rounded-2xl z-50 overflow-auto">
+      <div className="relative z-10 flex flex-col items-center p-3 bg-zinc-900 rounded-2xl w-[90%] sm:w-[80%] sm:h[80%] md:w-[60%] lg:w-[50%] xl:w-[40%] max-w-md h-fit max-h-[90%] overflow-auto">
         <Header
           heading="Create an account"
           paragraph="Already have an account? "

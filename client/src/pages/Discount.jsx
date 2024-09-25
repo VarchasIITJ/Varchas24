@@ -15,14 +15,14 @@ export default function LampDemo() {
           }}
           className="mt-7 bg-gradient-to-br from-slate-300 to-white py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-2xl">
           <p className="py-4 text-4xl mb-4">Contingent Leader</p>
-          <div className="text-left text-xl w-[900px]">
-          Win FREE ACCOMODATION at IIT Jodhpur and a JODHPUR CITY tour.<br/>
-          Simply bring 20 registrations to Varcahs'24 website along with<br/>
-          20 accomodations to Varchs'24 Sports fest.
+          <div className="text-xl w-[380px] sm:h-fit md:h-[16vh] text-center md:w-[900px] sm:w-[900px]">
+          Win FREE ACCOMODATION at IIT Jodhpur and a JODHPUR CITY tour.{window.innerWidth > 768 ? <br /> : " "}
+          Simply bring 20 registrations to Varchas'24 website along with{window.innerWidth > 768 ? <br /> : " "}
+          20 accomodations to Varchas'24 Sports fest.
         </div>
         </motion.div>
       </LampContainer>
-      <div className="flex justify-center align-middle w-full top-[400px] absolute text-white bg-[#010616] p-4 text-left z-10  ">
+      <div className="flex justify-center align-middle w-full top-[600px] md:top-[400px] sm:top-[400px] absolute text-white bg-[#010616] p-4 text-left z-10  ">
         <div className="delayed-appear items-center w-[900px] text-xl">
         <ul >
                     <li className="mt-[15px] mb-4">
@@ -31,7 +31,7 @@ export default function LampDemo() {
                     </li>
                     <li className="mt-4 mb-4">
                       
-                      <b>Contingent Leader must</b>: regsiter at least 20 students
+                      <b>Contingent Leader must</b>: register at least 20 students
                       along with accommodation
                     </li>
                     <li className="mt-4 mb-4">

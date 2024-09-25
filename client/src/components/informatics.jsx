@@ -5,12 +5,12 @@ const Informatics = () =>
   {
     return (
         <main className="h-fit w-screen bg-black flex flex-col lg:flex-row pb-10">
-        <div className="w-full justify-center mx-auto lg:w-1/2 h-1/2 md:h-full overflow-hidden bg-black">
+        <div className="w-full justify-center mx-auto lg:w-1/2 h-[45vh] md:h-full  bg-black">
           <ThreeScene />
         </div>
         <div className="sm:h-[50vh] md:h-[80vh] lg:h-screen w-screen lg:w-1/2 bg-black flex flex-col items-center justify-evenly">
           <div 
-            className="py-2 text-4xl md:text-6xl font-semibold font-robm text-yellow-300 flex flex-col items-center justify-center" 
+            className="py-2 text-[43px] font-bold md:text-6xl font-robm text-yellow-300 flex flex-col items-center justify-center" 
             style={{ minHeight: '100px' }} 
           >
             <span>Past Year Metrics</span>
