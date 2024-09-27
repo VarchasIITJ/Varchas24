@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/header";
 import FormAction from "../components/formaction";
-import { eventOptions } from "../constants";
+import { eventOptions, teamTypeOptions } from "../constants";
 import Select from "react-select";
 import Input from "../components/input";
 import axios from "axios";
