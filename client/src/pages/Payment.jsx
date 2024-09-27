@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// import Comingsoon from "../components/comingsoon";
+import Comingsoon from "../components/comingsoon";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
@@ -51,19 +51,12 @@ const Payment = () => {
         {Data}
       </div>
 
-      <div>
+      {/* <div>
         <button onClick={handleClick} className="px-4 py-2 bg-yellow-400 text-balck rounded hover:bg-orange-400-600 transition-colors"> Pay Now </button>
-      </div>
-
-      {/* <div className="w-[80%]">
-        <iframe
-          src="https://forms.eduqfix.com/vsevents/add"
-          width="100%"
-          height="600px"
-          frameborder="0px"
-        ></iframe>
       </div> */}
-      {/* <Comingsoon /> */}
+
+      
+      <Comingsoon />
     </main>
   );
 };
