@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export default function LampDemo() {
   return (
-    <div className="relative">
+    <div className="relative w-screen">
       <LampContainer className="items-center justify-center">
         <motion.div
           initial={{ opacity: 0.5, y: 100 }}

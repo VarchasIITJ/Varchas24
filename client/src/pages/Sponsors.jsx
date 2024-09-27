@@ -25,7 +25,7 @@ const Sponsors = () => {
       <div className="flex w-full justify-evenly">
 
         <div className="flex justify-center items-center flex-col ">
-          <h3 className="text-gray-100 text-3xl lg:text-4xl my-2">Associate Sponsor</h3>
+          <h3 className="text-gray-100 text-xl sm:text-xl md:text-3xl lg:text-4xl mb-2">Associate Sponsor</h3>
           <img
             src={Decathlon}
             alt="Decathlon"
@@ -33,7 +33,7 @@ const Sponsors = () => {
             />
         </div>
         <div className="flex justify-center items-center flex-col ">
-          <h3 className="text-gray-100 text-3xl lg:text-4xl mb-2">Sports Sponsor</h3>
+          <h3 className="text-gray-100 text-xl sm:text-xl md:text-3xl mb-2">Sports Sponsor</h3>
           <img
             src={STAGE}
             alt="STAG"
@@ -42,8 +42,8 @@ const Sponsors = () => {
         </div>
 
             </div>
-        <h3 className="text-gray-100 text-3xl lg:text-4xl mb-4">Past Sponsors</h3>
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12 w-full">
+        <h3 className="text-gray-100 text-xl sm:text-xl md:text-3xl mt-4 mb-4">Past Sponsors</h3>
+        <div className="grid grid-cols-3 lg:grid-cols-3 gap-6 lg:gap-12 w-full">
           <img src={SARAS} alt="SARAS" className="h-12 w-25 lg:h-20 object-contain mx-auto" />
           <img src={WOMAN} alt="WOMANERA" className="h-12 lg:h-16 w-auto object-contain mx-auto" />
           <img src={FM934} alt="94.3 FM" className="h-12 lg:h-16 w-auto object-contain mx-auto" />

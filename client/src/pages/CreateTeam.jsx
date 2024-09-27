@@ -7,6 +7,7 @@ import { eventOptions, categoryOptions, teamTypeOptions } from "../constants";
 import Select from "react-select";
 import Input from "../components/input";
 import axios from "axios";
+import Loader1  from '../components/Loader1';
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 
@@ -50,7 +51,7 @@ const customStyles = {
 };
 
 const fixedInputClass =
-  "rounded-md appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-yellow-400 focus:border-yellow-400 focus:z-10 sm:text-sm";
+  "rounded-md appearance-none block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-yellow-400 focus:border-yellow-400 focus:z-10 sm:text-sm";
 
 let categoryList = [];
 let teamList = [];
@@ -121,6 +122,8 @@ const TeamCreate = () => {
     createTeam();
   };
 
+  const [loader,setLoader] = useState("hidden");
+  const [main_d,setMainD] = useState("100");
   const createTeam = () => {
     const list = [
       "4",
@@ -139,6 +142,8 @@ const TeamCreate = () => {
       "5",
       "1",
     ];
+    setLoader("flex");
+    setMainD("10");
     const data_t = {
       category: selectedCategory,
       sport: selectedEvent,
@@ -166,6 +171,8 @@ const TeamCreate = () => {
         console.log(error);
         if (error.response && error.response.data && error.response.data.message){
             alert(error.response.data.message);
+            setLoader("hidden");
+            setMainD("100");
         }
         if (error.response && error.response.data && error.response.data.detail){
           alert('Session Expired. Kindly login again');
@@ -177,10 +184,13 @@ const TeamCreate = () => {
   };
 
   return (
-    <section className="bg-black h-screen flex items-center justify-center">
-  <div className="flex flex-col items-center p-4 bg-zinc-900 rounded-2xl overflow-auto h-[80%] w-[90%] sm:w-[80%] md:w-[60%] lg:w-[50%] xl:w-[40%]">
+    <section className="w-screen h-screen flex items-center justify-center">
+      <div className={`${loader} fixed inset-0 w-screen h-screen`}>
+        <Loader1/>
+      </div>
+  <div className={`flex flex-col items-center p-4 bg-zinc-900 rounded-2xl overflow-auto h-[80%] w-[90%] sm:w-[80%] md:w-[60%] lg:w-[50%] xl:w-[40%]`}>
     <Header heading="Event Registration" logoUrl={"/NewLogo.png"} />
-    <form className="mt-4 space-y-10 w-full sm:w-72 xl:w-96 h-[90%]" onSubmit={handleSubmit}>
+    <form className={`mt-4 space-y-10 w-full sm:w-72 xl:w-96 h-[90%]`} onSubmit={handleSubmit}>
       <div className="h-2/3 flex flex-col justify-evenly">
         <div>
           <label className="text-yellow-400">Select an Event:</label>

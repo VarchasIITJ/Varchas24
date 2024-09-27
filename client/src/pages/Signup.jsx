@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BackgroundBeamsWithCollision } from "../components/background-beams-with-collision";
 import axios from 'axios';
+import Skeleton from "react-loading-skeleton";
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const SignUp = () => {
@@ -70,7 +71,7 @@ const SignUp = () => {
 
 
   return (
-    <section className="h-screen flex items-center justify-center bg-black p-4">
+    <section className="h-screen w-screen flex items-center justify-center bg-black p-4">
     <BackgroundBeamsWithCollision>
       <div className="relative z-10 flex flex-col items-center p-3 bg-zinc-900 rounded-2xl w-[90%] sm:w-[80%] sm:h[80%] md:w-[60%] lg:w-[50%] xl:w-[40%] max-w-md h-fit max-h-[90%] overflow-auto">
         <Header
