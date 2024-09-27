@@ -44,7 +44,7 @@ const Payment = () => {
   }, []);
   return (
     <main className="relative w-screen h-fit sm:h-screen mx-auto sm:px-16 px-6 sm:py-16 py-10 max-w-7xl z-0 flex flex-col items-center justify-center">
-      {/* <div className="text-yellow-400 text-[2.5rem] font-mono capitalize my-10">
+      <div className="text-yellow-400 text-[2.5rem] font-mono capitalize my-10">
         {Data}
       </div>
 
@@ -53,14 +53,14 @@ const Payment = () => {
           
         </div>
         <iframe
-          src="https://www.meraevents.com/ticketWidget?eventId=257798&ucode=organizer&wcode=9063CD-9063CD-333333-9063CD-&theme=1"
+          src="https://forms.eduqfix.com/vsevents/add"
           width="100%"
           height="600px"
           frameborder="0px"
           onLoad={handleLoad}
         ></iframe>
-      </div> */}
-      <Comingsoon />
+      </div>
+      {/* <Comingsoon /> */}
     </main>
   );
 };
