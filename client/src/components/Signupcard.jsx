@@ -51,7 +51,7 @@ export default function Signup() {
                 console.log("Error data:", error.response.data);
                 alert(`Error: ${error.response.data.Error || 'An unexpected error occurred.'}`);
             } else if (error.request) {
-             
+            
                 console.log("Error request:", error.request);
                 alert("Error: No response from server.");
             } else {

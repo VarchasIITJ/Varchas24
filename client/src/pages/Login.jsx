@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Header from "../components/header";
 import Logincard from "../components/Logincard";
 import { useGoogleLogin } from "@react-oauth/google";
@@ -31,9 +31,12 @@ const Login = () => {
       
         .then((res) => {
         const { email } = res.data;
-  
+
+          
+        // google login
         axios.post(`${backendUrl}/account/google-signup/`, {
           email: email,
+          
         }, {
           headers: {
             'Content-Type': 'application/json',
@@ -80,7 +83,7 @@ const Login = () => {
         linkUrl="/signup"
         logoUrl="/NewLogo.png"
       />
-      <Logincard />
+      <Logincard/>
       <button
         onClick={() => login_google()}
         className="

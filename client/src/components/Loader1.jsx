@@ -60,7 +60,7 @@ const AnimatedSpinner = () => {
   }, []);
 
   return (
-    <div className="h-screen w-screen flex items-center justify-center bg-black fixed inset-0 overflow-hidden">
+    <div className="h-screen w-screen flex items-center justify-center bg-[#00000070] z-10 fixed inset-0 overflow-hidden">
       <svg id="mainSVG" xmlns="http://www.w3.org/2000/svg" viewBox="200 150 400 300" className="w-1/2 h-1/2">
         <defs>
           <g id="container" filter="url(#goo)" ref={containerRef}>

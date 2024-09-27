@@ -40,7 +40,7 @@ const Forgot = () => {
     }, 150);
     const configuration = {
       method: "post",
-      url: "https://api.varchas23.in/account/password_reset_request/",
+      url: "https://apivarchas24.in/account/password_reset_request/",
       data: { email: eid },
     };
 
@@ -64,7 +64,7 @@ const Forgot = () => {
     console.log(otp);
     const configuration = {
       method: "post",
-      url: "https://api.varchas23.in/account/otp_verification/",
+      url: "https://apivarchas24.in/account/otp_verification/",
       data: { email: eid, otp: otp },
     };
 
@@ -95,7 +95,7 @@ const Forgot = () => {
 
         const configuration = {
             method: "post",
-            url: "https://api.varchas23.in/account/reset_password/",
+            url: "https://apivarchas24.in/account/reset_password/",
             data: { email: eid, password: pass },
         };
         
