@@ -350,14 +350,12 @@ border: 1px solid rgba(0, 255, 189, 0.25);
   }
 }
 
-/* Hide ThreeScene on mobile */
+/* hide ThreeScene on mobile */
 .three-scene-container {
-  display: block; /* default display */
+  display: block;
 }
-
-/* Media query for mobile devices */
 @media only screen and (max-width: 768px) {
   .three-scene-container {
-    display: none; /* hide on mobile */
+    display: none;
   }
 }
