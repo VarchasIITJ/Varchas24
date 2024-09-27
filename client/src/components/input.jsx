@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 const fixedInputClass =
-  "rounded-md bg-zinc-900 appearance-none mx-auto relative block w-full px-3 py-2 border border-gray-500 placeholder-gray-500 text-gray-200 focus:outline-none focus:ring-yellow-400 m-2 focus:border-gray-400 focus:z-10 sm:text-sm";
+  "rounded-md bg-zinc-900 appearance-none mx-auto  block w-full px-3 py-2 border border-gray-500 placeholder-gray-500 text-gray-200 focus:outline-none focus:ring-yellow-400 m-2 focus:border-gray-400 focus:z-10 sm:text-sm";
 
 export default function Input({
   handleChange,

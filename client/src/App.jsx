@@ -15,15 +15,24 @@ import Forgot from "./pages/Forgot";
 import Not_Found from "./pages/Not_Found";
 import SignUp from "./pages/Signup";
 import Form from "./pages/Form"
-
-
-
+import Skeleton from "react-loading-skeleton";
+import Loader1 from './components/Loader1';
+import Loader2 from './components/Loader2';
+import { useState,useRef } from "react";
 const App = () => {
-
+  const ref = useRef(null);
+  const [sk_disply,setSkDisply] = useState('flex');
+  const handleLoad = ()=>{
+    ref.current.style.display = "flex";
+    setSkDisply('hidden');
+  }
   return (
 
     <div>
-      <div className="relative z-0 bg-black bg-cover bg-no-repeat bg-center">
+      {/* <div className={`h-screen bg-black ${sk_disply}`}>
+        <Loader1/>
+      </div> */}
+      <div   ref={ref}   className="relative z-0 bg-black bg-cover bg-no-repeat bg-center overflow-x-hidden">
         <Router>
           <div className="">
             <Navbar />
@@ -57,6 +66,7 @@ const App = () => {
       </div >
     </div>
   );
+  
 };
 
 export default App;

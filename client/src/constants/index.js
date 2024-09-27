@@ -806,7 +806,7 @@ export const eventOptions = [
   {
     value: "9",
     label: "Kabaddi",
-    category: "men",
+    category: ["men","women"],
     teamTypes: ["Team"],
   },
   // {

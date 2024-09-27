@@ -64,7 +64,7 @@ const TeamJoin = () => {
   };
 
   return (
-    <section className="bg-black h-screen flex items-center justify-center">
+    <section className="bg-black w-screen h-screen flex items-center justify-center">
   <div className="flex flex-col items-center p-4 bg-zinc-900 rounded-2xl overflow-auto max-h-[70%] w-[90%] sm:w-[80%] md:w-[60%] lg:w-[50%] xl:w-[40%] h-fit">
     <Header heading="Join Team" logoUrl={"/NewLogo.png"} />
     <form className="mt-4 space-y-6 w-full sm:w-72 xl:w-96" onSubmit={handleSubmit}>

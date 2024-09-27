@@ -49,11 +49,15 @@ const Payment = () => {
       </div>
 
       <div className="w-[80%]">
+        <div>
+          
+        </div>
         <iframe
           src="https://www.meraevents.com/ticketWidget?eventId=257798&ucode=organizer&wcode=9063CD-9063CD-333333-9063CD-&theme=1"
           width="100%"
           height="600px"
           frameborder="0px"
+          onLoad={handleLoad}
         ></iframe>
       </div> */}
       <Comingsoon />

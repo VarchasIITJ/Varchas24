@@ -10,10 +10,11 @@ import {motion} from "framer-motion"
 import { useAnimationControls,useInView } from "framer-motion";
 import { useEffect,useRef, useState } from "react";
 import logo from '../assets/logo.png';
+import Skeleton from "react-loading-skeleton";
 const Home = () => {
+    
     const ref1 = useRef();
     const [isSmall,setIsSmall] = useState(true);
-
     useEffect(()=>{
         const handleResize = () => {
             if(window.innerWidth<=768){
@@ -55,9 +56,8 @@ const Home = () => {
             controls3.start({opacity:1,transition:{duration:2}});
         }
     },[isInView3,controls3]);
-
     return (
-        <main className="min-h-screen w-screen bg-black flex flex-col scroll-smooth"> {/* Updated here */}
+        <main  className="min-h-screen w-screen bg-black flex flex-col scroll-smooth"> {/* Updated here */}
             <motion.div 
                 initial = {{opacity: 0}}
                 animate={controls1}
@@ -66,7 +66,7 @@ const Home = () => {
                 <div className="w-full lg:w-1/2 h-1/2">
                     {!isSmall ? <ParticleSlider /> : <img src={logo} className="align-middle ml-11 mt-20 h-full w-[300px] md:w-full sm:w-full" />}
                 </div>
-                <div className="z-0 w-full lg:w-1/2 h-full md:h-1/3 sm:h-4">
+                <div  className="z-0 w-full lg:w-1/2 h-full md:h-1/3 sm:h-4">
                     <CollegeModel />
                 </div>
             </motion.div>
