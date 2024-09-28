@@ -5,7 +5,7 @@ const Informatics = () =>
   {
     return (
         <main className="h-fit w-screen bg-black flex flex-col lg:flex-row pb-10">
-        <div className="w-full justify-center mx-auto lg:w-1/2 h-[45vh] md:h-full  bg-black">
+        <div className="w-full three-scene-container justify-center mx-auto lg:w-1/2 h-[45vh] md:h-full  bg-black">
           <ThreeScene />
         </div>
         <div className="sm:h-[50vh] md:h-[80vh] lg:h-screen w-screen lg:w-1/2 bg-black flex flex-col items-center justify-evenly">
