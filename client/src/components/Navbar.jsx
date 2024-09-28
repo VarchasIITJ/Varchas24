@@ -151,7 +151,7 @@ const Navbar = () => {
       <div className='sm:hidden flex flex-1 justify-between gap-8 w-full items-center backdrop-blur-sm bg-white/10 ... '>
         <div className=''>
           <NavLink to='/'>
-            <img src='/VLW.png' className='h-16 w-16' />
+            <img src='/NewLogo.png' className='h-16 w-16' />
           </NavLink>
         </div>
         <img

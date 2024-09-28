@@ -73,6 +73,22 @@ const TeamCreate = () => {
   const [selectedTeamType, setSelectedTeamType] = useState([]);
   const [iD, setID] = useState({});
 
+  useEffect(()=>{
+    if((selectedCategory === "women") && (selectedEvent === "1"))
+    { 
+      setFilteredTeamList(filteredTeamList.filter(e=>e.label!=="5000m"));
+      console.log(filteredTeamList);
+    }
+    else{
+      setFilteredTeamList(teamList.filter(teamType => {
+        if (selectedCategory === 'mixed' && teamType.value === 'Individual') {
+          return false;
+        }
+        return true;
+      }));
+    }
+  },[selectedCategory,selectedEvent]);
+
   const eventChangeHandler = (event) => {
     const selectedEventValue = event.target.value;
     setSelectedEvent(selectedEventValue);
@@ -173,12 +189,15 @@ const TeamCreate = () => {
       });
   };
 
-  const filteredTeamList = teamList.filter(teamType => {
-    if (selectedCategory === 'mixed' && teamType.value === 'Individual') {
-      return false;
-    }
-    return true;
-  });
+  const [filteredTeamList,setFilteredTeamList] = useState([]);
+  useEffect(()=>{
+    setFilteredTeamList(teamList.filter(teamType => {
+      if (selectedCategory === 'mixed' && teamType.value === 'Individual') {
+        return false;
+      }
+      return true;
+    }))
+  },[teamList])
 
   return (
     <section className="w-screen h-screen flex items-center overflow-hidden justify-center">
