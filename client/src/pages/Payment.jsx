@@ -53,7 +53,7 @@ const Payment = () => {
           src="https://forms.eduqfix.com/vsevents/add"
           width="100%"
           height="600px"
-          frameborder="0px"
+          frameBorder="0px"               
         ></iframe>
       </div>
       {/* <Comingsoon /> */}
