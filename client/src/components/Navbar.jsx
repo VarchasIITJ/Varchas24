@@ -39,12 +39,12 @@ const Navbar = () => {
       className='w-screen flex items-center sm:py-5 fixed sm:top-2 z-20 justify-center '
     >
       <div
-        className='px-4 list-none flex  lg:flex-row md:flex-col sm:flex w-full justify-between items-center 
+        className='px-4 hidden list-none lg:flex-row md:flex-col sm:flex w-full justify-between items-center 
         text-lg text-white 
       glass font-sans fixed uppercase
       '
       >
-        <div className='lg:w-1/4 mt-10 lg:mt-0 hover:text-[#ffeb3b]'>
+        <div className='lg:w-1/4 md:mt-10 lg:mt-0 hover:text-[#ffeb3b]'>
           <NavLink to='/'>
             <img src='/NewLogo.png' className='xl:h-16 xl:w-16 h-16 w-16' />
           </NavLink>
@@ -111,7 +111,7 @@ const Navbar = () => {
           <motion.li
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.93 }}
-            className='p-1 mt-2 hover:text-[#ffeb3b]  navbar center-underline-hover'
+            className='p-1 mt-2 hover:text-[#ffeb3b] text-xl navbar center-underline-hover'
           >
             <NavLink to='/sponsors'>Sponsors</NavLink>
           </motion.li>
@@ -119,14 +119,14 @@ const Navbar = () => {
           <motion.li
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.93 }}
-            className='p-1 mt-2 hover:text-[#ffeb3b]  navbar center-underline-hover'
+            className='p-1 mt-2 hover:text-[#ffeb3b] text-xl navbar center-underline-hover'
           >
             <NavLink to='/payment'>Payment</NavLink>
           </motion.li>
 
           <motion.li
             whileTap={{ scale: 0.93 }}
-            className={` p-1 px-6 mt-2  hover:text-[#ffeb3b]  navbar border-white border-2 rounded-l-full rounded-r-full`}
+            className={` text-center h-fit py-1 mt-3 px-2 hover:text-[#ffeb3b]  navbar border-white border-2 rounded-l-full rounded-r-full`}
           >
             {token ? (
               <NavLink to='/profile'>Profile</NavLink>
@@ -136,7 +136,7 @@ const Navbar = () => {
           </motion.li>
           <motion.li
             whileTap={{ scale: 0.93 }}
-            className='p-1 px-6 mt-2 mr-4 hover:text-black  border-yellow-300 border-2 rounded-l-full rounded-r-full bg-yellow-300 text-black'
+            className=' text-center h-fit py-1 mt-3 px-2 w-fit border-yellow-300 border-2 rounded-l-full rounded-r-full bg-yellow-300 text-black'
           >
             {token ? (
               <button onClick={handleLogout}>Log Out</button>
