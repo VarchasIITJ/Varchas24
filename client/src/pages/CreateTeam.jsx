@@ -7,7 +7,6 @@ import Select from "react-select";
 import Input from "../components/input";
 import axios from "axios";
 import Loader1  from '../components/Loader1';
-import './CreateTeam.css';
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const customStyles = {
@@ -73,6 +72,22 @@ const TeamCreate = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedTeamType, setSelectedTeamType] = useState([]);
   const [iD, setID] = useState({});
+
+  useEffect(()=>{
+    if((selectedCategory === "women") && (selectedEvent === "1"))
+    { 
+      setFilteredTeamList(filteredTeamList.filter(e=>e.label!=="5000m"));
+      console.log(filteredTeamList);
+    }
+    else{
+      setFilteredTeamList(teamList.filter(teamType => {
+        if (selectedCategory === 'mixed' && teamType.value === 'Individual') {
+          return false;
+        }
+        return true;
+      }));
+    }
+  },[selectedCategory,selectedEvent]);
 
   const eventChangeHandler = (event) => {
     const selectedEventValue = event.target.value;
@@ -174,19 +189,22 @@ const TeamCreate = () => {
       });
   };
 
-  const filteredTeamList = teamList.filter(teamType => {
-    if (selectedCategory === 'mixed' && teamType.value === 'Individual') {
-      return false;
-    }
-    return true;
-  });
+  const [filteredTeamList,setFilteredTeamList] = useState([]);
+  useEffect(()=>{
+    setFilteredTeamList(teamList.filter(teamType => {
+      if (selectedCategory === 'mixed' && teamType.value === 'Individual') {
+        return false;
+      }
+      return true;
+    }))
+  },[teamList])
 
   return (
-    <section className="w-screen h-screen flex items-center justify-center">
+    <section className="w-screen h-screen flex items-center overflow-hidden justify-center">
           <div className={`${loader} fixed z-10 inset-0 w-screen h-screen`}>
         <Loader1/>
       </div>
-  <div className={`flex flex-col items-center p-4 bg-zinc-900 rounded-2xl overflow-auto h-[80%] w-[90%] sm:w-[80%] md:w-[60%] lg:w-[50%] xl:w-[40%]`}>
+  <div className={`flex flex-col items-center p-4 bg-zinc-900 rounded-2xl overflow-auto h-[80%] w-[90%]  md:w-[60%] lg:w-[50%] xl:w-[40%]`}>
         <Header heading="Event Registration" logoUrl={"/NewLogo.png"} />
         <form className={`mt-4 space-y-10 w-full sm:w-72 xl:w-96 h-[90%]`} onSubmit={handleSubmit}>
           <div className="h-2/3 flex flex-col justify-evenly">
@@ -224,11 +242,11 @@ const TeamCreate = () => {
             </div>
             <div>
               <label className="text-yellow-400">Select a Team Type:</label>
-              <div className="absolute w-1/4">
+              <div className="w-full">
               <Select
                 id="multi_select"
                 closeMenuOnSelect={false}
-                className="mt-2"
+                className="mt-2 "
                 defaultValue={{ value: 'Select a Team Type', label: 'Select a Team Type' }}
                 styles={customStyles}
                 isMulti
