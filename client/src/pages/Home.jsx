@@ -64,7 +64,7 @@ const Home = () => {
                 ref={ref1}
                 className="h-fit flex flex-col lg:flex-row-reverse">
                 <div className="w-full lg:w-1/2 h-1/2">
-                    {!isSmall ? <ParticleSlider /> : <img src={logo} className="mt-20 h-full sm:w-full" />}
+                    {!isSmall ? <ParticleSlider /> : <img src={logo} className="mx-auto mt-20 h-full sm:w-full" />}
                 </div>
                 <div  className="z-0 w-full lg:w-1/2 h-full sm:h-4">
                     <CollegeModel />
