@@ -51,7 +51,7 @@ export default function LampDemo() {
         <ul>
                   <li className="mb-5">
                     
-                    For contingent size of 40+, bulk discount of Rs.50 will be
+                    For contingent size of 40+, bulk discount of Rs.49 will be
                     provided for each accommodation. 
                     <p>
                     *Must have atleast 40
@@ -60,7 +60,7 @@ export default function LampDemo() {
                   </li>
                   <li className="mb-5">
                     
-                    For contingent size of 50+, bulk discount of Rs.150 will be
+                    For contingent size of 50+, bulk discount of Rs.149 will be
                     provided for each accommodation. 
                     <p>
                       *Must have atleast 50
@@ -69,7 +69,7 @@ export default function LampDemo() {
                   </li>
                   <li className="mb-5">
                     
-                    For contingent size of 80+, bulk discount of Rs.200 will be
+                    For contingent size of 80+, bulk discount of Rs.199 will be
                     provided for each accommodation. 
                     <p>
 
