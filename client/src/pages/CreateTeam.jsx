@@ -220,8 +220,8 @@ const TeamCreate = () => {
       >
         
           <div className='mx-auto w-[90%]  md:w-[60%] lg:w-[60%] xl:w-[40%] justify-center flex flex-col my-8'>
-            <span className='block text-white w-full text-center'>Registration Ends In</span>
-            <RegTImer/>
+            <span className='block text-white w-full text-center'>Registration Has Finished</span>
+            {/* <RegTImer/> */}
           </div>
         <div
           className={`mx-auto flex flex-col items-center p-4 bg-zinc-900 rounded-2xl  h-[80%] w-[90%]  md:w-[60%] lg:w-[60%] xl:w-[40%] overflow-y-scroll`}
@@ -314,7 +314,7 @@ const TeamCreate = () => {
                 />
               ))}
             <br />
-            <FormAction handleSubmit={handleSubmit} text='Create Team' />
+            <FormAction handleSubmit={handleSubmit} text='Create Team' disabled={true}/>
           </form>
         </div>
       </div>
