@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <nav
       id='NAV'
-      className='w-screen flex items-center sm:py-5 fixed sm:top-2 z-20 justify-center '
+      className='w-screen flex items-center sm:py-5 sticky my-1 sm:top-2 z-20 justify-center '
     >
       <div
         className='px-4 hidden list-none lg:flex-row md:flex-col sm:flex w-full justify-between items-center 
