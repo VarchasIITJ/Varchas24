@@ -14,7 +14,7 @@ const Sponsors = () => {
         }}
       >
         <div className="mt-20 flex flex-col justify-center items-center h-full">
-          <h3 className="text-black text-3xl lg:text-5xl font-bold mb-8 lg:mb-16 text-center font-roboto">Sponsors</h3>
+          <h3 className="text-black text-3xl lg:text-5xl font-bold mb-8 lg:mb-16 text-center font-roboto">Past Sponsors</h3>
           <p className="text-black text-sm lg:text-base text-center font-roboto">
             Over the past years Varchas has had the privilege to have hosted a number of sponsors which provided a very entertaining experience to our visitors as well as the brand. The crowd engagement, media exposure, sampling and brand building opportunities offered at Varchas are unparalleled.
           </p>
