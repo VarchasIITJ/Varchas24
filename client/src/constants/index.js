@@ -765,7 +765,7 @@ export const eventOptions = [
     value: "2",
     label: "Badminton",
     category: ["men", "women", "mixed"],
-    teamTypes: ["Team","Individual"],
+    teamTypes: ["Team"],
   },
   {
     value: "3",
@@ -789,7 +789,7 @@ export const eventOptions = [
     value: "6",
     label: "Table Tennis",
     category: ["men", "women"],
-    teamTypes: ["Individual"],
+    teamTypes: ["Team"],
   },
   {
     value: "7",
@@ -819,7 +819,7 @@ export const eventOptions = [
     value: "11",
     label: "Squash",
     category: "men",
-    teamTypes: ["Individual"],
+    teamTypes: ["Team"],
   },
   {
     value: "12",

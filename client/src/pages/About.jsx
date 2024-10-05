@@ -26,7 +26,7 @@ return (
         </span>
       </div >
       <div className="rounded-2xl bg-yellow-400 h-[30%] w-[80%] max-w-screen flex items-center justify-center">
-        <CountdownTimer />
+        <CountdownTimer day={10} month={9} year={2024} />
       </div>
     </div>
   </div>
