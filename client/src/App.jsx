@@ -32,7 +32,7 @@ const App = () => {
       {/* <div className={`h-screen bg-black ${sk_disply}`}>
         <Loader1/>
       </div> */}
-      <div   ref={ref}   className="relative z-0 bg-black bg-cover bg-no-repeat bg-center overflow-x-hidden">
+      <div   ref={ref}   className="relative z-0 bg-black bg-cover bg-no-repeat bg-center overflow-x-hidden overflow-y-hidden">
         <Router>
           <div className="">
             <Navbar />

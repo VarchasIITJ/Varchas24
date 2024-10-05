@@ -224,7 +224,7 @@ const TeamCreate = () => {
             {/* <RegTImer/> */}
           </div>
         <div
-          className={`mx-auto flex flex-col items-center p-4 bg-zinc-900 rounded-2xl  h-[80%] w-[90%]  md:w-[60%] lg:w-[60%] xl:w-[40%] overflow-y-scroll`}
+          className={`mx-auto flex flex-col items-center p-4 bg-zinc-900 rounded-2xl  h-full w-[90%]  md:w-[60%] lg:w-[60%] xl:w-[40%] overflow-y-hidden`}
         >
           <Header heading='Event Registration' logoUrl={'/NewLogo.png'} />
           <div className='text-white text-sm'>
@@ -314,7 +314,7 @@ const TeamCreate = () => {
                 />
               ))}
             <br />
-            <FormAction handleSubmit={handleSubmit} text='Create Team' disabled={true}/>
+            <FormAction handleSubmit={handleSubmit} text='Registration Closed' disabled={true}/>
           </form>
         </div>
       </div>
