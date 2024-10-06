@@ -314,11 +314,7 @@ const TeamCreate = () => {
                 />
               ))}
             <br />
-<<<<<<< HEAD
             <FormAction handleSubmit={handleSubmit} text='Create Team' disabled={false}/>
-=======
-            <FormAction handleSubmit={handleSubmit} text='Registration Closed' disabled={true}/>
->>>>>>> 3cc008682549d1d5e658b1af44464e85ccb4e1dd
           </form>
         </div>
       </div>
