@@ -10,7 +10,7 @@ const fields = signupFields;
 let fieldsState = {};
 fields.forEach((field) => (fieldsState[field.id] = ""));
 
-export default function Signup() {
+export default function Signup({disabled,text}) {
   const [signupState, setSignupState] = useState(fieldsState);
   const navigate = useNavigate();
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
@@ -82,7 +82,7 @@ export default function Signup() {
       </div>
    
          
-      <FormAction handleSubmit={handleSubmit} text="SignUp" />
+      <FormAction handleSubmit={handleSubmit} text={text} disabled={disabled}/>
 
   </form>
 

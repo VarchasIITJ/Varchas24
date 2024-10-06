@@ -81,7 +81,7 @@ const SignUp = () => {
           linkUrl="/login"
           logoUrl={"/NewLogo.png"}
         />
-        <SignupCard />
+        <SignupCard disabled={true} text="Registrations Closed!"/>
         {/* <h4 className="text-white mt-4">Or</h4> */}
         <button
           onClick={() => signup_google()}
@@ -98,8 +98,9 @@ const SignUp = () => {
             border border-white
             hover:border-yellow-400
           "
+          disabled = {true}
         >
-          Signup with Google
+          Registrations Closed!
         </button>
       </div>
     </BackgroundBeamsWithCollision>
