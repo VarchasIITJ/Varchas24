@@ -62,6 +62,14 @@ export default function Profiles() {
         <div className="text-gray-400 hover:text-white">College</div>
         <div className="text-yellow-300">{details.college}</div>
       </div>
+       <div className="flex flex-col md:flex-row justify-between text-[0.875rem] md:text-[1.125rem] gap-4 md:gap-6 mb-4">
+        <div className="text-gray-400 hover:text-white">Accomadation_Asked</div>
+        <div className="text-yellow-300">{details.accomadation}</div>
+      </div>
+       <div className="flex flex-col md:flex-row justify-between text-[0.875rem] md:text-[1.125rem] gap-4 md:gap-6 mb-4">
+        <div className="text-gray-400 hover:text-white">Accomadation_Payment_Status</div>
+        <div className="text-yellow-300">{details.accomadation_payment}</div>
+      </div>
       <div className="flex flex-col md:flex-row justify-between text-[0.875rem] md:text-[1.125rem] gap-4 md:gap-6 mb-4">
         <div className="text-gray-400 hover:text-white">Registered Teams</div>
         <div className="text-yellow-300 flex flex-col items-end">

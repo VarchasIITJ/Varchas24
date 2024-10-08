@@ -79,6 +79,10 @@ const VTeam = () => {
             <div className="">Event</div>
             <div className="text-yellow-300">{val.event}</div>
           </div>
+          <div className="flex justify-between text-[1rem] md:text-[1.25rem] gap-5 md:gap-10">
+            <div className="">payment_information</div>
+            <div className="text-yellow-300">{val.payment_information}</div>
+          </div>
           <div className="flex flex-row justify-between">
           <div className="text-[1.25rem] md:text-[1.5rem] mt-4">Player Details</div>
           <div className="flex justify-between text-[1rem] md:text-[1.25rem] gap-5 md:gap-10">
